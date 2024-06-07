@@ -1,0 +1,269 @@
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+.flight-search {
+  background-image: url("./img/main.jpg");
+  height: 392px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.38);
+  width: 100vw;
+
+  @include for-wide-middle {
+    background: url("./img/main.jpg") no-repeat center bottom;
+    background-size: cover;
+  }
+
+  @include for-narrow-middle {
+    height: 372px;
+    background: url("./img/main.jpg") no-repeat center bottom;
+  }
+
+  @include for-mobile {
+    height: 307px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  &__title {
+    margin: 0px;
+    font: 70px "open sans", sans-serif;
+    color: $white-color;
+    line-height: 80px;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+
+    @include for-narrow-middle {
+      font: 60px "open sans", sans-serif;
+    }
+
+    @include for-mobile {
+      font: 35px "open sans", sans-serif;
+      padding-top: 20px;
+      line-height: 40px;
+    }
+  }
+
+  &__form {
+    height: 80px;
+    width: 740px;
+    background-color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    border-radius: 0 80px 0 0;
+    margin-top: 18px;
+
+    @include for-wide-middle {
+      width: 620px;
+    }
+
+    @include for-narrow-middle {
+      height: 60px;
+      width: 640px;
+    }
+
+    @include for-mobile {
+      height: 50px;
+      border-radius: 0px;
+      width: 100vw;
+    }
+
+    &_input {
+      height: 80px;
+      width: 468px;
+      padding: 0px;
+      margin: 0px;
+      font-size: 24px;
+      border: none;
+      flex: 1;
+
+      @include for-narrow-middle {
+        height: 60px;
+        width: 398px;
+        font-size: 18px;
+      }
+
+      @include for-mobile {
+        height: 50px;
+        font-size: 18px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      @include for-wide-middle {
+        width: 348px;
+      }
+    }
+
+    &_submit-btn {
+      width: 200px;
+      height: 80px;
+      background-color: $blue-color;
+      color: $white-color;
+      font: 26px "open sans", sans-serif;
+      border: none;
+      margin: 0px;
+      padding: 0 20px;
+      border-radius: 0 80px 0 0;
+      transition: 0.3s ease-in-out;
+      font-weight: 700;
+      text-align: left;
+
+      @include for-narrow-middle {
+        height: 60px;
+      }
+      @include for-narrow-middle {
+        width: 170px;
+        font-size: 20px;
+      }
+
+      @include for-mobile {
+        display: none;
+      }
+
+      &:hover {
+        border-radius: 0 40px 0 0;
+      }
+    }
+
+    &_icon-holder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_icon {
+      width: 32px;
+      height: 31px;
+      color: #fefefe;
+      padding: 0 20px;
+
+      @include for-mobile {
+        height: 20px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  &__buttons {
+    width: 740px;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-wide-middle {
+      width: 620px;
+    }
+
+    @include for-narrow-middle {
+      width: 640px;
+    }
+
+    @include for-mobile {
+      flex-direction: column;
+      width: 100vw;
+      margin: 0 20px;
+    }
+  }
+
+  &__btn {
+    width: 340px;
+    height: 60px;
+    background-color: $white-color;
+    display: flex;
+    padding: 0 15px;
+    align-items: center;
+    border: none;
+    transition: 0.3s ease-in-out;
+
+    &:last-child {
+      justify-content: end;
+    }
+
+    @include for-wide-middle {
+      width: 270px;
+    }
+
+    @include for-narrow-middle {
+      width: 270px;
+    }
+
+    @include for-mobile {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    &_all-departures {
+      border-radius: 10px 50px 10px 10px;
+
+      @include for-mobile {
+        margin-right: 20px;
+        padding: 0;
+      }
+
+      &:hover {
+        border-radius: 10px 25px 10px 10px;
+        background-color: $blue-color;
+      }
+
+      &:hover .flight-search__btn_text {
+        color: $white-color;
+      }
+
+      &:hover .flight-search__btn_icon {
+        filter: grayscale(100%) invert(100%) brightness(1000%) contrast(100%);
+      }
+    }
+
+    &_all-arrivals {
+      border-radius: 50px 10px 10px 10px;
+      margin-bottom: 60px;
+
+      @include for-mobile {
+        margin-bottom: 30px;
+        padding: 0;
+      }
+
+      &:hover {
+        border-radius: 25px 10px 10px 10px;
+        background-color: $blue-color;
+      }
+
+      &:hover .flight-search__btn_text {
+        color: $white-color;
+      }
+
+      &:hover .flight-search__btn_icon {
+        filter: grayscale(100%) invert(100%) brightness(1000%) contrast(100%);
+      }
+    }
+
+    &_text {
+      font: 20px "open sans", sans-serif;
+      color: $blue-color;
+      font-weight: 500;
+
+      @include for-wide-middle {
+        font: 16px "open sans", sans-serif;
+      }
+
+      @include for-narrow-middle {
+        font: 16px "open sans", sans-serif;
+      }
+    }
+
+    &_icon {
+      width: 40px;
+      height: 28px;
+      padding: 0 15px;
+    }
+  }
+}

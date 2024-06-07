@@ -1,0 +1,23 @@
+{
+  "name": "kyiv-airport-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "styles": "sass --watch ./src/styles/index.scss ./src/index.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiLyHet/Kyiv-airport-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiLyHet/Kyiv-airport-project/issues"
+  },
+  "homepage": "https://github.com/DiLyHet/Kyiv-airport-project#readme",
+  "dependencies": {
+    "sass": "^1.75.0"
+  }
+}

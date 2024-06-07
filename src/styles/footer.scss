@@ -1,0 +1,249 @@
+@import "./breakpoints.scss";
+@import "./variables.scss";
+
+.footer-section {
+  width: 1140px;
+  display: flex;
+  flex-direction: column;
+
+  @include for-wide-middle {
+    width: 960px;
+  }
+
+  @include for-narrow-middle {
+    width: 720px;
+  }
+
+  @include for-mobile {
+    width: calc(100vw - 20px);
+  }
+}
+
+.footer {
+  background-color: #595959;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+
+  @include for-mobile {
+    padding: 0 0 20px 0;
+  }
+
+  &__main-info-section {
+    display: flex;
+
+    @include for-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__main-info {
+    display: flex;
+
+    @include for-narrow-middle {
+      flex-direction: column;
+    }
+
+    @include for-mobile {
+      flex-direction: column;
+    }
+
+    &_container {
+      width: 265px;
+      padding: 0 10px;
+
+      @include for-wide-middle {
+        width: 220px;
+      }
+
+      @include for-narrow-middle {
+        width: 220px;
+      }
+
+      @include for-mobile {
+        border-bottom: 0.1px solid $white-color;
+        height: 50px;
+        width: calc(100vw - 20px);
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
+    }
+
+    &_title {
+      color: $white-color;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &_item {
+      color: $white-color;
+      font-size: 16px;
+      margin-top: 10px;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+
+      @include for-mobile {
+        display: none;
+      }
+    }
+
+    &_etc-container {
+      width: 265px;
+      padding: 0 10px;
+
+      @include for-wide-middle {
+        width: 220px;
+      }
+
+      @include for-narrow-middle {
+        width: 700px;
+        display: flex;
+        margin-top: 30px;
+      }
+
+      @include for-mobile {
+        padding: 0;
+        margin-top: 50px;
+      }
+    }
+
+    &_contacts {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      @include for-narrow-middle {
+        width: 350px;
+      }
+    }
+
+    &_text {
+      color: $white-color;
+      font-size: 24px;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include for-wide-middle {
+        font-size: 28px;
+      }
+
+      @include for-narrow-middle {
+        font-size: 28px;
+      }
+
+      @include for-mobile {
+        font-size: 28px;
+      }
+    }
+
+    &_media {
+      display: flex;
+      flex-direction: column;
+
+      @include for-narrow-middle {
+        width: 350px;
+      }
+    }
+
+    &_icon {
+      color: $white-color;
+      font-size: 30px;
+
+      &:hover {
+        cursor: pointer;
+        color: #b8bdc1;
+      }
+    }
+
+    &_media-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      @include for-narrow-middle {
+        width: 270px;
+      }
+    }
+  }
+
+  &__dev-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #b8bdc1;
+
+    @include for-narrow-middle {
+      align-items: end;
+    }
+
+    @include for-mobile {
+      flex-direction: column;
+    }
+
+    &_copyright {
+      display: flex;
+      width: 410px;
+      justify-content: space-between;
+
+      @include for-narrow-middle {
+        flex-direction: column;
+      }
+
+      @include for-mobile {
+        flex-direction: column;
+      }
+    }
+
+    &_text {
+      color: #b8bdc1;
+      font-size: 12px;
+      padding: 0 10px;
+
+      @include for-mobile {
+        padding: 0;
+      }
+    }
+
+    &_uig-part {
+      display: flex;
+
+      @include for-mobile {
+        margin-top: 10px;
+      }
+    }
+
+    &_uig-icon {
+      width: 30px;
+      height: 30.77px;
+
+      @include for-mobile {
+        margin-left: 10px;
+      }
+    }
+
+    &_dev-part {
+      width: 116px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include for-mobile {
+        margin-top: 20px;
+        align-items: start;
+      }
+    }
+
+    &_dev-icon {
+      width: 96px;
+    }
+  }
+}

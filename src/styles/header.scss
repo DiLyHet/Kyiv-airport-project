@@ -1,0 +1,87 @@
+@import "./breakpoints.scss";
+@import "./variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  background-color: $blue-color;
+  height: 92px;
+
+  @include for-narrow-middle {
+    height: 50px;
+  }
+
+  @include for-mobile {
+    height: 50px;
+  }
+
+  &__logo {
+    background-color: $blue-color;
+    border: none;
+    padding: 0px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &_img {
+      width: 180px;
+      height: 67.5px;
+      margin-left: 120px;
+
+      @include for-wide-middle {
+        margin-left: 0px;
+        width: 125px;
+        height: 46.88px;
+      }
+
+      @include for-narrow-middle {
+        width: 125px;
+        height: 46.88px;
+        margin-left: 20px;
+      }
+
+      @include for-mobile {
+        width: 125px;
+        height: 46.88px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.header__navigation {
+
+  &_item {
+    padding: 0 35px;
+    height: 92px;
+    background-color: $blue-color;
+    border: none;
+    color: $white-color;
+    font: 20px "open sans", sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+
+    @include for-narrow-middle {
+      display: none;
+    }
+
+    @include for-mobile {
+      display: none;
+    }
+
+    &:first-child {
+      @include for-wide-middle {
+        padding-left: 5px;
+      }
+    }
+
+    &:last-child {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+  display: flex;
+  align-items: center;
+}
