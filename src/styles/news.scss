@@ -50,7 +50,7 @@
       width: 140px;
       height: 40px;
       background-color: #1eb7ee;
-      color: $white-color;
+      color: $color-white;
       font-size: 16px;
       padding: 0 15px;
       border: 2px solid #1eb7ee;
@@ -93,7 +93,7 @@
       }
 
       &:hover .news__content_title {
-        color: $blue-color;
+        color: $color-blue;
       }
     }
 
@@ -162,7 +162,7 @@
       }
 
       &:hover .news__content_title {
-        color: $blue-color;
+        color: $color-blue;
       }
     }
   }

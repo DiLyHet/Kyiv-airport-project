@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  background-color: $blue-color;
+  background-color: $color-blue;
   height: 92px;
 
   @include for-narrow-middle {
@@ -17,7 +17,7 @@
   }
 
   &__logo {
-    background-color: $blue-color;
+    background-color: $color-blue;
     border: none;
     padding: 0px;
 
@@ -56,9 +56,9 @@
   &_item {
     padding: 0 35px;
     height: 92px;
-    background-color: $blue-color;
+    background-color: $color-blue;
     border: none;
-    color: $white-color;
+    color: $color-white;
     font: 20px "open sans", sans-serif;
     cursor: pointer;
     font-weight: 600;

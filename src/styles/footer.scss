@@ -63,7 +63,7 @@
       }
 
       @include for-mobile {
-        border-bottom: 0.1px solid $white-color;
+        border-bottom: 0.1px solid $color-white;
         height: 50px;
         width: calc(100vw - 20px);
         display: flex;
@@ -73,13 +73,13 @@
     }
 
     &_title {
-      color: $white-color;
+      color: $color-white;
       font-size: 16px;
       font-weight: 700;
     }
 
     &_item {
-      color: $white-color;
+      color: $color-white;
       font-size: 16px;
       margin-top: 10px;
 
@@ -123,7 +123,7 @@
     }
 
     &_text {
-      color: $white-color;
+      color: $color-white;
       font-size: 24px;
       font-weight: 600;
 
@@ -154,7 +154,7 @@
     }
 
     &_icon {
-      color: $white-color;
+      color: $color-white;
       font-size: 30px;
 
       &:hover {

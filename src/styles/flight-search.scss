@@ -31,7 +31,7 @@
   &__title {
     margin: 0px;
     font: 70px "open sans", sans-serif;
-    color: $white-color;
+    color: $color-white;
     line-height: 80px;
     padding-top: 60px;
     display: flex;
@@ -52,7 +52,7 @@
   &__form {
     height: 80px;
     width: 740px;
-    background-color: $white-color;
+    background-color: $color-white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,8 +107,8 @@
     &_submit-btn {
       width: 200px;
       height: 80px;
-      background-color: $blue-color;
-      color: $white-color;
+      background-color: $color-blue;
+      color: $color-white;
       font: 26px "open sans", sans-serif;
       border: none;
       margin: 0px;
@@ -177,7 +177,7 @@
   &__btn {
     width: 340px;
     height: 60px;
-    background-color: $white-color;
+    background-color: $color-white;
     display: flex;
     padding: 0 15px;
     align-items: center;
@@ -211,11 +211,11 @@
 
       &:hover {
         border-radius: 10px 25px 10px 10px;
-        background-color: $blue-color;
+        background-color: $color-blue;
       }
 
       &:hover .flight-search__btn_text {
-        color: $white-color;
+        color: $color-white;
       }
 
       &:hover .flight-search__btn_icon {
@@ -234,11 +234,11 @@
 
       &:hover {
         border-radius: 25px 10px 10px 10px;
-        background-color: $blue-color;
+        background-color: $color-blue;
       }
 
       &:hover .flight-search__btn_text {
-        color: $white-color;
+        color: $color-white;
       }
 
       &:hover .flight-search__btn_icon {
@@ -248,7 +248,7 @@
 
     &_text {
       font: 20px "open sans", sans-serif;
-      color: $blue-color;
+      color: $color-blue;
       font-weight: 500;
 
       @include for-wide-middle {
