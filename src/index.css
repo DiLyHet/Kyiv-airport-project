@@ -336,16 +336,6 @@
   justify-content: space-between;
 }
 
-#id1-5 {
-  color: #595959;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: start;
-}
-
 #id1-7 {
   color: #1eb7ee;
   padding-left: 30px;
@@ -766,7 +756,7 @@
   border-radius: 150px 0 0 0;
 }
 
-.block__content_1st-type {
+.block__content_buy-tickets {
   height: 106px;
   padding-top: 34px;
 }
@@ -777,11 +767,11 @@
   align-items: end;
 }
 
-.block__content_2st-type {
+.block__content_express-line {
   margin-top: 34px;
 }
 
-.block__content_3st-type {
+.block__content_vip-terminal {
   margin-top: 22px;
 }
 
@@ -793,15 +783,15 @@
   border-radius: 0 150px 0 0;
 }
 
-.block__content_4st-type {
+.block__content_how-to-get {
   width: 455px;
 }
 
-.block__content_5st-type {
+.block__content_services {
   width: 550px;
 }
 
-.block__content_6st-type {
+.block__content_mastercard-fastline {
   height: 106px;
   padding-top: 34px;
   width: 645px;
@@ -812,12 +802,33 @@
   margin-bottom: 10px;
 }
 
-.block__content_7st-type {
+.block__content_parking {
   margin-top: 22px;
 }
 
-.block__content_8st-type {
+.block__content_airlines-destinations {
   margin-top: 34px;
+}
+
+.block__content_covid-testing {
+  margin-top: 34px;
+}
+
+.block__content_information {
+  height: 118px;
+  padding-top: 22px;
+  padding-bottom: 10px;
+  border-radius: 150px 0 0 0;
+}
+
+#id1-5 {
+  color: #595959;
+  padding-left: 30px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 24px;
+  text-align: start;
 }
 
 .flight-search {
