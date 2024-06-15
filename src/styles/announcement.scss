@@ -44,9 +44,10 @@
   }
 
   @include for-mobile {
-    width: 567px;
+    max-width: calc(100vw - 20px);
     height: 181px;
-    padding: 30px 150px 30px 30px;
+    flex-shrink: 1;
+    // padding: 30px 150px 30px 30px;
   }
 }
 
@@ -96,7 +97,7 @@
   }
 
   @include for-mobile {
-    width: 747px;
+    width: calc(100vw - 20px);
     height: 300px;
     border-radius: 100px 20px 20px;
   }
@@ -297,315 +298,10 @@
   }
 }
 
-#id1-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  background: url("./img/1.jpg");
-  width: 455px;
-  height: 340px;
-  margin: 0 10px;
-  border-radius: 0 200px 0 0;
-  justify-content: space-between;
-}
-
-#id1-3 {
-  padding-left: 30px;
-  height: 190px;
-  display: flex;
-  align-items: center;
-}
-
 .block__content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-
-#id1-7 {
-  color: $color-blue;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: start;
-  border-radius: 0 150px 0 0;
-}
-
-#id2-1 {
-  display: flex;
-  flex-direction: column;
-  width: 645px;
-  height: 340px;
-  margin: 0 10px;
-  border-radius: 200px 0 0 0;
-  background: url("./img/32.jpg");
-  justify-content: space-between;
-}
-
-#id2-2 {
-  padding-right: 30px;
-  height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-#id2-5 {
-  color: #595959;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: end;
-  line-height: 50px;
-}
-
-#id2-6 {
-  color: $color-blue;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: end;
-  border-radius: 150px 0 0 0;
-}
-
-#id3-2 {
-  display: flex;
-  flex-direction: column;
-  background-color: $color-white;
-  width: 455px;
-  height: 340px;
-  margin: 0 10px;
-  border-radius: 0 0 200px 0;
-}
-
-#id3-3 {
-  padding-left: 30px;
-  background: url("./img/2.jpg");
-  border-radius: 0 0 150px 0;
-  height: 190px;
-  display: flex;
-  align-items: center;
-}
-
-#id3-5 {
-  color: #595959;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: start;
-}
-
-#id3-6 {
-  color: $color-blue;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: start;
-  width: 300px;
-}
-
-#id4-1 {
-  display: flex;
-  flex-direction: column;
-  width: 645px;
-  height: 340px;
-  background-color: $color-white;
-  border-radius: 0 0 0 200px;
-  margin: 0 10px;
-}
-
-#id4-2 {
-  padding-right: 30px;
-  background: url("./img/49.jpg");
-  height: 190px;
-  border-radius: 0 0 0 150px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-#id4-4 {
-  color: #595959;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: end;
-}
-
-#id4-5 {
-  color: $color-blue;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: end;
-}
-
-#id5-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: url("./img/24.jpg");
-  width: 550px;
-  height: 340px;
-  margin: 0 10px;
-  border-radius: 0 200px 0 0;
-}
-
-#id5-3 {
-  padding-left: 30px;
-  height: 190px;
-  display: flex;
-  align-items: center;
-}
-
-#id5-6 {
-  color: #595959;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: start;
-}
-
-#id5-7 {
-  color: $color-blue;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: start;
-  border-radius: 0 150px 0 0;
-}
-
-#id6-1 {
-  display: flex;
-  flex-direction: column;
-  width: 550px;
-  height: 340px;
-  justify-content: space-between;
-  background: url("./img/covid-3.jpeg");
-  border-radius: 200px 0 0 0;
-  margin: 0 10px;
-}
-
-#id6-2 {
-  padding-right: 30px;
-  height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-#id6-4 {
-  color: #595959;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: end;
-}
-
-#id6-6 {
-  color: $color-blue;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: end;
-  border-radius: 150px 0 0 0;
-}
-
-#id7-2 {
-  display: flex;
-  flex-direction: column;
-  width: 550px;
-  height: 340px;
-  background-color: $color-white;
-  border-radius: 0 0 200px 0;
-  margin: 0 10px;
-}
-
-#id7-3 {
-  padding-left: 30px;
-  background: url("./img/4.jpg");
-  height: 190px;
-  border-radius: 0 0 150px 0;
-  display: flex;
-  align-items: center;
-}
-
-#id7-5 {
-  color: #595959;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: start;
-}
-
-#id7-6 {
-  color: $color-blue;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: start;
-  width: 300px;
-}
-
-#id8-1 {
-  display: flex;
-  flex-direction: column;
-  background-color: $color-white;
-  width: 550px;
-  height: 340px;
-  border-radius: 0 0 0 200px;
-  margin: 0 10px;
-}
-
-#id8-2 {
-  padding-right: 30px;
-  background: url("./img/27.jpg");
-  height: 190px;
-  border-radius: 0 0 0 150px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
 }
 
 .text-right {
@@ -628,113 +324,6 @@
   text-align: start;
 }
 
-#id8-4 {
-  color: #595959;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: end;
-}
-
-#id8-5 {
-  color: $color-blue;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: end;
-  width: 300px;
-}
-
-#id9-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: url("./img/47.jpg");
-  width: 645px;
-  height: 340px;
-  margin: 0 10px;
-  border-radius: 0 200px 0 0;
-}
-
-#id9-3 {
-  padding-left: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  height: 190px;
-}
-
-#id9-6 {
-  color: #595959;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: start;
-}
-
-#id9-7 {
-  color: $color-blue;
-  padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: start;
-  border-radius: 0 150px 0 0;
-}
-
-#id10-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 455px;
-  background: url("./img/12.jpg");
-  border-radius: 200px 0 0 0;
-  margin: 0 10px;
-}
-
-#id10-2 {
-  padding-right: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  height: 190px;
-}
-
-#id10-4 {
-  color: #595959;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  text-align: end;
-  border-radius: 150px 0 0 0;
-}
-
-#id10-6 {
-  color: $color-blue;
-  padding-right: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  background-color: $color-white;
-  border: none;
-  text-align: end;
-  border-radius: 150px 0 0 0;
-}
-
 //block__content
 
 .block__content_right-top {
@@ -743,6 +332,10 @@
   padding-top: 22px;
   padding-bottom: 10px;
   border-radius: 150px 0 0 0;
+
+  @include for-wide-middle {
+    height: 150px;
+  }
 }
 
 .block__content_buy-tickets {
@@ -812,12 +405,224 @@
 
 // description text
 
-#id1-5 {
+.block__description {
   color: #595959;
+  font: $font-description;
+}
+
+.block__description_left-position {
   padding-left: 30px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
   text-align: start;
+}
+
+.block__description_right-position {
+  padding-right: 30px;
+  text-align: end;
+}
+
+//button
+
+.block__button {
+  color: $color-blue;
+  font: $font-button;
+  background-color: $color-white;
+  border: none;
+}
+
+.block__button_left-position {
+  padding-left: 30px;
+  text-align: start;
+}
+
+.block__button_right-position {
+  padding-right: 30px;
+  text-align: end;
+}
+
+.block__button_how-to-get {
+  border-radius: 0 150px 0 0;
+}
+
+.block__button_buy-tickets {
+  border-radius: 150px 0 0 0;
+}
+
+.block__button_parking {
+  width: 300px;
+}
+
+.block__button_services {
+  border-radius: 0 150px 0 0;
+}
+
+.block__button_covid-testing {
+  border-radius: 150px 0 0 0;
+}
+
+.block__button_airlines-destinations {
+  width: 300px;
+}
+
+.block__button_vip-terminal {
+  width: 300px;
+}
+
+.block__button_mastercard-fastline {
+  border-radius: 0 150px 0 0;
+}
+
+.block__button_information {
+  border-radius: 150px 0 0 0;
+}
+
+// title
+
+.block__title {
+  display: flex;
+  height: 190px;
+  align-items: center;
+}
+
+.block__title_left-position {
+  padding-left: 30px;
+}
+
+.block__title_right-position {
+  padding-right: 30px;
+  justify-content: end;
+}
+
+.block__title_parking {
+  background: url("./img/2.jpg");
+  border-radius: 0 0 150px 0;
+}
+
+.block__title_express-line {
+  background: url("./img/49.jpg");
+  border-radius: 0 0 0 150px;
+}
+
+.block__title_airlines-destinations {
+  background: url("./img/4.jpg");
+  border-radius: 0 0 150px 0;
+}
+
+.block__title_vip-terminal {
+  background: url("./img/27.jpg");
+  border-radius: 0 0 0 150px;
+}
+
+.block__title_mastercard-fastline {
+  justify-content: left;
+}
+
+//container
+
+.block__container {
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+  margin: 0 10px;
+}
+
+.block__container_top-position {
+  justify-content: space-between;
+}
+
+.block__container_bottom-position {
+  background-color: $color-white;
+}
+
+.block__container_wide-size {
+  width: 645px;
+
+  @include for-wide-middle {
+    width: 540px;
+  }
+  
+  @include for-narrow-middle {
+    width: 400px;
+  }
+
+  @include for-mobile {
+    width: calc(100vw - 20px);
+  }
+}
+
+.block__container_medium-size {
+  width: 550px;
+
+  @include for-wide-middle {
+    width: 460px;
+  }
+  
+  @include for-narrow-middle {
+    width: 340px;
+  }
+
+  @include for-mobile {
+    width: calc(100vw - 20px);
+  }
+}
+
+.block__container_narrow-size {
+  width: 455px;
+  
+  @include for-wide-middle {
+    width: 380px;
+  }
+
+  @include for-narrow-middle {
+    width: 280px;
+  }
+
+  @include for-mobile {
+    width: calc(100vw - 20px);
+  }
+}
+
+.block__container_how-to-get {
+  border-radius: 0 200px 0 0;
+  background: url("./img/1.jpg");
+}
+
+.block__container_buy-tickets {
+  border-radius: 200px 0 0 0;
+  background: url("./img/32.jpg");
+}
+
+.block__container_parking {
+  border-radius: 0 0 200px 0;
+}
+
+.block__container_express-line {
+  border-radius: 0 0 0 200px;
+}
+
+.block__container_services {
+  border-radius: 0 200px 0 0;
+  background: url("./img/24.jpg");
+}
+
+.block__container_covid-testing {
+  border-radius: 200px 0 0 0;
+  background: url("./img/covid-3.jpeg");
+}
+
+.block__container_airlines-destinations {
+  border-radius: 0 0 200px 0;
+}
+
+.block__container_vip-terminal {
+  border-radius: 0 0 0 200px;
+}
+
+.block__container_mastercard-fastline {
+  border-radius: 0 200px 0 0;
+  background: url("./img/47.jpg");
+}
+
+.block__container_information {
+  border-radius: 200px 0 0 0;
+  background: url("./img/12.jpg");
 }
