@@ -42,9 +42,11 @@
 }
 @media screen and (max-width: 767.9px) {
   .announcement__content {
-    max-width: calc(100vw - 20px);
+    width: calc(100vw - 200px);
     height: 181px;
-    flex-shrink: 1;
+    overflow: hidden;
+    padding: 30px 150px 30px 30px;
+    border-radius: 20px 100px 20px 20px;
   }
 }
 
@@ -310,6 +312,11 @@
 .announcement__blocks:last-of-type {
   margin-bottom: 0px;
 }
+@media screen and (max-width: 767.9px) {
+  .announcement__blocks {
+    flex-direction: column;
+  }
+}
 
 .block__content {
   display: flex;
@@ -326,6 +333,24 @@
   font-style: normal;
   text-align: end;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .text-right {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .text-right {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .text-right {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
 
 .text-left {
   color: #ffffff;
@@ -336,17 +361,40 @@
   font-style: normal;
   text-align: start;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .text-left {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .text-left {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .text-left {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
 
 .block__content_right-top {
   background-color: #ffffff;
   height: 118px;
   padding-top: 22px;
-  padding-bottom: 10px;
   border-radius: 150px 0 0 0;
+  transition: 0.3s ease-in-out;
 }
 @media screen and (min-width: 992px) and (max-width: 1199.9px) {
   .block__content_right-top {
-    height: 150px;
+    height: 128px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__content_right-top {
+    border-radius: 80px 0 0 0;
   }
 }
 
@@ -354,35 +402,119 @@
   height: 106px;
   padding-top: 34px;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_buy-tickets {
+    height: 116.01px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__content_buy-tickets {
+    padding-top: 17px;
+    height: 98px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__content_buy-tickets {
+    border-radius: 0;
+  }
+}
 
 .block__content_right-bottom {
   height: 150px;
-  margin-bottom: 10px;
   align-items: end;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_right-bottom {
+    padding-top: 34px;
+  }
 }
 
 .block__content_express-line {
   margin-top: 34px;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_express-line {
+    margin-top: 0px;
+    height: 116.01px;
+  }
+}
 
 .block__content_vip-terminal {
   margin-top: 22px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_vip-terminal {
+    margin-top: 0px;
+    height: 116.01px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__content_vip-terminal {
+    border-radius: 0;
+  }
 }
 
 .block__content_left-top {
   background-color: #ffffff;
   height: 118px;
   padding-top: 22px;
-  padding-bottom: 10px;
   border-radius: 0 150px 0 0;
+  transition: 0.3s ease-in-out;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_left-top {
+    height: 128px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__content_left-top {
+    height: 115px;
+    border-radius: 0 80px 0 0;
+  }
 }
 
 .block__content_how-to-get {
   width: 455px;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_how-to-get {
+    width: 380px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__content_how-to-get {
+    padding-top: 17px;
+    height: 98px;
+    width: 280px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__content_how-to-get {
+    width: calc(100vw - 20px);
+    border-radius: 0;
+  }
+}
 
 .block__content_services {
   width: 550px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_services {
+    width: 460px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__content_services {
+    padding-top: 17px;
+    height: 98px;
+    width: 340px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__content_services {
+    width: calc(100vw - 20px);
+    border-radius: 0;
+  }
 }
 
 .block__content_mastercard-fastline {
@@ -390,44 +522,156 @@
   padding-top: 34px;
   width: 645px;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_mastercard-fastline {
+    width: 540px;
+    height: 116.01px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__content_mastercard-fastline {
+    padding-top: 17px;
+    height: 98px;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__content_mastercard-fastline {
+    width: calc(100vw - 20px);
+    border-radius: 0;
+  }
+}
 
 .block__content_left-bottom {
   height: 150px;
-  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_left-bottom {
+    padding-top: 34px;
+    height: 116.01px;
+  }
 }
 
 .block__content_parking {
   margin-top: 22px;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_parking {
+    margin-top: 0px;
+  }
+}
 
 .block__content_airlines-destinations {
   margin-top: 34px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_airlines-destinations {
+    margin-top: 0px;
+  }
 }
 
 .block__content_covid-testing {
   margin-top: 34px;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_covid-testing {
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__content_covid-testing {
+    margin-top: 0px;
+    padding-top: 17px;
+    height: 98px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__content_covid-testing {
+    border-radius: 0;
+  }
+}
 
 .block__content_information {
   height: 118px;
   padding-top: 22px;
-  padding-bottom: 10px;
   border-radius: 150px 0 0 0;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__content_information {
+    height: 128px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__content_information {
+    padding-top: 17px;
+    height: 98px;
+    border-radius: 80px 0 0 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__content_information {
+    border-radius: 0;
+  }
 }
 
 .block__description {
   color: #595959;
   font: normal 600 24px "Open Sans", sans-serif;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__description {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__description {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__description {
+    font-size: 16px;
+  }
+}
 
 .block__description_left-position {
   padding-left: 30px;
   text-align: start;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__description_left-position {
+    padding-left: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__description_left-position {
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__description_left-position {
+    padding-left: 15px;
+  }
+}
 
 .block__description_right-position {
   padding-right: 30px;
   text-align: end;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__description_right-position {
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__description_right-position {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__description_right-position {
+    padding-right: 15px;
+  }
 }
 
 .block__button {
@@ -435,87 +679,306 @@
   font: normal 700 20px "Open Sans", sans-serif;
   background-color: #ffffff;
   border: none;
+  height: 50px;
+  transition: 0.3s ease-in-out;
+}
+.block__button:hover {
+  background-color: #1eb7ee;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__button {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__button {
+    font-size: 12px;
+  }
 }
 
 .block__button_left-position {
   padding-left: 30px;
   text-align: start;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__button_left-position {
+    padding-left: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_left-position {
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__button_left-position {
+    padding-left: 15px;
+  }
+}
 
 .block__button_right-position {
   padding-right: 30px;
   text-align: end;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__button_right-position {
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_right-position {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__button_right-position {
+    padding-right: 15px;
+  }
+}
 
 .block__button_how-to-get {
   border-radius: 0 150px 0 0;
+  width: 318.5px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_how-to-get {
+    width: 196px;
+  }
 }
 
 .block__button_buy-tickets {
   border-radius: 150px 0 0 0;
+  width: 451.5px;
+  align-self: flex-end;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_buy-tickets {
+    width: 280px;
+  }
 }
 
 .block__button_parking {
-  width: 300px;
+  width: 250px;
+  border-radius: 0 150px 0 0;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__button_parking {
+    width: 170px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_parking {
+    width: 170px;
+  }
+}
+
+.block__button_express-line {
+  width: 451.5px;
+  border-radius: 150px 0 0 0;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__button_express-line {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_express-line {
+    width: 280px;
+  }
 }
 
 .block__button_services {
   border-radius: 0 150px 0 0;
+  width: 385px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_services {
+    width: 238px;
+  }
 }
 
 .block__button_covid-testing {
   border-radius: 150px 0 0 0;
+  width: 385px;
+  align-self: flex-end;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_covid-testing {
+    width: 238px;
+  }
 }
 
 .block__button_airlines-destinations {
-  width: 300px;
+  width: 350px;
+  border-radius: 0 150px 0 0;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__button_airlines-destinations {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_airlines-destinations {
+    width: 200px;
+  }
 }
 
 .block__button_vip-terminal {
-  width: 300px;
+  width: 350px;
+  border-radius: 150px 0 0 0;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__button_vip-terminal {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_vip-terminal {
+    width: 200px;
+  }
 }
 
 .block__button_mastercard-fastline {
   border-radius: 0 150px 0 0;
+  width: 451.5px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_mastercard-fastline {
+    width: 280px;
+  }
 }
 
 .block__button_information {
   border-radius: 150px 0 0 0;
+  width: 318.5px;
+  align-self: flex-end;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__button_information {
+    width: 196px;
+  }
 }
 
 .block__title {
   display: flex;
   height: 190px;
   align-items: center;
+  transition: 0.3s ease-in-out;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__title {
+    height: 80px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__title {
+    height: 115px;
+  }
 }
 
 .block__title_left-position {
   padding-left: 30px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__title_left-position {
+    padding-left: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__title_left-position {
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__title_left-position {
+    padding-left: 15px;
+  }
 }
 
 .block__title_right-position {
   padding-right: 30px;
   justify-content: end;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__title_right-position {
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__title_right-position {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__title_right-position {
+    padding-right: 15px;
+  }
+}
 
 .block__title_parking {
   background: url("./img/2.jpg");
   border-radius: 0 0 150px 0;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__title_parking {
+    border-radius: 0 0 80px 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__title_parking {
+    border-radius: 0;
+  }
 }
 
 .block__title_express-line {
   background: url("./img/49.jpg");
   border-radius: 0 0 0 150px;
 }
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__title_express-line {
+    border-radius: 0 0 0 80px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__title_express-line {
+    border-radius: 0;
+  }
+}
 
 .block__title_airlines-destinations {
   background: url("./img/4.jpg");
   border-radius: 0 0 150px 0;
 }
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__title_airlines-destinations {
+    border-radius: 0 0 80px 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__title_airlines-destinations {
+    border-radius: 0;
+  }
+}
 
 .block__title_vip-terminal {
   background: url("./img/27.jpg");
   border-radius: 0 0 0 150px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__title_vip-terminal {
+    border-radius: 0 0 0 80px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__title_vip-terminal {
+    border-radius: 0;
+  }
 }
 
 .block__title_mastercard-fastline {
@@ -527,6 +990,26 @@
   flex-direction: column;
   height: 340px;
   margin: 0 10px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container {
+    height: 230px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container {
+    height: 230px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container {
+    height: 250px;
+  }
 }
 
 .block__container_top-position {
@@ -598,46 +1081,504 @@
   border-radius: 0 200px 0 0;
   background: url("./img/1.jpg");
 }
+.block__container_how-to-get:hover {
+  border-radius: 0 150px 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_how-to-get:hover {
+    border-radius: 0 70px 0 0;
+  }
+}
+.block__container_how-to-get:hover .block__content_how-to-get {
+  border-radius: 0 100px 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_how-to-get:hover .block__content_how-to-get {
+    border-radius: 0;
+  }
+}
+.block__container_how-to-get:hover .block__button_how-to-get {
+  background-color: #1eb7ee;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_how-to-get:hover .block__button_how-to-get {
+    width: 266px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_how-to-get:hover .block__button_how-to-get {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_how-to-get {
+    border-radius: 0 120px 0 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_how-to-get {
+    border-radius: 0 70px 0 0;
+    margin-bottom: 15px;
+  }
+}
 
 .block__container_buy-tickets {
   border-radius: 200px 0 0 0;
   background: url("./img/32.jpg");
 }
+.block__container_buy-tickets:hover {
+  border-radius: 150px 0 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_buy-tickets:hover {
+    border-radius: 70px 0 0 0;
+  }
+}
+.block__container_buy-tickets:hover .block__content_buy-tickets {
+  border-radius: 100px 0 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_buy-tickets:hover .block__content_buy-tickets {
+    border-radius: 0;
+  }
+}
+.block__container_buy-tickets:hover .block__button_buy-tickets {
+  background-color: #1eb7ee;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_buy-tickets:hover .block__button_buy-tickets {
+    width: 378px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_buy-tickets:hover .block__button_buy-tickets {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_buy-tickets {
+    border-radius: 120px 0 0 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_buy-tickets {
+    border-radius: 70px 0 0 0;
+  }
+}
 
 .block__container_parking {
   border-radius: 0 0 200px 0;
 }
+.block__container_parking:hover {
+  border-radius: 0 0 150px 0;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_parking:hover {
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_parking:hover {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_parking:hover {
+    border-radius: 0 0 70px 0;
+  }
+}
+.block__container_parking:hover .block__title_parking {
+  border-radius: 0 0 100px 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_parking:hover .block__title_parking {
+    border-radius: 0;
+  }
+}
+.block__container_parking:hover .block__button_parking {
+  background-color: #1eb7ee;
+  color: #ffffff;
+  width: 318.5px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_parking:hover .block__button_parking {
+    width: 266px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_parking:hover .block__button_parking {
+    width: 196px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_parking:hover .block__button_parking {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_parking {
+    border-radius: 0 0 120px 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_parking {
+    border-radius: 0 0 70px 0;
+    margin-bottom: 15px;
+  }
+}
 
 .block__container_express-line {
   border-radius: 0 0 0 200px;
+}
+.block__container_express-line:hover {
+  border-radius: 0 0 0 150px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_express-line:hover {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_express-line:hover {
+    border-radius: 0 0 0 70px;
+  }
+}
+.block__container_express-line:hover .block__title_express-line {
+  border-radius: 0 0 0 100px;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_express-line:hover .block__title_express-line {
+    border-radius: 0;
+  }
+}
+.block__container_express-line:hover .block__button_express-line {
+  background-color: #1eb7ee;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_express-line:hover .block__button_express-line {
+    width: 378px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_express-line:hover .block__button_express-line {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_express-line {
+    border-radius: 0 0 0 120px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_express-line {
+    border-radius: 0 0 0 70px;
+  }
 }
 
 .block__container_services {
   border-radius: 0 200px 0 0;
   background: url("./img/24.jpg");
 }
+.block__container_services:hover {
+  border-radius: 0 150px 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_services:hover {
+    border-radius: 0 70px 0 0;
+  }
+}
+.block__container_services:hover .block__content_services {
+  border-radius: 0 100px 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_services:hover .block__content_services {
+    border-radius: 0;
+  }
+}
+.block__container_services:hover .block__button_services {
+  background-color: #1eb7ee;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_services:hover .block__button_services {
+    width: 322px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_services:hover .block__button_services {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_services {
+    border-radius: 0 120px 0 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_services {
+    border-radius: 0 70px 0 0;
+    margin-bottom: 15px;
+  }
+}
 
 .block__container_covid-testing {
   border-radius: 200px 0 0 0;
   background: url("./img/covid-3.jpeg");
 }
+.block__container_covid-testing:hover {
+  border-radius: 150px 0 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_covid-testing:hover {
+    border-radius: 70px 0 0 0;
+  }
+}
+.block__container_covid-testing:hover .block__content_covid-testing {
+  border-radius: 100px 0 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_covid-testing:hover .block__content_covid-testing {
+    border-radius: 0;
+  }
+}
+.block__container_covid-testing:hover .block__button_covid-testing {
+  background-color: #1eb7ee;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_covid-testing:hover .block__button_covid-testing {
+    width: 322px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_covid-testing:hover .block__button_covid-testing {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_covid-testing {
+    border-radius: 120px 0 0 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_covid-testing {
+    border-radius: 70px 0 0 0;
+  }
+}
 
 .block__container_airlines-destinations {
   border-radius: 0 0 200px 0;
 }
+.block__container_airlines-destinations:hover {
+  border-radius: 0 0 150px 0;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_airlines-destinations:hover {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_airlines-destinations:hover {
+    border-radius: 0 0 70px 0;
+  }
+}
+.block__container_airlines-destinations:hover .block__title_airlines-destinations {
+  border-radius: 0 0 100px 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_airlines-destinations:hover .block__title_airlines-destinations {
+    border-radius: 0;
+  }
+}
+.block__container_airlines-destinations:hover .block__button_airlines-destinations {
+  background-color: #1eb7ee;
+  color: #ffffff;
+  width: 395px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_airlines-destinations:hover .block__button_airlines-destinations {
+    width: 322px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_airlines-destinations:hover .block__button_airlines-destinations {
+    width: 238px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_airlines-destinations:hover .block__button_airlines-destinations {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_airlines-destinations {
+    border-radius: 0 0 120px 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_airlines-destinations {
+    border-radius: 0 0 70px 0;
+    margin-bottom: 15px;
+  }
+}
 
 .block__container_vip-terminal {
   border-radius: 0 0 0 200px;
+}
+.block__container_vip-terminal:hover {
+  border-radius: 0 0 0 150px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_vip-terminal:hover {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_vip-terminal:hover {
+    border-radius: 0 0 0 70px;
+  }
+}
+.block__container_vip-terminal:hover .block__title_vip-terminal {
+  border-radius: 0 0 0 100px;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_vip-terminal:hover .block__title_vip-terminal {
+    border-radius: 0;
+  }
+}
+.block__container_vip-terminal:hover .block__button_vip-terminal {
+  background-color: #1eb7ee;
+  color: #ffffff;
+  width: 385px;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_vip-terminal:hover .block__button_vip-terminal {
+    width: 322px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_vip-terminal:hover .block__button_vip-terminal {
+    width: 238px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_vip-terminal:hover .block__button_vip-terminal {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_vip-terminal {
+    border-radius: 0 0 0 120px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_vip-terminal {
+    border-radius: 0 0 0 70px;
+  }
 }
 
 .block__container_mastercard-fastline {
   border-radius: 0 200px 0 0;
   background: url("./img/47.jpg");
 }
+.block__container_mastercard-fastline:hover {
+  border-radius: 0 150px 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_mastercard-fastline:hover {
+    border-radius: 0 70px 0 0;
+  }
+}
+.block__container_mastercard-fastline:hover .block__content_mastercard-fastline {
+  border-radius: 0 100px 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_mastercard-fastline:hover .block__content_mastercard-fastline {
+    border-radius: 0;
+  }
+}
+.block__container_mastercard-fastline:hover .block__button_mastercard-fastline {
+  background-color: #1eb7ee;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_mastercard-fastline:hover .block__button_mastercard-fastline {
+    width: 378px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_mastercard-fastline:hover .block__button_mastercard-fastline {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_mastercard-fastline {
+    border-radius: 0 120px 0 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_mastercard-fastline {
+    border-radius: 0 70px 0 0;
+    margin-bottom: 15px;
+  }
+}
 
 .block__container_information {
   border-radius: 200px 0 0 0;
   background: url("./img/12.jpg");
+}
+.block__container_information:hover {
+  border-radius: 150px 0 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_information:hover {
+    border-radius: 70px 0 0 0;
+  }
+}
+.block__container_information:hover .block__content_information {
+  border-radius: 100px 0 0 0;
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_information:hover .block__content_information {
+    border-radius: 0;
+  }
+}
+.block__container_information:hover .block__button_information {
+  background-color: #1eb7ee;
+  color: #ffffff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .block__container_information:hover .block__button_information {
+    width: 266px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_information:hover .block__button_information {
+    background-color: #ffffff;
+    color: #1eb7ee;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .block__container_information {
+    border-radius: 120px 0 0 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .block__container_information {
+    border-radius: 70px 0 0 0;
+  }
 }
 
 .flight-search {
@@ -666,7 +1607,7 @@
 @media screen and (max-width: 767.9px) {
   .flight-search {
     height: 307px;
-    width: 100%;
+    width: calc(100vw - 20px);
     padding: 0 10px;
   }
 }
@@ -718,7 +1659,7 @@
   .flight-search__form {
     height: 50px;
     border-radius: 0px;
-    width: 100vw;
+    width: calc(100vw - 30px);
   }
 }
 .flight-search__form_input {
@@ -819,7 +1760,7 @@
 @media screen and (max-width: 767.9px) {
   .flight-search__buttons {
     flex-direction: column;
-    width: 100vw;
+    width: calc(100vw - 30px);
     margin: 0 20px;
   }
 }
@@ -995,11 +1936,13 @@
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
+  list-style-type: none;
 }
 .footer__main-info_item {
   color: #ffffff;
   font-size: 16px;
   margin-top: 10px;
+  list-style-type: none;
 }
 .footer__main-info_item:hover {
   text-decoration-line: underline;
@@ -1172,6 +2115,7 @@
   flex-wrap: nowrap;
   background-color: #1eb7ee;
   height: 92px;
+  width: 100vw;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
   .header {
@@ -1283,6 +2227,11 @@
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 767.9px) {
+  .news__header {
+    margin-top: 40px;
+  }
+}
 .news__header_title {
   font-size: 70px;
   color: #1eb7ee;
@@ -1300,6 +2249,7 @@
 @media screen and (max-width: 767.9px) {
   .news__header_title {
     font-size: 36px;
+    margin-left: 15px;
   }
 }
 .news__header_button {
@@ -1316,6 +2266,11 @@
 }
 .news__header_button:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 767.9px) {
+  .news__header_button {
+    margin-right: 10px;
+  }
 }
 .news__content {
   margin-top: 40px;
@@ -1337,8 +2292,19 @@
   flex-direction: column;
   width: 550px;
 }
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+  .news__content_element {
+    width: 460px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+  .news__content_element {
+    width: 340px;
+  }
+}
 @media screen and (max-width: 767.9px) {
   .news__content_element {
+    width: calc(100vw - 20px);
     margin-top: 30px;
   }
 }
@@ -1352,6 +2318,7 @@
   font-size: 30px;
   color: #595959;
   font-weight: 600;
+  overflow: hidden;
 }
 .news__content_element-container {
   display: flex;
@@ -1419,6 +2386,18 @@
 }
 .news__content_main-element:hover .news__content_title {
   color: #1eb7ee;
+}
+
+.page {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #e7efec;
+}
+
+@media screen and (max-width: 767.9px) {
+  ul {
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -29,6 +29,10 @@
     align-items: center;
     justify-content: space-between;
 
+    @include for-mobile {
+      margin-top: 40px;
+    }
+
     &_title {
       font-size: 70px;
       color: #1eb7ee;
@@ -43,6 +47,7 @@
 
       @include for-mobile {
         font-size: 36px;
+        margin-left: 15px;
       }
     }
 
@@ -60,6 +65,10 @@
 
       &:hover {
         cursor: pointer;
+      }
+
+      @include for-mobile {
+        margin-right: 10px;
       }
     }
   }
@@ -84,7 +93,16 @@
       flex-direction: column;
       width: 550px;
 
+      @include for-wide-middle {
+        width: 460px;
+      }
+
+      @include for-narrow-middle {
+        width: 340px;
+      }
+
       @include for-mobile {
+        width: calc(100vw - 20px);
         margin-top: 30px;
       }
 
@@ -101,6 +119,7 @@
       font-size: 30px;
       color: #595959;
       font-weight: 600;
+      overflow: hidden;
     }
 
     &_element-container {

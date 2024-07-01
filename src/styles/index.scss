@@ -3,3 +3,15 @@
 @import "footer.scss";
 @import "header.scss";
 @import "news.scss";
+
+.page {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #e7efec;
+}
+
+ul {
+    @include for-mobile {
+        padding: 0;
+    }
+}

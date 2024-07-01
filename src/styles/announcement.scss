@@ -44,10 +44,11 @@
   }
 
   @include for-mobile {
-    max-width: calc(100vw - 20px);
+    width: calc(100vw - 200px);
     height: 181px;
-    flex-shrink: 1;
-    // padding: 30px 150px 30px 30px;
+    overflow: hidden;
+    padding: 30px 150px 30px 30px;
+    border-radius: 20px 100px 20px 20px;
   }
 }
 
@@ -296,6 +297,10 @@
   &:last-of-type {
     margin-bottom: 0px;
   }
+
+  @include for-mobile {
+    flex-direction: column;
+  }
 }
 
 .block__content {
@@ -312,6 +317,21 @@
   font-weight: 600;
   font-style: normal;
   text-align: end;
+
+  @include for-wide-middle {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @include for-narrow-middle {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @include for-mobile {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .text-left {
@@ -322,6 +342,21 @@
   font-weight: 600;
   font-style: normal;
   text-align: start;
+
+  @include for-wide-middle {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @include for-narrow-middle {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  @include for-mobile {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 //block__content
@@ -330,77 +365,212 @@
   background-color: $color-white;
   height: 118px;
   padding-top: 22px;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   border-radius: 150px 0 0 0;
+  transition: 0.3s ease-in-out;
 
   @include for-wide-middle {
-    height: 150px;
+    height: 128px;
+  }
+
+  @include for-narrow-middle {
+    border-radius: 80px 0 0 0;
   }
 }
 
 .block__content_buy-tickets {
   height: 106px;
   padding-top: 34px;
+
+  @include for-wide-middle {
+    height: 116.01px;
+  }
+
+  @include for-narrow-middle {
+    padding-top: 17px;
+    height: 98px;
+  }
+
+  @include for-mobile {
+    border-radius: 0;
+  }
 }
 
 .block__content_right-bottom {
   height: 150px;
-  margin-bottom: 10px;
   align-items: end;
+
+  @include for-wide-middle {
+    padding-top: 34px;
+  }
 }
 
 .block__content_express-line {
   margin-top: 34px;
+
+  @include for-wide-middle {
+    margin-top: 0px;
+    height: 116.01px;
+  }
 }
 
 .block__content_vip-terminal {
   margin-top: 22px;
+
+  @include for-wide-middle {
+    margin-top: 0px;
+    height: 116.01px;
+  }
+
+  @include for-mobile {
+    border-radius: 0;
+  }
 }
 
 .block__content_left-top {
   background-color: $color-white;
   height: 118px;
   padding-top: 22px;
-  padding-bottom: 10px;
   border-radius: 0 150px 0 0;
+  transition: 0.3s ease-in-out;
+
+  @include for-wide-middle {
+    height: 128px;
+  }
+
+  @include for-narrow-middle {
+    height: 115px;
+    border-radius: 0 80px 0 0;
+  }
+
+  // @include for-mobile {
+  //   width: calc(100vw - 20px);
+  // }
 }
 
 .block__content_how-to-get {
   width: 455px;
+  // transition: .3s ease-in-out;
+
+  @include for-wide-middle {
+    width: 380px;
+  }
+
+  @include for-narrow-middle {
+    padding-top: 17px;
+    height: 98px;
+    width: 280px;
+  }
+
+  @include for-mobile {
+    width: calc(100vw - 20px);
+    border-radius: 0;
+  }
 }
 
 .block__content_services {
   width: 550px;
+
+  @include for-wide-middle {
+    width: 460px;
+  }
+
+  @include for-narrow-middle {
+    padding-top: 17px;
+    height: 98px;
+    width: 340px;
+  }
+
+  @include for-mobile {
+    width: calc(100vw - 20px);
+    border-radius: 0;
+  }
 }
 
 .block__content_mastercard-fastline {
   height: 106px;
   padding-top: 34px;
   width: 645px;
+
+  @include for-wide-middle {
+    width: 540px;
+    height: 116.01px;
+  }
+
+  @include for-narrow-middle {
+    padding-top: 17px;
+    height: 98px;
+    width: 400px;
+  }
+
+  @include for-mobile {
+    width: calc(100vw - 20px);
+    border-radius: 0;
+  }
 }
 
 .block__content_left-bottom {
   height: 150px;
-  margin-bottom: 10px;
+
+  @include for-wide-middle {
+    padding-top: 34px;
+    height: 116.01px;
+  }
 }
 
 .block__content_parking {
   margin-top: 22px;
+
+  @include for-wide-middle {
+    margin-top: 0px;
+  }
 }
 
 .block__content_airlines-destinations {
   margin-top: 34px;
+
+  @include for-wide-middle {
+    margin-top: 0px;
+  }
 }
 
 .block__content_covid-testing {
   margin-top: 34px;
+
+  @include for-wide-middle {
+    margin-top: 0px;
+  }
+
+  @include for-narrow-middle {
+    margin-top: 0px;
+    padding-top: 17px;
+    height: 98px;
+  }
+
+  @include for-mobile {
+    border-radius: 0;
+  }
 }
 
 .block__content_information {
   height: 118px;
   padding-top: 22px;
-  padding-bottom: 10px;
+  // padding-bottom: 10px;
   border-radius: 150px 0 0 0;
+
+  @include for-wide-middle {
+    height: 128px;
+  }
+
+  @include for-narrow-middle {
+    padding-top: 17px;
+    height: 98px;
+    border-radius: 80px 0 0 0;
+  }
+
+  @include for-mobile {
+    border-radius: 0;
+  }
 }
 
 // description text
@@ -408,16 +578,52 @@
 .block__description {
   color: #595959;
   font: $font-description;
+
+  @include for-wide-middle {
+    font-size: 18px;
+  }
+
+  @include for-narrow-middle {
+    font-size: 18px;
+  }
+
+  @include for-mobile {
+    font-size: 16px;
+  }
 }
 
 .block__description_left-position {
   padding-left: 30px;
   text-align: start;
+
+  @include for-wide-middle {
+    padding-left: 15px;
+  }
+
+  @include for-narrow-middle {
+    padding-left: 15px;
+  }
+
+  @include for-mobile {
+    padding-left: 15px;
+  }
 }
 
 .block__description_right-position {
   padding-right: 30px;
   text-align: end;
+
+  @include for-wide-middle {
+    padding-right: 15px;
+  }
+
+  @include for-narrow-middle {
+    padding-right: 15px;
+  }
+
+  @include for-mobile {
+    padding-right: 15px;
+  }
 }
 
 //button
@@ -427,52 +633,168 @@
   font: $font-button;
   background-color: $color-white;
   border: none;
+  height: 50px;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+
+  @include for-wide-middle {
+    font-size: 12px;
+  }
+
+  @include for-narrow-middle {
+    font-size: 12px;
+  }
+
+  @include for-mobile {
+    font-size: 12px;
+  }
 }
 
 .block__button_left-position {
   padding-left: 30px;
   text-align: start;
+
+  @include for-wide-middle {
+    padding-left: 15px;
+  }
+
+  @include for-narrow-middle {
+    padding-left: 15px;
+  }
+
+  @include for-mobile {
+    padding-left: 15px;
+  }
 }
 
 .block__button_right-position {
   padding-right: 30px;
   text-align: end;
+
+  @include for-wide-middle {
+    padding-right: 15px;
+  }
+
+  @include for-narrow-middle {
+    padding-right: 15px;
+  }
+
+  @include for-mobile {
+    padding-right: 15px;
+  }
 }
 
 .block__button_how-to-get {
   border-radius: 0 150px 0 0;
+  width: 318.5px;
+
+  @include for-narrow-middle {
+    width: 196px;
+  }
 }
 
 .block__button_buy-tickets {
   border-radius: 150px 0 0 0;
+  width: 451.5px;
+  align-self: flex-end;
+
+  @include for-narrow-middle {
+    width: 280px;
+  }
 }
 
 .block__button_parking {
-  width: 300px;
+  width: 250px;
+  border-radius: 0 150px 0 0;
+
+  @include for-wide-middle {
+    width: 170px;
+  }
+
+  @include for-narrow-middle {
+    width: 170px;
+  }
+}
+
+.block__button_express-line {
+  width: 451.5px;
+  border-radius: 150px 0 0 0;
+
+  @include for-wide-middle {
+    width: 350px;
+  }
+
+  @include for-narrow-middle {
+    width: 280px;
+  }
 }
 
 .block__button_services {
   border-radius: 0 150px 0 0;
+  width: 385px;
+
+  @include for-narrow-middle {
+    width: 238px;
+  }
 }
 
 .block__button_covid-testing {
   border-radius: 150px 0 0 0;
+  width: 385px;
+  align-self: flex-end;
+
+  @include for-narrow-middle {
+    width: 238px;
+  }
 }
 
 .block__button_airlines-destinations {
-  width: 300px;
+  width: 350px;
+  border-radius: 0 150px 0 0;
+
+  @include for-wide-middle {
+    width: 250px;
+  }
+
+  @include for-narrow-middle {
+    width: 200px;
+  }
 }
 
 .block__button_vip-terminal {
-  width: 300px;
+  width: 350px;
+  border-radius: 150px 0 0 0;
+
+  @include for-wide-middle {
+    width: 250px;
+  }
+
+  @include for-narrow-middle {
+    width: 200px;
+  }
 }
 
 .block__button_mastercard-fastline {
   border-radius: 0 150px 0 0;
+  width: 451.5px;
+
+  @include for-narrow-middle {
+    width: 280px;
+  }
 }
 
 .block__button_information {
   border-radius: 150px 0 0 0;
+  width: 318.5px;
+  align-self: flex-end;
+
+  @include for-narrow-middle {
+    width: 196px;
+  }
 }
 
 // title
@@ -481,35 +803,100 @@
   display: flex;
   height: 190px;
   align-items: center;
+  transition: 0.3s ease-in-out;
+
+  @include for-wide-middle {
+    height: 80px;
+  }
+
+  @include for-narrow-middle {
+    height: 115px;
+  }
 }
 
 .block__title_left-position {
   padding-left: 30px;
+
+  @include for-wide-middle {
+    padding-left: 15px;
+  }
+
+  @include for-narrow-middle {
+    padding-left: 15px;
+  }
+
+  @include for-mobile {
+    padding-left: 15px;
+  }
 }
 
 .block__title_right-position {
   padding-right: 30px;
   justify-content: end;
+
+  @include for-wide-middle {
+    padding-right: 15px;
+  }
+
+  @include for-narrow-middle {
+    padding-right: 15px;
+  }
+
+  @include for-mobile {
+    padding-right: 15px;
+  }
 }
 
 .block__title_parking {
   background: url("./img/2.jpg");
   border-radius: 0 0 150px 0;
+
+  @include for-narrow-middle {
+    border-radius: 0 0 80px 0;
+  }
+
+  @include for-mobile {
+    border-radius: 0;
+  }
 }
 
 .block__title_express-line {
   background: url("./img/49.jpg");
   border-radius: 0 0 0 150px;
+
+  @include for-narrow-middle {
+    border-radius: 0 0 0 80px;
+  }
+
+  @include for-mobile {
+    border-radius: 0;
+  }
 }
 
 .block__title_airlines-destinations {
   background: url("./img/4.jpg");
   border-radius: 0 0 150px 0;
+
+  @include for-narrow-middle {
+    border-radius: 0 0 80px 0;
+  }
+
+  @include for-mobile {
+    border-radius: 0;
+  }
 }
 
 .block__title_vip-terminal {
   background: url("./img/27.jpg");
   border-radius: 0 0 0 150px;
+
+  @include for-narrow-middle {
+    border-radius: 0 0 0 80px;
+  }
+
+  @include for-mobile {
+    border-radius: 0;
+  }
 }
 
 .block__title_mastercard-fastline {
@@ -523,14 +910,33 @@
   flex-direction: column;
   height: 340px;
   margin: 0 10px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+
+  @include for-wide-middle {
+    height: 230px;
+  }
+
+  @include for-narrow-middle {
+    height: 230px;
+  }
+
+  @include for-mobile {
+    height: 250px;
+  }
 }
 
 .block__container_top-position {
   justify-content: space-between;
+  // transition: .3s ease-in-out;
 }
 
 .block__container_bottom-position {
   background-color: $color-white;
+  // transition: .3s ease-in-out;
 }
 
 .block__container_wide-size {
@@ -539,7 +945,7 @@
   @include for-wide-middle {
     width: 540px;
   }
-  
+
   @include for-narrow-middle {
     width: 400px;
   }
@@ -555,7 +961,7 @@
   @include for-wide-middle {
     width: 460px;
   }
-  
+
   @include for-narrow-middle {
     width: 340px;
   }
@@ -567,7 +973,7 @@
 
 .block__container_narrow-size {
   width: 455px;
-  
+
   @include for-wide-middle {
     width: 380px;
   }
@@ -584,45 +990,468 @@
 .block__container_how-to-get {
   border-radius: 0 200px 0 0;
   background: url("./img/1.jpg");
+
+  &:hover {
+    border-radius: 0 150px 0 0;
+
+    @include for-mobile {
+      border-radius: 0 70px 0 0;
+    }
+  }
+
+  &:hover .block__content_how-to-get {
+    border-radius: 0 100px 0 0;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_how-to-get {
+    background-color: $color-blue;
+    color: $color-white;
+
+    @include for-wide-middle {
+      width: 266px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 0 120px 0 0;
+  }
+
+  @include for-mobile {
+    border-radius: 0 70px 0 0;
+    margin-bottom: 15px;
+  }
 }
 
 .block__container_buy-tickets {
   border-radius: 200px 0 0 0;
   background: url("./img/32.jpg");
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+
+  &:hover {
+    border-radius: 150px 0 0 0;
+
+    @include for-mobile {
+      border-radius: 70px 0 0 0;
+    }
+  }
+
+  &:hover .block__content_buy-tickets {
+    border-radius: 100px 0 0 0;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_buy-tickets {
+    background-color: $color-blue;
+    color: $color-white;
+
+    @include for-wide-middle {
+      width: 378px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 120px 0 0 0;
+  }
+
+  @include for-mobile {
+    border-radius: 70px 0 0 0;
+  }
 }
 
 .block__container_parking {
   border-radius: 0 0 200px 0;
+
+  &:hover {
+    border-radius: 0 0 150px 0;
+
+    @include for-wide-middle {
+      overflow: hidden;
+    }
+
+    @include for-narrow-middle {
+      overflow: hidden;
+    }
+
+    @include for-mobile {
+      border-radius: 0 0 70px 0;
+    }
+  }
+
+  &:hover .block__title_parking {
+    border-radius: 0 0 100px 0;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_parking {
+    background-color: $color-blue;
+    color: $color-white;
+    width: 318.5px;
+
+    @include for-wide-middle {
+      width: 266px;
+    }
+
+    @include for-narrow-middle {
+      width: 196px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 0 0 120px 0;
+  }
+
+  @include for-mobile {
+    border-radius: 0 0 70px 0;
+    margin-bottom: 15px;
+  }
 }
 
 .block__container_express-line {
   border-radius: 0 0 0 200px;
+
+  &:hover {
+    border-radius: 0 0 0 150px;
+
+    @include for-narrow-middle {
+      overflow: hidden;
+    }
+
+    @include for-mobile {
+      border-radius: 0 0 0 70px;
+    }
+  }
+
+  &:hover .block__title_express-line {
+    border-radius: 0 0 0 100px;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_express-line {
+    background-color: $color-blue;
+    color: $color-white;
+
+    @include for-wide-middle {
+      width: 378px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 0 0 0 120px;
+  }
+
+  @include for-mobile {
+    border-radius: 0 0 0 70px;
+  }
 }
 
 .block__container_services {
   border-radius: 0 200px 0 0;
   background: url("./img/24.jpg");
+
+  &:hover {
+    border-radius: 0 150px 0 0;
+
+    @include for-mobile {
+      border-radius: 0 70px 0 0;
+    }
+  }
+
+  &:hover .block__content_services {
+    border-radius: 0 100px 0 0;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_services {
+    background-color: $color-blue;
+    color: $color-white;
+
+    @include for-wide-middle {
+      width: 322px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 0 120px 0 0;
+  }
+
+  @include for-mobile {
+    border-radius: 0 70px 0 0;
+    margin-bottom: 15px;
+  }
 }
 
 .block__container_covid-testing {
   border-radius: 200px 0 0 0;
   background: url("./img/covid-3.jpeg");
+
+  &:hover {
+    border-radius: 150px 0 0 0;
+
+    @include for-mobile {
+      border-radius: 70px 0 0 0;
+    }
+  }
+
+  &:hover .block__content_covid-testing {
+    border-radius: 100px 0 0 0;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_covid-testing {
+    background-color: $color-blue;
+    color: $color-white;
+
+    @include for-wide-middle {
+      width: 322px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 120px 0 0 0;
+  }
+
+  @include for-mobile {
+    border-radius: 70px 0 0 0;
+  }
 }
 
 .block__container_airlines-destinations {
   border-radius: 0 0 200px 0;
+
+  &:hover {
+    border-radius: 0 0 150px 0;
+
+    @include for-narrow-middle {
+      overflow: hidden;
+    }
+
+    @include for-mobile {
+      border-radius: 0 0 70px 0;
+    }
+  }
+
+  &:hover .block__title_airlines-destinations {
+    border-radius: 0 0 100px 0;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_airlines-destinations {
+    background-color: $color-blue;
+    color: $color-white;
+    width: 395px;
+
+    @include for-wide-middle {
+      width: 322px;
+    }
+
+    @include for-narrow-middle {
+      width: 238px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 0 0 120px 0;
+  }
+
+  @include for-mobile {
+    border-radius: 0 0 70px 0;
+    margin-bottom: 15px;
+  }
 }
 
 .block__container_vip-terminal {
   border-radius: 0 0 0 200px;
+
+  &:hover {
+    border-radius: 0 0 0 150px;
+
+    @include for-narrow-middle {
+      overflow: hidden;
+    }
+
+    @include for-mobile {
+      border-radius: 0 0 0 70px;
+    }
+  }
+
+  &:hover .block__title_vip-terminal {
+    border-radius: 0 0 0 100px;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_vip-terminal {
+    background-color: $color-blue;
+    color: $color-white;
+    width: 385px;
+
+    @include for-wide-middle {
+      width: 322px;
+    }
+
+    @include for-narrow-middle {
+      width: 238px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 0 0 0 120px;
+  }
+
+  @include for-mobile {
+    border-radius: 0 0 0 70px;
+  }
 }
 
 .block__container_mastercard-fastline {
   border-radius: 0 200px 0 0;
   background: url("./img/47.jpg");
+
+  &:hover {
+    border-radius: 0 150px 0 0;
+
+    @include for-mobile {
+      border-radius: 0 70px 0 0;
+    }
+  }
+
+  &:hover .block__content_mastercard-fastline {
+    border-radius: 0 100px 0 0;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_mastercard-fastline {
+    background-color: $color-blue;
+    color: $color-white;
+
+    @include for-wide-middle {
+      width: 378px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 0 120px 0 0;
+  }
+
+  @include for-mobile {
+    border-radius: 0 70px 0 0;
+    margin-bottom: 15px;
+  }
 }
 
 .block__container_information {
   border-radius: 200px 0 0 0;
   background: url("./img/12.jpg");
+
+  &:hover {
+    border-radius: 150px 0 0 0;
+
+    @include for-mobile {
+      border-radius: 70px 0 0 0;
+    }
+  }
+
+  &:hover .block__content_information {
+    border-radius: 100px 0 0 0;
+
+    @include for-mobile {
+      border-radius: 0;
+    }
+  }
+
+  &:hover .block__button_information {
+    background-color: $color-blue;
+    color: $color-white;
+
+    @include for-wide-middle {
+      width: 266px;
+    }
+
+    @include for-mobile {
+      background-color: $color-white;
+      color: $color-blue;
+    }
+  }
+
+  @include for-narrow-middle {
+    border-radius: 120px 0 0 0;
+  }
+
+  @include for-mobile {
+    border-radius: 70px 0 0 0;
+  }
 }

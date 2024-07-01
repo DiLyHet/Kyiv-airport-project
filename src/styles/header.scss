@@ -7,6 +7,7 @@
   flex-wrap: nowrap;
   background-color: $color-blue;
   height: 92px;
+  width: 100vw;
 
   @include for-narrow-middle {
     height: 50px;

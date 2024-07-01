@@ -76,12 +76,14 @@
       color: $color-white;
       font-size: 16px;
       font-weight: 700;
+      list-style-type: none;
     }
 
     &_item {
       color: $color-white;
       font-size: 16px;
       margin-top: 10px;
+      list-style-type: none;
 
       &:hover {
         text-decoration-line: underline;
