@@ -5,11 +5,11 @@ import Announcement from "../Announcement/Announcement";
 import News from "../News/News";
 import Footer from "../Footer/Footer";
 
-const HomePage = () => {
+const HomePage = ({ type, setType }) => {
   return (
     <>
       <Header />
-      <FlightSearch />
+      <FlightSearch type={type} setType={setType} />
       <Announcement />
       <News />
       <Footer />

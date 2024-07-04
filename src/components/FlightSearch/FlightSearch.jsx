@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const FlightSearch = ({ type, setType }) => {
+const FlightSearch = ({
+  type,
+  setType,
+  data,
+  setInputSearchArray,
+  inputSearchArray,
+}) => {
+  const [inputValue, setInputValue] = useState("");
+  console.log(inputValue);
+  console.log(inputSearchArray);
+  console.log(data);
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
   return (
     <section className="flight-search">
       <h2 className="flight-search__title">ПОШУК РЕЙСУ</h2>
@@ -18,18 +32,40 @@ const FlightSearch = ({ type, setType }) => {
             type="text"
             className="flight-search__form_input"
             placeholder="Номер рейсу або місто"
+            onChange={handleInputChange}
           />
         </div>
 
         <Link className="submit-btn__text" to={"/flight_search"}>
-          <button type="submit" className="flight-search__form_submit-btn">
+          <button
+            type="submit"
+            className="flight-search__form_submit-btn"
+            onClick={() => {
+              if (type !== "ARRIVAL") {
+                setType("DEPARTURE");
+              }
+              const matchingAirports = data.filter((airport) => {
+                const upperInputValue = inputValue.toUpperCase();
+                return (
+                  inputValue &&
+                  airport.codeShare &&
+                  airport.departureCity &&
+                  airport.arrivalCity &&
+                  (upperInputValue === airport.codeShare.toUpperCase() ||
+                    upperInputValue === airport.departureCity.toUpperCase() ||
+                    upperInputValue === airport.arrivalCity.toUpperCase())
+                );
+              });
+
+              setInputSearchArray(matchingAirports);
+            }}>
             ЗНАЙТИ
           </button>
         </Link>
       </form>
       <div className="flight-search__buttons">
         <Link
-          className={`flight-search__btn flight-search__btn_all-departures ${type === "DEPARTURE" ? 'flight-search__btn_current' : ''}`}
+          className={`flight-search__btn flight-search__btn_all-departures ${type === "DEPARTURE" ? "flight-search__btn_current" : ""}`}
           to={"/flight_search"}
           onClick={() => setType("DEPARTURE")}>
           <div className="flight-search__btn_icon">
@@ -68,7 +104,7 @@ const FlightSearch = ({ type, setType }) => {
           <span className="flight-search__btn_text">ВИЛІТ УСІ РЕЙСИ</span>
         </Link>
         <Link
-          className={`flight-search__btn flight-search__btn_all-arrivals ${type === "ARRIVAL" ? 'flight-search__btn_current' : ''}`}
+          className={`flight-search__btn flight-search__btn_all-arrivals ${type === "ARRIVAL" ? "flight-search__btn_current" : ""}`}
           to={"/flight_search"}
           onClick={() => setType("ARRIVAL")}>
           <span className="flight-search__btn_text">ПРИЛІТ УСІ РЕЙСИ</span>
