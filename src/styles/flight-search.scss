@@ -2,7 +2,7 @@
 @import "./breakpoints.scss";
 
 .flight-search {
-  background-image: url("./img/main.jpg");
+  background-image: url("../img/main.jpg");
   height: 392px;
   margin: 0px;
   display: flex;
@@ -13,13 +13,13 @@
   width: 100vw;
 
   @include for-wide-middle {
-    background: url("./img/main.jpg") no-repeat center bottom;
+    background: url("../img/main.jpg") no-repeat center bottom;
     background-size: cover;
   }
 
   @include for-narrow-middle {
     height: 372px;
-    background: url("./img/main.jpg") no-repeat center bottom;
+    background: url("../img/main.jpg") no-repeat center bottom;
   }
 
   @include for-mobile {
@@ -30,7 +30,9 @@
 
   &__title {
     margin: 0px;
-    font: 70px "open sans", sans-serif;
+    font:
+      70px "open sans",
+      sans-serif;
     color: $color-white;
     line-height: 80px;
     padding-top: 60px;
@@ -39,11 +41,15 @@
     font-weight: 300;
 
     @include for-narrow-middle {
-      font: 60px "open sans", sans-serif;
+      font:
+        60px "open sans",
+        sans-serif;
     }
 
     @include for-mobile {
-      font: 35px "open sans", sans-serif;
+      font:
+        35px "open sans",
+        sans-serif;
       padding-top: 20px;
       line-height: 40px;
     }
@@ -109,7 +115,9 @@
       height: 80px;
       background-color: $color-blue;
       color: $color-white;
-      font: 26px "open sans", sans-serif;
+      font:
+        26px "open sans",
+        sans-serif;
       border: none;
       margin: 0px;
       padding: 0 20px;
@@ -183,7 +191,7 @@
     align-items: center;
     border: none;
     transition: 0.3s ease-in-out;
-
+    text-decoration: none;
     &:last-child {
       justify-content: end;
     }
@@ -201,8 +209,24 @@
       margin-top: 10px;
     }
 
+    &_current {
+      background-color: $color-blue;
+    }
+
+    &_current .flight-search__btn_text {
+      color: $color-white;
+    }
+
+    &_current .flight-search__btn_icon {
+      filter: grayscale(100%) invert(100%) brightness(1000%) contrast(100%);
+    }
+
     &_all-departures {
       border-radius: 10px 50px 10px 10px;
+
+      @include for-desktop {
+        margin-right: 60px;
+      }
 
       @include for-mobile {
         margin-right: 20px;
@@ -247,16 +271,23 @@
     }
 
     &_text {
-      font: 20px "open sans", sans-serif;
+      font:
+        20px "open sans",
+        sans-serif;
       color: $color-blue;
       font-weight: 500;
+      text-decoration: none;
 
       @include for-wide-middle {
-        font: 16px "open sans", sans-serif;
+        font:
+          16px "open sans",
+          sans-serif;
       }
 
       @include for-narrow-middle {
-        font: 16px "open sans", sans-serif;
+        font:
+          16px "open sans",
+          sans-serif;
       }
     }
 
@@ -266,4 +297,256 @@
       padding: 0 15px;
     }
   }
+}
+
+.submit-btn {
+  &__text {
+    color: $color-white;
+    font:
+      26px "open sans",
+      sans-serif;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: none;
+
+    @include for-narrow-middle {
+      font-size: 20px;
+    }
+  }
+}
+
+.board {
+  &__content {
+    background-color: white;
+    overflow: hidden;
+  }
+}
+
+.filter {
+  min-height: 140px;
+
+  &__buttons-wrapper {
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    width: 55%;
+    height: 60px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: end;
+    color: #fff;
+    background-color: #73d2f0;
+    border: none;
+    border-radius: 0 60px 0 0;
+    transition: 0.3s ease-in-out;
+    padding: 0 135px 0 0;
+    z-index: 5;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 285px;
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: url("https://www.pngkey.com/png/full/138-1382606_icon-airplane-icon-blue-png.png")
+        no-repeat center;
+      background-size: contain;
+      filter: brightness(500%);
+    }
+
+    &:hover {
+      background-color: #1eb7ee;
+    }
+
+    &:last-child {
+      right: 0;
+      text-align: start;
+      border-radius: 60px 0 0 0;
+      padding: 0 0 0 180px;
+
+      &::before {
+        left: 130px;
+        transform: rotate(90deg);
+      }
+    }
+
+    &_current {
+      background-color: #fff;
+      color: #1eb7ee;
+      z-index: 6;
+
+      &::before {
+        filter: brightness(110%);
+      }
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__date-wrapper {
+    display: flex;
+    width: 1200px;
+    height: 140px;
+    padding: 85px 20px 0;
+  }
+
+  &__date-input-label {
+    margin-right: 30px;
+    p {
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      color: #1eb7ee;
+    }
+  }
+
+  &__date-input {
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #1eb7ee;
+    background-image: url("../img/calendar-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 44% 47%;
+    background-size: 120px 120px;
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__date-buttons {
+    display: flex;
+    width: 300px;
+    height: 100%;
+  }
+
+  &__date-button {
+    width: 100px;
+    height: 75px;
+    text-align: center;
+    cursor: pointer;
+    color: #b8b9b9;
+    border-bottom: 3px solid #d0d0d0;
+    transition: 0.3s ease-in-out;
+
+    & p:first-child {
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    & p:last-child {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &_current {
+      color: #1eb7ee;
+      border-bottom: 3px solid #1eb7ee;
+    }
+  }
+}
+
+/* styles.scss */
+
+.airport-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.airport-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  padding: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #e9ecef;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &__logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: center;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__info p {
+    margin: 4px 16px 4px 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+  &__info p:last-child {
+    margin-right: 0;
+  }
+
+  &__code {
+    font-style: italic;
+    color: #888;
+  }
+
+  &__date {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  &__terminal {
+    font-weight: bold;
+    color: #1976d2;
+  }
+
+  &__status {
+    font-weight: bold;
+    color: #4caf50;
+  }
+
+  &__type {
+    font-size: 0.8rem;
+    color: #666;
+  }
+}
+
+.no-flights {
+  font-size: 24px;
+  color: $color-blue;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
 }

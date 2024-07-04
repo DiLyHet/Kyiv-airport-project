@@ -922,7 +922,7 @@
 }
 
 .block__title_parking {
-  background: url("./img/2.jpg");
+  background: url("../img/2.jpg");
   border-radius: 0 0 150px 0;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
@@ -937,7 +937,7 @@
 }
 
 .block__title_express-line {
-  background: url("./img/49.jpg");
+  background: url("././img/49.jpg");
   border-radius: 0 0 0 150px;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
@@ -952,7 +952,7 @@
 }
 
 .block__title_airlines-destinations {
-  background: url("./img/4.jpg");
+  background: url("././img/4.jpg");
   border-radius: 0 0 150px 0;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
@@ -967,7 +967,7 @@
 }
 
 .block__title_vip-terminal {
-  background: url("./img/27.jpg");
+  background: url("././img/27.jpg");
   border-radius: 0 0 0 150px;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
@@ -1079,7 +1079,7 @@
 
 .block__container_how-to-get {
   border-radius: 0 200px 0 0;
-  background: url("./img/1.jpg");
+  background: url("././img/1.jpg");
 }
 .block__container_how-to-get:hover {
   border-radius: 0 150px 0 0;
@@ -1126,7 +1126,7 @@
 
 .block__container_buy-tickets {
   border-radius: 200px 0 0 0;
-  background: url("./img/32.jpg");
+  background: url("././img/32.jpg");
 }
 .block__container_buy-tickets:hover {
   border-radius: 150px 0 0 0;
@@ -1537,7 +1537,7 @@
 
 .block__container_information {
   border-radius: 200px 0 0 0;
-  background: url("./img/12.jpg");
+  background: url("././img/12.jpg");
 }
 .block__container_information:hover {
   border-radius: 150px 0 0 0;
