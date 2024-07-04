@@ -1,11 +1,11 @@
 import React from "react";
 import '../../styles/header.scss';
 
-const Header = () => {
-  return(
+const Header: React.FC = () => {
+  return (
     <header className="header">
       <button className="header__logo">
-        <img className="header__logo_img" src="http://localhost:8080/7059b488acdb71054d5d.png"/>
+        <img className="header__logo_img" src="http://localhost:8080/7059b488acdb71054d5d.png" alt="Logo" />
       </button>
       <nav className="header__navigation">
         <button className="header__navigation_item">Пасажирам</button>

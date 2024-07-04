@@ -2,7 +2,7 @@
 @import "./breakpoints.scss";
 
 .flight-search {
-  background-image: url("../img/main.jpg");
+  background-image: url("/assets/images/main.jpg");
   height: 392px;
   margin: 0px;
   display: flex;
@@ -13,13 +13,13 @@
   width: 100vw;
 
   @include for-wide-middle {
-    background: url("../img/main.jpg") no-repeat center bottom;
+    background: url("./assets/images/main.jpg") no-repeat center bottom;
     background-size: cover;
   }
 
   @include for-narrow-middle {
     height: 372px;
-    background: url("../img/main.jpg") no-repeat center bottom;
+    background: url("/assets/images/main.jpg") no-repeat center bottom;
   }
 
   @include for-mobile {
@@ -417,7 +417,7 @@
     border-radius: 5px;
     outline: none;
     background-color: #1eb7ee;
-    background-image: url("../img/calendar-icon.svg");
+    background-image: url("/assets/images/calendar-icon.svg");
     background-repeat: no-repeat;
     background-position: 44% 47%;
     background-size: 120px 120px;

@@ -6,12 +6,26 @@ const webpack = require('webpack');
 module.exports = (_, argv) => {
     const isProduction = argv.mode === 'production';
     const config = {
-        entry: './src/index.jsx',
+        entry: './src/index.tsx',
         output: {
             filename: 'bundle.js',
+            path: __dirname + '/dist',
         },
         module: {
             rules: [
+                {
+                    test: /\.(js|jsx|ts|tsx)$/,
+                    exclude: /node_modules/,
+                    use: 'babel-loader',
+                },
+                {
+                    test: /\.s?css$/,
+                    use: [
+                        isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+                        'css-loader',
+                        'sass-loader',
+                    ],
+                },
                 {
                     test: /\.(png|jpe?g|gif|svg)$/,
                     use: [
@@ -19,29 +33,15 @@ module.exports = (_, argv) => {
                             loader: 'file-loader',
                             options: {
                                 name: '[path][name].[ext]',
+                                outputPath: 'images/', // Adjust output path as needed
                             },
                         },
                     ],
                 },
             ],
-            rules: [
-                {
-                    test: /.(js|jsx?)$/,
-                    exclude: /node_modules/,
-                    use: ['babel-loader'],
-                },
-                {
-                    test: /.s?css$/,
-                    use: [
-                        isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-                        'css-loader',
-                        'sass-loader',
-                    ],
-                },
-            ],
         },
         resolve: {
-            extensions: ['.js', '.jsx', '.scss'],
+            extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss'],
         },
         plugins: [
             new webpack.ProgressPlugin(),
@@ -59,15 +59,9 @@ module.exports = (_, argv) => {
     };
 
     if (isProduction) {
-        config.plugins.push(new webpack.HotModuleReplacementPlugin());
-    }
-
-    if (isProduction) {
-        config.plugins.push(
-            new MiniCssExtractPlugin({
-                filename: '[name].css',
-            }),
-        );
+        config.plugins.push(new MiniCssExtractPlugin({
+            filename: '[name].css',
+        }));
     }
 
     return config;

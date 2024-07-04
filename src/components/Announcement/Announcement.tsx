@@ -1,6 +1,6 @@
 import React from "react";
 
-const Announcement = () => {
+const Announcement: React.FC = () => {
   return (
     <section className="announcement">
       <div className="announcement__content">
@@ -46,10 +46,7 @@ const Announcement = () => {
           </div>
         </div>
         <div className="announcement__blocks">
-          <div
-            className="block__container block__container_bottom-position 
-                block__container_narrow-size
-                block__container_parking">
+          <div className="block__container block__container_bottom-position block__container_narrow-size block__container_parking">
             <div className="block__title block__title_left-position block__title_parking">
               <span className="text-left">ПАРКОВКА</span>
             </div>
@@ -63,10 +60,7 @@ const Announcement = () => {
               </button>
             </div>
           </div>
-          <div
-            className="block__container block__container_bottom-position 
-                block__container_wide-size 
-                block__container_express-line ">
+          <div className="block__container block__container_bottom-position block__container_wide-size block__container_express-line">
             <div className="block__title block__title_right-position block__title_express-line">
               <span className="text-right">EXPRESS LINE</span>
             </div>
@@ -87,7 +81,7 @@ const Announcement = () => {
             <div className="info-block__icon">
               <img
                 className="info-block__icon_img"
-                src="./img/priority-line-icon.svg"
+                src="/assets/images/priority-line-icon.svg"
                 alt=""
               />
             </div>
@@ -101,7 +95,7 @@ const Announcement = () => {
           <div className="quantity-selector">
             <div className="quantity-selector__item">
               <div className="quantity-selector__item_icon">
-                <img className="icon__adult" src="./img/adult.svg" alt="" />
+                <img className="icon__adult" src="/assets/images/adult.svg" alt="" />
                 <span className="icon__text">Дорослі</span>
               </div>
               <span className="quantity-selector__counter_number">1</span>
@@ -109,7 +103,7 @@ const Announcement = () => {
             </div>
             <div className="quantity-selector__item">
               <div className="quantity-selector__item_icon">
-                <img className="icon__child" src="./img/child.svg" alt="" />
+                <img className="icon__child" src="/assets/images/child.svg" alt="" />
                 <span className="icon__text">Діти (2-12)</span>
               </div>
               <span className="quantity-selector__counter_number">0</span>
@@ -120,10 +114,7 @@ const Announcement = () => {
         </div>
       </div>
       <div className="announcement__blocks">
-        <div
-          className="block__container block__container_top-position 
-            block__container_medium-size 
-            block__container_services ">
+        <div className="block__container block__container_top-position block__container_medium-size block__container_services">
           <div className="block__title block__title_left-position">
             <span className="text-left">
               ПОСЛУГИ <br /> IEV
@@ -139,10 +130,7 @@ const Announcement = () => {
             </button>
           </div>
         </div>
-        <div
-          className="block__container block__container_top-position 
-            block__container_medium-size 
-            block__container_covid-testing">
+        <div className="block__container block__container_top-position block__container_medium-size block__container_covid-testing">
           <div className="block__title block__title_right-position">
             <span className="text-right">
               ТЕСТУВАННЯ НА <br />
@@ -161,10 +149,7 @@ const Announcement = () => {
         </div>
       </div>
       <div className="announcement__blocks">
-        <div
-          className="block__container block__container_bottom-position 
-            block__container_medium-size 
-            block__container_airlines-destinations">
+        <div className="block__container block__container_bottom-position block__container_medium-size block__container_airlines-destinations">
           <div className="block__title block__title_left-position block__title_airlines-destinations">
             <span className="text-left">
               АВІАКОМПАНІЇ ТА <br />
@@ -180,10 +165,7 @@ const Announcement = () => {
             </button>
           </div>
         </div>
-        <div
-          className="block__container block__container_bottom-position 
-            block__container_medium-size 
-            block__container_vip-terminal">
+        <div className="block__container block__container_bottom-position block__container_medium-size block__container_vip-terminal">
           <div className="block__title block__title_right-position block__title_vip-terminal">
             <span className="text-right">VIP ТЕРМІНАЛ</span>
           </div>
@@ -199,10 +181,7 @@ const Announcement = () => {
         </div>
       </div>
       <div className="announcement__blocks">
-        <div
-          className="block__container block__container_top-position 
-            block__container_wide-size 
-            block__container_mastercard-fastline">
+        <div className="block__container block__container_top-position block__container_wide-size block__container_mastercard-fastline">
           <div className="block__title block__title_left-position block__title_mastercard-fastline">
             <span className="text-left">
               MASTERCARD <br /> FAST LINE
@@ -217,10 +196,7 @@ const Announcement = () => {
             </button>
           </div>
         </div>
-        <div
-          className="block__container block__container_top-position 
-            block__container_narrow-size 
-            block__container_information">
+        <div className="block__container block__container_top-position block__container_narrow-size block__container_information">
           <div className="block__title block__title_right-position">
             <span className="text-right">АВІАДОВІДКА</span>
           </div>

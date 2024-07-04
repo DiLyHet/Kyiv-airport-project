@@ -848,7 +848,7 @@
 }
 
 .block__title_parking {
-  background: url("../img/2.jpg");
+  background: url("/assets/images/2.jpg");
   border-radius: 0 0 150px 0;
 
   @include for-narrow-middle {
@@ -861,7 +861,7 @@
 }
 
 .block__title_express-line {
-  background: url("../img/49.jpg");
+  background: url("/assets/images/49.jpg");
   border-radius: 0 0 0 150px;
 
   @include for-narrow-middle {
@@ -874,7 +874,7 @@
 }
 
 .block__title_airlines-destinations {
-  background: url("../img/4.jpg");
+  background: url("/assets/images/4.jpg");
   border-radius: 0 0 150px 0;
 
   @include for-narrow-middle {
@@ -887,7 +887,7 @@
 }
 
 .block__title_vip-terminal {
-  background: url("../img/27.jpg");
+  background: url("/assets/images/27.jpg");
   border-radius: 0 0 0 150px;
 
   @include for-narrow-middle {
@@ -989,7 +989,7 @@
 
 .block__container_how-to-get {
   border-radius: 0 200px 0 0;
-  background: url("../img/1.jpg");
+  background: url("/assets/images/1.jpg");
 
   &:hover {
     border-radius: 0 150px 0 0;
@@ -1033,7 +1033,7 @@
 
 .block__container_buy-tickets {
   border-radius: 200px 0 0 0;
-  background: url("../img/32.jpg");
+  background: url("../../assets/images/32.jpg");
   // background-repeat: no-repeat;
   // background-size: cover;
   // background-position: center;
@@ -1181,7 +1181,7 @@
 
 .block__container_services {
   border-radius: 0 200px 0 0;
-  background: url("../img/24.jpg");
+  background: url("/assets/images/24.jpg");
 
   &:hover {
     border-radius: 0 150px 0 0;
@@ -1225,7 +1225,7 @@
 
 .block__container_covid-testing {
   border-radius: 200px 0 0 0;
-  background: url("../img/covid-3.jpeg");
+  background: url("/assets/images/covid-3.jpeg");
 
   &:hover {
     border-radius: 150px 0 0 0;
@@ -1371,7 +1371,7 @@
 
 .block__container_mastercard-fastline {
   border-radius: 0 200px 0 0;
-  background: url("../img/47.jpg");
+  background: url('/assets/images/47.jpg');
 
   &:hover {
     border-radius: 0 150px 0 0;
@@ -1415,7 +1415,7 @@
 
 .block__container_information {
   border-radius: 200px 0 0 0;
-  background: url("../img/12.jpg");
+  background: url("/assets/images/12.jpg");
 
   &:hover {
     border-radius: 150px 0 0 0;

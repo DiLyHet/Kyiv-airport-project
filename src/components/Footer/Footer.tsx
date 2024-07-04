@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <section className="footer-section">
@@ -12,12 +12,8 @@ const Footer = () => {
                 <li className="footer__main-info_item">Розклад рейсів</li>
                 <li className="footer__main-info_item">Замовлення послуг</li>
                 <li className="footer__main-info_item">Контактна інформація</li>
-                <li className="footer__main-info_item">
-                  Політика конфіденційності
-                </li>
-                <li className="footer__main-info_item">
-                  Форма відгуків та пропозицій
-                </li>
+                <li className="footer__main-info_item">Політика конфіденційності</li>
+                <li className="footer__main-info_item">Форма відгуків та пропозицій</li>
               </ul>
             </div>
             <div className="footer__main-info_container">
@@ -27,7 +23,7 @@ const Footer = () => {
                 <li className="footer__main-info_item">Наземне обслуговування</li>
                 <li className="footer__main-info_item">Характеристики аеродрому</li>
                 <li className="footer__main-info_item">Учбовий центр</li>
-                <li className="footer__main-info_item">Ваканciї</li>
+                <li className="footer__main-info_item">Вакансії</li>
               </ul>
             </div>
             <div className="footer__main-info_container">
@@ -37,9 +33,7 @@ const Footer = () => {
                 <li className="footer__main-info_item">Останні новини</li>
                 <li className="footer__main-info_item">Соціальні та артпроекти</li>
                 <li className="footer__main-info_item">Фінансова звітність</li>
-                <li className="footer__main-info_item">
-                  Статистика пасажиропотоку
-                </li>
+                <li className="footer__main-info_item">Статистика пасажиропотоку</li>
               </ul>
             </div>
           </div>
@@ -61,6 +55,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         <div className="footer__dev-info">
           <div className="footer__dev-info_copyright">
             <div className="footer__dev-info_text">
@@ -79,7 +74,7 @@ const Footer = () => {
               </span>
               <img
                 className="footer__dev-info_uig-icon"
-                src="./img/logo_white.png"
+                src="/assets/images/logo_white.png"
                 alt=""
               />
             </div>
@@ -88,7 +83,7 @@ const Footer = () => {
             <span className="footer__dev-info_text">Розробка сайту</span>
             <img
               className="footer__dev-info_dev-icon"
-              src="./img/smplLogo.png"
+              src="/assets/images/smplLogo.png"
               alt=""
             />
           </div>
