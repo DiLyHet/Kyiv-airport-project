@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../../../assets/images/logo_white.png";
 
 const Footer: React.FC = () => {
   return (
@@ -74,18 +75,12 @@ const Footer: React.FC = () => {
               </span>
               <img
                 className="footer__dev-info_uig-icon"
-                src="/assets/images/logo_white.png"
-                alt=""
+                src={Logo}
+                alt="logo"
               />
             </div>
           </div>
           <div className="footer__dev-info_dev-part">
-            <span className="footer__dev-info_text">Розробка сайту</span>
-            <img
-              className="footer__dev-info_dev-icon"
-              src="/assets/images/smplLogo.png"
-              alt=""
-            />
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Image from '../../../assets/images/main.jpg';
 
 interface AirportData {
   codeShare: string;
@@ -52,7 +53,7 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
   };
 
   return (
-    <section className="flight-search">
+    <section className="flight-search" style={{ backgroundImage: `url(${Image})` }}>
       <h2 className="flight-search__title">ПОШУК РЕЙСУ</h2>
       <form className="flight-search__form">
         <div className="flight-search__form_icon-holder">

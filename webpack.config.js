@@ -22,7 +22,12 @@ module.exports = (_, argv) => {
                     test: /\.s?css$/,
                     use: [
                         isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-                        'css-loader',
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1,
+                            },
+                        },
                         'sass-loader',
                     ],
                 },
@@ -32,8 +37,9 @@ module.exports = (_, argv) => {
                         {
                             loader: 'file-loader',
                             options: {
-                                name: '[path][name].[ext]',
-                                outputPath: 'images/', // Adjust output path as needed
+                                name: '[name].[hash].[ext]',
+                                outputPath: 'images/',
+                                publicPath: 'images/', // This should match the outputPath
                             },
                         },
                     ],
@@ -60,7 +66,7 @@ module.exports = (_, argv) => {
 
     if (isProduction) {
         config.plugins.push(new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: '[name].[contenthash].css',
         }));
     }
 

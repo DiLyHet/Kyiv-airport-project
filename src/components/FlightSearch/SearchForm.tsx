@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getAirportData } from "../../api";
+import Image from '../../../assets/images/calendar-icon.svg';
 
 interface Airport {
   id: number;
@@ -143,6 +144,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
             <input
               type="date"
               className="filter__date-input"
+              style={{ backgroundImage: `url(${Image})` }}
               id="filter-date-input"
               value={date}
               onChange={handleDateChange}

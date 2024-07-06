@@ -848,7 +848,6 @@
 }
 
 .block__title_parking {
-  background: url("/assets/images/2.jpg");
   border-radius: 0 0 150px 0;
 
   @include for-narrow-middle {
@@ -861,7 +860,6 @@
 }
 
 .block__title_express-line {
-  background: url("/assets/images/49.jpg");
   border-radius: 0 0 0 150px;
 
   @include for-narrow-middle {
@@ -874,7 +872,6 @@
 }
 
 .block__title_airlines-destinations {
-  background: url("/assets/images/4.jpg");
   border-radius: 0 0 150px 0;
 
   @include for-narrow-middle {
@@ -887,7 +884,6 @@
 }
 
 .block__title_vip-terminal {
-  background: url("/assets/images/27.jpg");
   border-radius: 0 0 0 150px;
 
   @include for-narrow-middle {
@@ -902,8 +898,6 @@
 .block__title_mastercard-fastline {
   justify-content: left;
 }
-
-//container
 
 .block__container {
   display: flex;
@@ -931,12 +925,10 @@
 
 .block__container_top-position {
   justify-content: space-between;
-  // transition: .3s ease-in-out;
 }
 
 .block__container_bottom-position {
   background-color: $color-white;
-  // transition: .3s ease-in-out;
 }
 
 .block__container_wide-size {
@@ -989,7 +981,6 @@
 
 .block__container_how-to-get {
   border-radius: 0 200px 0 0;
-  background: url("/assets/images/1.jpg");
 
   &:hover {
     border-radius: 0 150px 0 0;
@@ -1033,10 +1024,6 @@
 
 .block__container_buy-tickets {
   border-radius: 200px 0 0 0;
-  background: url("../../assets/images/32.jpg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
 
   &:hover {
     border-radius: 150px 0 0 0;
@@ -1181,7 +1168,6 @@
 
 .block__container_services {
   border-radius: 0 200px 0 0;
-  background: url("/assets/images/24.jpg");
 
   &:hover {
     border-radius: 0 150px 0 0;
@@ -1225,7 +1211,6 @@
 
 .block__container_covid-testing {
   border-radius: 200px 0 0 0;
-  background: url("/assets/images/covid-3.jpeg");
 
   &:hover {
     border-radius: 150px 0 0 0;
@@ -1371,7 +1356,6 @@
 
 .block__container_mastercard-fastline {
   border-radius: 0 200px 0 0;
-  background: url('/assets/images/47.jpg');
 
   &:hover {
     border-radius: 0 150px 0 0;
@@ -1415,7 +1399,6 @@
 
 .block__container_information {
   border-radius: 200px 0 0 0;
-  background: url("/assets/images/12.jpg");
 
   &:hover {
     border-radius: 150px 0 0 0;
