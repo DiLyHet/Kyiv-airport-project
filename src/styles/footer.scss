@@ -9,11 +9,9 @@
   @include for-wide-middle {
     width: 960px;
   }
-
   @include for-narrow-middle {
     width: 720px;
   }
-
   @include for-mobile {
     width: calc(100vw - 20px);
   }
@@ -45,7 +43,6 @@
     @include for-narrow-middle {
       flex-direction: column;
     }
-
     @include for-mobile {
       flex-direction: column;
     }
@@ -57,11 +54,9 @@
       @include for-wide-middle {
         width: 220px;
       }
-
       @include for-narrow-middle {
         width: 220px;
       }
-
       @include for-mobile {
         border-bottom: 0.1px solid $color-white;
         height: 50px;
@@ -101,13 +96,11 @@
       @include for-wide-middle {
         width: 220px;
       }
-
       @include for-narrow-middle {
         width: 700px;
         display: flex;
         margin-top: 30px;
       }
-
       @include for-mobile {
         padding: 0;
         margin-top: 50px;
@@ -136,11 +129,9 @@
       @include for-wide-middle {
         font-size: 28px;
       }
-
       @include for-narrow-middle {
         font-size: 28px;
       }
-
       @include for-mobile {
         font-size: 28px;
       }
@@ -186,7 +177,6 @@
     @include for-narrow-middle {
       align-items: end;
     }
-
     @include for-mobile {
       flex-direction: column;
     }
@@ -199,7 +189,6 @@
       @include for-narrow-middle {
         flex-direction: column;
       }
-
       @include for-mobile {
         flex-direction: column;
       }

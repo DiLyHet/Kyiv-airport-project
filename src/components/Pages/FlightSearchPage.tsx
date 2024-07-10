@@ -9,7 +9,10 @@ interface FlightSearchPageProps {
   setType: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const FlightSearchPage: React.FC<FlightSearchPageProps> = ({ type, setType }) => {
+const FlightSearchPage: React.FC<FlightSearchPageProps> = ({
+  type,
+  setType,
+}) => {
   const [inputSearchArray, setInputSearchArray] = useState<any[]>([]);
   const [data, setData] = useState<any[]>([]);
 

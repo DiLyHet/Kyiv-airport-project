@@ -1,18 +1,17 @@
 import React from "react";
-import AdultImg from "../../../assets/images/adult.svg";
-import ChildImg from "../../../assets/images/child.svg";
-import PriorityLineImg from "../../../assets/images/priority-line-icon.svg";
-import HowToGet from '../../../assets/images/1.jpg';
-import BuyTickets from '../../../assets/images/32.jpg';
-import Parking from '../../../assets/images/2.jpg';
-import ExpressLine from '../../../assets/images/49.jpg';
-import Services from '../../../assets/images/24.jpg';
-import CovidTesting from '../../../assets/images/covid-3.jpeg';
-import AirlinesDestinations from '../../../assets/images/4.jpg';
-import VipTerminal from '../../../assets/images/27.jpg';
-import MastercardFastline from '../../../assets/images/47.jpg';
-import Information from '../../../assets/images/12.jpg';
-
+import AdultImg from "../../images/adult.svg";
+import ChildImg from "../../images/child.svg";
+import PriorityLineImg from "../../images/priority-line-icon.svg";
+import HowToGet from "../../images/1.jpg";
+import BuyTickets from "../../images/32.jpg";
+import Parking from "../../images/2.jpg";
+import ExpressLine from "../../images/49.jpg";
+import Services from "../../images/24.jpg";
+import CovidTesting from "../../images/covid-3.jpeg";
+import AirlinesDestinations from "../../images/4.jpg";
+import VipTerminal from "../../images/27.jpg";
+import MastercardFastline from "../../images/47.jpg";
+import Information from "../../images/12.jpg";
 
 const Announcement: React.FC = () => {
   return (
@@ -28,7 +27,10 @@ const Announcement: React.FC = () => {
       </div>
       <div>
         <div className="announcement__blocks">
-          <div className="block__container block__container_top-position block__container_narrow-size block__container_how-to-get" style={{ backgroundImage: `url(${HowToGet})` }}>
+          <div
+            className="block__container block__container_top-position block__container_narrow-size block__container_how-to-get"
+            style={{ backgroundImage: `url(${HowToGet})` }}
+          >
             <div className="block__title block__title_left-position">
               <span className="text-left">ЯК ДІСТАТИСЯ</span>
             </div>
@@ -42,7 +44,10 @@ const Announcement: React.FC = () => {
               </button>
             </div>
           </div>
-          <div className="block__container block__container_top-position block__container_wide-size block__container_buy-tickets" style={{ backgroundImage: `url(${BuyTickets})` }}>
+          <div
+            className="block__container block__container_top-position block__container_wide-size block__container_buy-tickets"
+            style={{ backgroundImage: `url(${BuyTickets})` }}
+          >
             <div className="block__title block__title_right-position">
               <span className="text-right">
                 ПРИДБАТИ <br />
@@ -61,7 +66,10 @@ const Announcement: React.FC = () => {
         </div>
         <div className="announcement__blocks">
           <div className="block__container block__container_bottom-position block__container_narrow-size block__container_parking">
-            <div className="block__title block__title_left-position block__title_parking" style={{ backgroundImage: `url(${Parking})` }}>
+            <div
+              className="block__title block__title_left-position block__title_parking"
+              style={{ backgroundImage: `url(${Parking})` }}
+            >
               <span className="text-left">ПАРКОВКА</span>
             </div>
             <div className="block__content block__content_left-bottom block__content_parking">
@@ -75,7 +83,10 @@ const Announcement: React.FC = () => {
             </div>
           </div>
           <div className="block__container block__container_bottom-position block__container_wide-size block__container_express-line">
-            <div className="block__title block__title_right-position block__title_express-line" style={{ backgroundImage: `url(${ExpressLine})` }}>
+            <div
+              className="block__title block__title_right-position block__title_express-line"
+              style={{ backgroundImage: `url(${ExpressLine})` }}
+            >
               <span className="text-right">EXPRESS LINE</span>
             </div>
             <div className="block__content block__content_right-bottom block__content_express-line">
@@ -100,7 +111,9 @@ const Announcement: React.FC = () => {
               />
             </div>
             <div className="info-block__description">
-              <span className="info-block__description_title">PRIORITY LINE</span>
+              <span className="info-block__description_title">
+                PRIORITY LINE
+              </span>
               <span className="info-block__description_subtitle">
                 Прискорене проходження всіх формальностей
               </span>
@@ -128,7 +141,10 @@ const Announcement: React.FC = () => {
         </div>
       </div>
       <div className="announcement__blocks">
-        <div className="block__container block__container_top-position block__container_medium-size block__container_services" style={{ backgroundImage: `url(${Services})` }}>
+        <div
+          className="block__container block__container_top-position block__container_medium-size block__container_services"
+          style={{ backgroundImage: `url(${Services})` }}
+        >
           <div className="block__title block__title_left-position">
             <span className="text-left">
               ПОСЛУГИ <br /> IEV
@@ -144,7 +160,10 @@ const Announcement: React.FC = () => {
             </button>
           </div>
         </div>
-        <div className="block__container block__container_top-position block__container_medium-size block__container_covid-testing" style={{ backgroundImage: `url(${CovidTesting})` }}>
+        <div
+          className="block__container block__container_top-position block__container_medium-size block__container_covid-testing"
+          style={{ backgroundImage: `url(${CovidTesting})` }}
+        >
           <div className="block__title block__title_right-position">
             <span className="text-right">
               ТЕСТУВАННЯ НА <br />
@@ -164,7 +183,10 @@ const Announcement: React.FC = () => {
       </div>
       <div className="announcement__blocks">
         <div className="block__container block__container_bottom-position block__container_medium-size block__container_airlines-destinations">
-          <div className="block__title block__title_left-position block__title_airlines-destinations" style={{ backgroundImage: `url(${AirlinesDestinations})` }}>
+          <div
+            className="block__title block__title_left-position block__title_airlines-destinations"
+            style={{ backgroundImage: `url(${AirlinesDestinations})` }}
+          >
             <span className="text-left">
               АВІАКОМПАНІЇ ТА <br />
               НАПРЯМКИ
@@ -180,7 +202,10 @@ const Announcement: React.FC = () => {
           </div>
         </div>
         <div className="block__container block__container_bottom-position block__container_medium-size block__container_vip-terminal">
-          <div className="block__title block__title_right-position block__title_vip-terminal" style={{ backgroundImage: `url(${VipTerminal})` }}>
+          <div
+            className="block__title block__title_right-position block__title_vip-terminal"
+            style={{ backgroundImage: `url(${VipTerminal})` }}
+          >
             <span className="text-right">VIP ТЕРМІНАЛ</span>
           </div>
           <div className="block__content block__content_right-bottom block__content_vip-terminal">
@@ -195,7 +220,10 @@ const Announcement: React.FC = () => {
         </div>
       </div>
       <div className="announcement__blocks">
-        <div className="block__container block__container_top-position block__container_wide-size block__container_mastercard-fastline" style={{ backgroundImage: `url(${MastercardFastline})` }}>
+        <div
+          className="block__container block__container_top-position block__container_wide-size block__container_mastercard-fastline"
+          style={{ backgroundImage: `url(${MastercardFastline})` }}
+        >
           <div className="block__title block__title_left-position block__title_mastercard-fastline">
             <span className="text-left">
               MASTERCARD <br /> FAST LINE
@@ -210,7 +238,10 @@ const Announcement: React.FC = () => {
             </button>
           </div>
         </div>
-        <div className="block__container block__container_top-position block__container_narrow-size block__container_information" style={{ backgroundImage: `url(${Information})` }}>
+        <div
+          className="block__container block__container_top-position block__container_narrow-size block__container_information"
+          style={{ backgroundImage: `url(${Information})` }}
+        >
           <div className="block__title block__title_right-position">
             <span className="text-right">АВІАДОВІДКА</span>
           </div>

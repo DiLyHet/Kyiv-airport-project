@@ -1,11 +1,10 @@
 @import "./variables.scss";
 @import "./breakpoints.scss";
 
-
 .flight-search {
   background-image: no-repeat center bottom;
   height: 392px;
-  margin: 0px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,11 +15,9 @@
   @include for-wide-middle {
     background-size: cover;
   }
-
   @include for-narrow-middle {
     height: 372px;
   }
-
   @include for-mobile {
     height: 307px;
     width: calc(100vw - 20px);
@@ -28,9 +25,9 @@
   }
 
   &__title {
-    margin: 0px;
+    margin: 0;
     font:
-      70px "open sans",
+      70px "Open Sans",
       sans-serif;
     color: $color-white;
     line-height: 80px;
@@ -41,13 +38,12 @@
 
     @include for-narrow-middle {
       font:
-        60px "open sans",
+        60px "Open Sans",
         sans-serif;
     }
-
     @include for-mobile {
       font:
-        35px "open sans",
+        35px "Open Sans",
         sans-serif;
       padding-top: 20px;
       line-height: 40px;
@@ -61,30 +57,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px;
+    padding: 0;
     border-radius: 0 80px 0 0;
     margin-top: 18px;
 
     @include for-wide-middle {
       width: 620px;
     }
-
     @include for-narrow-middle {
       height: 60px;
       width: 640px;
     }
-
     @include for-mobile {
       height: 50px;
-      border-radius: 0px;
+      border-radius: 0;
       width: calc(100vw - 30px);
     }
 
     &_input {
       height: 80px;
       width: 468px;
-      padding: 0px;
-      margin: 0px;
+      padding: 0;
+      margin: 0;
       font-size: 24px;
       border: none;
       flex: 1;
@@ -94,16 +88,13 @@
         width: 398px;
         font-size: 18px;
       }
-
       @include for-mobile {
         height: 50px;
         font-size: 18px;
       }
-
       &:focus {
         outline: none;
       }
-
       @include for-wide-middle {
         width: 348px;
       }
@@ -115,10 +106,10 @@
       background-color: $color-blue;
       color: $color-white;
       font:
-        26px "open sans",
+        26px "Open Sans",
         sans-serif;
       border: none;
-      margin: 0px;
+      margin: 0;
       padding: 0 20px;
       border-radius: 0 80px 0 0;
       transition: 0.3s ease-in-out;
@@ -127,12 +118,9 @@
 
       @include for-narrow-middle {
         height: 60px;
-      }
-      @include for-narrow-middle {
         width: 170px;
         font-size: 20px;
       }
-
       @include for-mobile {
         display: none;
       }
@@ -169,11 +157,9 @@
     @include for-wide-middle {
       width: 620px;
     }
-
     @include for-narrow-middle {
       width: 640px;
     }
-
     @include for-mobile {
       flex-direction: column;
       width: calc(100vw - 30px);
@@ -198,11 +184,9 @@
     @include for-wide-middle {
       width: 270px;
     }
-
     @include for-narrow-middle {
       width: 270px;
     }
-
     @include for-mobile {
       width: 100%;
       margin-top: 10px;
@@ -215,7 +199,6 @@
     &_current .flight-search__btn_text {
       color: $color-white;
     }
-
     &_current .flight-search__btn_icon {
       filter: grayscale(100%) invert(100%) brightness(1000%) contrast(100%);
     }
@@ -226,7 +209,6 @@
       @include for-desktop {
         margin-right: 60px;
       }
-
       @include for-mobile {
         margin-right: 20px;
         padding: 0;
@@ -240,7 +222,6 @@
       &:hover .flight-search__btn_text {
         color: $color-white;
       }
-
       &:hover .flight-search__btn_icon {
         filter: grayscale(100%) invert(100%) brightness(1000%) contrast(100%);
       }
@@ -263,7 +244,6 @@
       &:hover .flight-search__btn_text {
         color: $color-white;
       }
-
       &:hover .flight-search__btn_icon {
         filter: grayscale(100%) invert(100%) brightness(1000%) contrast(100%);
       }
@@ -271,7 +251,7 @@
 
     &_text {
       font:
-        20px "open sans",
+        20px "Open Sans",
         sans-serif;
       color: $color-blue;
       font-weight: 500;
@@ -279,13 +259,12 @@
 
       @include for-wide-middle {
         font:
-          16px "open sans",
+          16px "Open Sans",
           sans-serif;
       }
-
       @include for-narrow-middle {
         font:
-          16px "open sans",
+          16px "Open Sans",
           sans-serif;
       }
     }
@@ -302,7 +281,7 @@
   &__text {
     color: $color-white;
     font:
-      26px "open sans",
+      26px "Open Sans",
       sans-serif;
     font-weight: 700;
     text-align: left;
@@ -333,9 +312,9 @@
     top: 0;
     width: 55%;
     height: 60px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+    font:
+      600 24px/60px "Open Sans",
+      sans-serif;
     text-align: end;
     color: #fff;
     background-color: #73d2f0;
@@ -354,8 +333,7 @@
       display: block;
       width: 30px;
       height: 30px;
-      background: url("https://www.pngkey.com/png/full/138-1382606_icon-airplane-icon-blue-png.png")
-        no-repeat center;
+      background: no-repeat center;
       background-size: contain;
       filter: brightness(500%);
     }
@@ -416,10 +394,10 @@
     border-radius: 5px;
     outline: none;
     background-color: #1eb7ee;
-    background-image: url("/assets/img/calendar-icon.svg");
     background-repeat: no-repeat;
     background-position: 44% 47%;
     background-size: 120px 120px;
+
     &::-webkit-calendar-picker-indicator {
       opacity: 0;
       cursor: pointer;

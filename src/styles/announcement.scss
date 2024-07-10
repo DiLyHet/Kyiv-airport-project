@@ -1,6 +1,11 @@
 @import "./breakpoints.scss";
 @import "./variables.scss";
 
+@mixin background-clip($value) {
+  -webkit-background-clip: $value;
+  background-clip: $value;
+}
+
 .announcement {
   background-color: $color-white;
   width: 100vw;
@@ -8,99 +13,126 @@
   flex-direction: column;
   align-items: center;
   background-color: #e7efec;
-}
 
-.announcement__content {
-  height: 211px;
-  width: 815px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  padding: 50px 280px 25px 25px;
-  border-radius: 20px 200px 20px 20px;
-  background-image: linear-gradient(180deg, #fff600 0%, #d5cc01 100%);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
-  justify-content: space-between;
-  transition: border-radius 0.2s ease-out;
+  &__content {
+    height: 211px;
+    width: 815px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    padding: 50px 280px 25px 25px;
+    border-radius: 20px 200px 20px 20px;
+    background-image: linear-gradient(180deg, #fff600 0%, #d5cc01 100%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+    justify-content: space-between;
+    transition: border-radius 0.2s ease-out;
 
-  &:hover {
-    border-radius: 20px 125px 20px 20px;
+    &:hover {
+      border-radius: 20px 125px 20px 20px;
+    }
+
+    &:hover .announcement__link {
+      color: $color-white;
+    }
+
+    @include for-wide-middle {
+      width: 635px;
+      height: 236px;
+      padding: 25px 280px 25px 25px;
+    }
+
+    @include for-narrow-middle {
+      width: 520px;
+      height: 181px;
+      padding: 30px 150px 30px 30px;
+    }
+
+    @include for-mobile {
+      width: calc(100vw - 200px);
+      height: 181px;
+      overflow: hidden;
+      padding: 30px 150px 30px 30px;
+      border-radius: 20px 100px 20px 20px;
+    }
   }
 
-  &:hover .announcement__link {
-    color: $color-white;
+  &__blocks {
+    display: flex;
+    margin-bottom: 15px;
+    &:first-of-type {
+      margin-top: 85px;
+    }
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+
+    @include for-mobile {
+      flex-direction: column;
+    }
   }
 
-  @include for-wide-middle {
-    width: 635px;
-    height: 236px;
-    padding: 25px 280px 25px 25px;
+  &__message {
+    font:
+      normal 700 26px "Open Sans condenced",
+      sans-serif;
+
+    @include for-narrow-middle {
+      font:
+        normal 700 22px "Open Sans condenced",
+        sans-serif;
+    }
+
+    @include for-mobile {
+      font:
+        normal 700 22px "Open Sans condenced",
+        sans-serif;
+    }
   }
 
-  @include for-narrow-middle {
-    width: 520px;
-    height: 181px;
-    padding: 30px 150px 30px 30px;
+  &__link {
+    font:
+      normal 700 30px "Open Sans condenced",
+      sans-serif;
+
+    @include for-narrow-middle {
+      font:
+        normal 700 22px "Open Sans condenced",
+        sans-serif;
+    }
+
+    @include for-mobile {
+      font:
+        normal 700 22px "Open Sans condenced",
+        sans-serif;
+    }
   }
 
-  @include for-mobile {
-    width: calc(100vw - 200px);
-    height: 181px;
-    overflow: hidden;
-    padding: 30px 150px 30px 30px;
-    border-radius: 20px 100px 20px 20px;
-  }
-}
+  &__info {
+    display: flex;
+    background-image: linear-gradient(-180deg, #8dc23a 0%, #587e1d 100%);
+    border-radius: 180px 20px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+    width: 1120px;
+    height: 340px;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
-.announcement__message {
-  font: normal 700 26px "Open Sans condenced", sans-serif;
+    @include for-wide-middle {
+      width: 940px;
+    }
 
-  @include for-narrow-middle {
-    font: normal 700 22px "Open Sans condenced", sans-serif;
-  }
+    @include for-narrow-middle {
+      width: 700px;
+      height: 300px;
+    }
 
-  @include for-mobile {
-    font: normal 700 22px "Open Sans condenced", sans-serif;
-  }
-}
-
-.announcement__link {
-  font: normal 700 30px "Open Sans condenced", sans-serif;
-
-  @include for-narrow-middle {
-    font: normal 700 22px "Open Sans condenced", sans-serif;
-  }
-
-  @include for-mobile {
-    font: normal 700 22px "Open Sans condenced", sans-serif;
-  }
-}
-
-.announcement__info {
-  display: flex;
-  background-image: linear-gradient(-180deg, #8dc23a 0%, #587e1d 100%);
-  border-radius: 180px 20px 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
-  width: 1120px;
-  height: 340px;
-  justify-content: end;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
-
-  @include for-wide-middle {
-    width: 940px;
-  }
-
-  @include for-narrow-middle {
-    width: 700px;
-    height: 300px;
-  }
-
-  @include for-mobile {
-    width: calc(100vw - 20px);
-    height: 300px;
-    border-radius: 100px 20px 20px;
+    @include for-mobile {
+      width: calc(100vw - 20px);
+      height: 300px;
+      border-radius: 100px 20px 20px;
+    }
   }
 }
 
@@ -127,186 +159,177 @@
     width: 610px;
     height: 174px;
   }
-}
 
-.info-block__title {
-  display: flex;
-}
-
-.info-block__description {
-  display: flex;
-  flex-direction: column;
-}
-
-.info-block__description_title {
-  font: normal 700 120px "Open Sans", sans-serif;
-  background: linear-gradient(-180deg, #8dc23a 0%, #587e1d 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1;
-  margin-top: 20px;
-  margin-right: 40px;
-  text-align: end;
-
-  @include for-narrow-middle {
-    font-size: 80px;
+  &__title {
+    display: flex;
   }
 
-  @include for-mobile {
-    font-size: 50px;
+  &__description {
+    display: flex;
+    flex-direction: column;
+
+    &_title {
+      font:
+        normal 700 120px "Open Sans",
+        sans-serif;
+      background: linear-gradient(-180deg, #8dc23a 0%, #587e1d 100%);
+      @include background-clip(text);
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+      margin-top: 20px;
+      margin-right: 40px;
+      text-align: end;
+
+      @include for-narrow-middle {
+        font-size: 80px;
+      }
+
+      @include for-mobile {
+        font-size: 50px;
+      }
+    }
+
+    &_subtitle {
+      font:
+        normal 400 24px "Open Sans",
+        sans-serif;
+      color: #2f2f2f;
+      margin-top: 15px;
+      line-height: 1;
+      margin-bottom: 20px;
+      margin-right: 40px;
+      text-align: end;
+
+      @include for-mobile {
+        font-size: 16px;
+      }
+    }
   }
-}
 
-.info-block__description_subtitle {
-  font: normal 400 24px "Open Sans", sans-serif;
-  color: #2f2f2f;
-  margin-top: 15px;
-  line-height: 1;
-  margin-bottom: 20px;
-  margin-right: 40px;
-  text-align: end;
+  &__icon {
+    width: 198px;
+    height: 126px;
+    margin-top: 40px;
+    margin-right: 40px;
 
-  @include for-mobile {
-    font-size: 16px;
-  }
-}
+    @include for-wide-middle {
+      display: none;
+    }
 
-.info-block__icon {
-  width: 198px;
-  height: 126px;
-  margin-top: 40px;
-  margin-right: 40px;
+    @include for-narrow-middle {
+      display: none;
+    }
 
-  @include for-wide-middle {
-    display: none;
-  }
-
-  @include for-narrow-middle {
-    display: none;
-  }
-
-  @include for-mobile {
-    display: none;
+    @include for-mobile {
+      display: none;
+    }
   }
 }
 
 .quantity-selector {
   display: flex;
   align-items: end;
-}
 
-.quantity-selector__item {
-  display: flex;
-  align-items: end;
-  margin-left: 50px;
+  &__item {
+    display: flex;
+    align-items: end;
+    margin-left: 50px;
 
-  @include for-mobile {
-    display: none;
+    @include for-mobile {
+      display: none;
+
+      &_icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 }
 
-.quantity-selector__item_icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+.icon {
+  &__adult {
+    width: 60px;
+    height: 50px;
+  }
 
-.icon__adult {
-  width: 60px;
-  height: 50px;
-}
+  &__child {
+    width: 50px;
+    height: 35px;
+  }
 
-.icon__child {
-  width: 50px;
-  height: 35px;
-}
-
-.icon__text {
-  font: normal 700 14px "Open Sans", sans-serif;
-  color: #5a5e60;
-}
-
-.quantity-selector__counter_number {
-  color: #2f2f2f;
-  font: normal 700 40px "Open Sans", sans-serif;
-  line-height: 1;
-  margin-bottom: 15px;
-  margin-left: 5px;
-}
-
-.quantity-selector__counter_button {
-  cursor: pointer;
-  border-radius: 50%;
-  color: #28a745;
-  border: 2px solid #28a745;
-  background: #fff;
-  width: 40px;
-  height: 40px;
-  line-height: 36px;
-  font-size: 28px;
-  font-weight: 700;
-  text-align: center;
-  margin-left: 15px;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  margin-bottom: 15px;
-
-  &:hover {
-    color: #fff;
-    background-color: #28a745;
+  &__text {
+    font:
+      normal 700 14px "Open Sans",
+      sans-serif;
+    color: #5a5e60;
   }
 }
 
-.quantity-selector__button {
-  margin-left: 15px;
-  margin-right: 40px;
-  height: 65px;
-  border: 4px solid #1eb7ee;
-  border-radius: 30px;
-  line-height: 57px;
-  text-align: center;
-  background: #fff;
-  width: 180px;
-  color: #1eb7ee;
-  font-weight: 700;
-  font-size: 20px;
-  margin-left: 15px;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  cursor: pointer;
-
-  &:hover {
-    color: #fff;
-    background-color: #1eb7ee;
-  }
-
-  @include for-mobile {
-    width: 108px;
-    height: 40px;
-    font-size: 14px;
+.quantity-selector {
+  &__counter_number {
+    color: #2f2f2f;
+    font:
+      normal 700 40px "Open Sans",
+      sans-serif;
     line-height: 1;
-  }
-}
+    margin-bottom: 15px;
+    margin-left: 5px;
 
-.announcement__blocks {
-  display: flex;
-  margin-bottom: 15px;
-  &:first-of-type {
-    margin-top: 85px;
-  }
-  &:last-of-type {
-    margin-bottom: 0px;
+    &_button {
+      cursor: pointer;
+      border-radius: 50%;
+      color: #28a745;
+      border: 2px solid #28a745;
+      background: #fff;
+      width: 40px;
+      height: 40px;
+      line-height: 36px;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-left: 15px;
+      -webkit-transition: 0.3s ease-out;
+      transition: 0.3s ease-out;
+      margin-bottom: 15px;
+
+      &:hover {
+        color: #fff;
+        background-color: #28a745;
+      }
+    }
   }
 
-  @include for-mobile {
-    flex-direction: column;
-  }
-}
+  &__button {
+    margin-left: 15px;
+    margin-right: 40px;
+    height: 65px;
+    border: 4px solid #1eb7ee;
+    border-radius: 30px;
+    line-height: 57px;
+    text-align: center;
+    background: #fff;
+    width: 180px;
+    color: #1eb7ee;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 15px;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+    cursor: pointer;
 
-.block__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    &:hover {
+      color: #fff;
+      background-color: #1eb7ee;
+    }
+
+    @include for-mobile {
+      width: 108px;
+      height: 40px;
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
 }
 
 .text-right {
@@ -359,1082 +382,1075 @@
   }
 }
 
-//block__content
-
-.block__content_right-top {
-  background-color: $color-white;
-  height: 118px;
-  padding-top: 22px;
-  // padding-bottom: 10px;
-  border-radius: 150px 0 0 0;
-  transition: 0.3s ease-in-out;
-
-  @include for-wide-middle {
-    height: 128px;
-  }
-
-  @include for-narrow-middle {
-    border-radius: 80px 0 0 0;
-  }
-}
-
-.block__content_buy-tickets {
-  height: 106px;
-  padding-top: 34px;
-
-  @include for-wide-middle {
-    height: 116.01px;
-  }
-
-  @include for-narrow-middle {
-    padding-top: 17px;
-    height: 98px;
-  }
-
-  @include for-mobile {
-    border-radius: 0;
-  }
-}
-
-.block__content_right-bottom {
-  height: 150px;
-  align-items: end;
-
-  @include for-wide-middle {
-    padding-top: 34px;
-  }
-}
-
-.block__content_express-line {
-  margin-top: 34px;
-
-  @include for-wide-middle {
-    margin-top: 0px;
-    height: 116.01px;
-  }
-}
-
-.block__content_vip-terminal {
-  margin-top: 22px;
-
-  @include for-wide-middle {
-    margin-top: 0px;
-    height: 116.01px;
-  }
-
-  @include for-mobile {
-    border-radius: 0;
-  }
-}
-
-.block__content_left-top {
-  background-color: $color-white;
-  height: 118px;
-  padding-top: 22px;
-  border-radius: 0 150px 0 0;
-  transition: 0.3s ease-in-out;
-
-  @include for-wide-middle {
-    height: 128px;
-  }
-
-  @include for-narrow-middle {
-    height: 115px;
-    border-radius: 0 80px 0 0;
-  }
-
-  // @include for-mobile {
-  //   width: calc(100vw - 20px);
-  // }
-}
-
-.block__content_how-to-get {
-  width: 455px;
-  // transition: .3s ease-in-out;
-
-  @include for-wide-middle {
-    width: 380px;
-  }
-
-  @include for-narrow-middle {
-    padding-top: 17px;
-    height: 98px;
-    width: 280px;
-  }
-
-  @include for-mobile {
-    width: calc(100vw - 20px);
-    border-radius: 0;
-  }
-}
-
-.block__content_services {
-  width: 550px;
-
-  @include for-wide-middle {
-    width: 460px;
-  }
-
-  @include for-narrow-middle {
-    padding-top: 17px;
-    height: 98px;
-    width: 340px;
-  }
-
-  @include for-mobile {
-    width: calc(100vw - 20px);
-    border-radius: 0;
-  }
-}
-
-.block__content_mastercard-fastline {
-  height: 106px;
-  padding-top: 34px;
-  width: 645px;
-
-  @include for-wide-middle {
-    width: 540px;
-    height: 116.01px;
-  }
-
-  @include for-narrow-middle {
-    padding-top: 17px;
-    height: 98px;
-    width: 400px;
-  }
-
-  @include for-mobile {
-    width: calc(100vw - 20px);
-    border-radius: 0;
-  }
-}
-
-.block__content_left-bottom {
-  height: 150px;
-
-  @include for-wide-middle {
-    padding-top: 34px;
-    height: 116.01px;
-  }
-}
-
-.block__content_parking {
-  margin-top: 22px;
-
-  @include for-wide-middle {
-    margin-top: 0px;
-  }
-}
-
-.block__content_airlines-destinations {
-  margin-top: 34px;
-
-  @include for-wide-middle {
-    margin-top: 0px;
-  }
-}
-
-.block__content_covid-testing {
-  margin-top: 34px;
-
-  @include for-wide-middle {
-    margin-top: 0px;
-  }
-
-  @include for-narrow-middle {
-    margin-top: 0px;
-    padding-top: 17px;
-    height: 98px;
-  }
-
-  @include for-mobile {
-    border-radius: 0;
-  }
-}
-
-.block__content_information {
-  height: 118px;
-  padding-top: 22px;
-  // padding-bottom: 10px;
-  border-radius: 150px 0 0 0;
-
-  @include for-wide-middle {
-    height: 128px;
-  }
-
-  @include for-narrow-middle {
-    padding-top: 17px;
-    height: 98px;
-    border-radius: 80px 0 0 0;
-  }
-
-  @include for-mobile {
-    border-radius: 0;
-  }
-}
-
-// description text
-
-.block__description {
-  color: #595959;
-  font: $font-description;
-
-  @include for-wide-middle {
-    font-size: 18px;
-  }
-
-  @include for-narrow-middle {
-    font-size: 18px;
-  }
-
-  @include for-mobile {
-    font-size: 16px;
-  }
-}
-
-.block__description_left-position {
-  padding-left: 30px;
-  text-align: start;
-
-  @include for-wide-middle {
-    padding-left: 15px;
-  }
-
-  @include for-narrow-middle {
-    padding-left: 15px;
-  }
-
-  @include for-mobile {
-    padding-left: 15px;
-  }
-}
-
-.block__description_right-position {
-  padding-right: 30px;
-  text-align: end;
-
-  @include for-wide-middle {
-    padding-right: 15px;
-  }
-
-  @include for-narrow-middle {
-    padding-right: 15px;
-  }
-
-  @include for-mobile {
-    padding-right: 15px;
-  }
-}
-
-//button
-
-.block__button {
-  color: $color-blue;
-  font: $font-button;
-  background-color: $color-white;
-  border: none;
-  height: 50px;
-  transition: 0.3s ease-in-out;
-
-  &:hover {
-    background-color: $color-blue;
-    color: $color-white;
-  }
-
-  @include for-wide-middle {
-    font-size: 12px;
-  }
-
-  @include for-narrow-middle {
-    font-size: 12px;
-  }
-
-  @include for-mobile {
-    font-size: 12px;
-  }
-}
-
-.block__button_left-position {
-  padding-left: 30px;
-  text-align: start;
-
-  @include for-wide-middle {
-    padding-left: 15px;
-  }
-
-  @include for-narrow-middle {
-    padding-left: 15px;
-  }
-
-  @include for-mobile {
-    padding-left: 15px;
-  }
-}
-
-.block__button_right-position {
-  padding-right: 30px;
-  text-align: end;
-
-  @include for-wide-middle {
-    padding-right: 15px;
-  }
-
-  @include for-narrow-middle {
-    padding-right: 15px;
-  }
-
-  @include for-mobile {
-    padding-right: 15px;
-  }
-}
-
-.block__button_how-to-get {
-  border-radius: 0 150px 0 0;
-  width: 318.5px;
-
-  @include for-narrow-middle {
-    width: 196px;
-  }
-}
-
-.block__button_buy-tickets {
-  border-radius: 150px 0 0 0;
-  width: 451.5px;
-  align-self: flex-end;
-
-  @include for-narrow-middle {
-    width: 280px;
-  }
-}
-
-.block__button_parking {
-  width: 250px;
-  border-radius: 0 150px 0 0;
-
-  @include for-wide-middle {
-    width: 170px;
-  }
-
-  @include for-narrow-middle {
-    width: 170px;
-  }
-}
-
-.block__button_express-line {
-  width: 451.5px;
-  border-radius: 150px 0 0 0;
-
-  @include for-wide-middle {
-    width: 350px;
-  }
-
-  @include for-narrow-middle {
-    width: 280px;
-  }
-}
-
-.block__button_services {
-  border-radius: 0 150px 0 0;
-  width: 385px;
-
-  @include for-narrow-middle {
-    width: 238px;
-  }
-}
-
-.block__button_covid-testing {
-  border-radius: 150px 0 0 0;
-  width: 385px;
-  align-self: flex-end;
-
-  @include for-narrow-middle {
-    width: 238px;
-  }
-}
-
-.block__button_airlines-destinations {
-  width: 350px;
-  border-radius: 0 150px 0 0;
-
-  @include for-wide-middle {
-    width: 250px;
-  }
-
-  @include for-narrow-middle {
-    width: 200px;
-  }
-}
-
-.block__button_vip-terminal {
-  width: 350px;
-  border-radius: 150px 0 0 0;
-
-  @include for-wide-middle {
-    width: 250px;
-  }
-
-  @include for-narrow-middle {
-    width: 200px;
-  }
-}
-
-.block__button_mastercard-fastline {
-  border-radius: 0 150px 0 0;
-  width: 451.5px;
-
-  @include for-narrow-middle {
-    width: 280px;
-  }
-}
-
-.block__button_information {
-  border-radius: 150px 0 0 0;
-  width: 318.5px;
-  align-self: flex-end;
-
-  @include for-narrow-middle {
-    width: 196px;
-  }
-}
-
-// title
-
-.block__title {
-  display: flex;
-  height: 190px;
-  align-items: center;
-  transition: 0.3s ease-in-out;
-
-  @include for-wide-middle {
-    height: 80px;
-  }
-
-  @include for-narrow-middle {
-    height: 115px;
-  }
-}
-
-.block__title_left-position {
-  padding-left: 30px;
-
-  @include for-wide-middle {
-    padding-left: 15px;
-  }
-
-  @include for-narrow-middle {
-    padding-left: 15px;
-  }
-
-  @include for-mobile {
-    padding-left: 15px;
-  }
-}
-
-.block__title_right-position {
-  padding-right: 30px;
-  justify-content: end;
-
-  @include for-wide-middle {
-    padding-right: 15px;
-  }
-
-  @include for-narrow-middle {
-    padding-right: 15px;
-  }
-
-  @include for-mobile {
-    padding-right: 15px;
-  }
-}
-
-.block__title_parking {
-  border-radius: 0 0 150px 0;
-
-  @include for-narrow-middle {
-    border-radius: 0 0 80px 0;
-  }
-
-  @include for-mobile {
-    border-radius: 0;
-  }
-}
-
-.block__title_express-line {
-  border-radius: 0 0 0 150px;
-
-  @include for-narrow-middle {
-    border-radius: 0 0 0 80px;
-  }
-
-  @include for-mobile {
-    border-radius: 0;
-  }
-}
-
-.block__title_airlines-destinations {
-  border-radius: 0 0 150px 0;
-
-  @include for-narrow-middle {
-    border-radius: 0 0 80px 0;
-  }
-
-  @include for-mobile {
-    border-radius: 0;
-  }
-}
-
-.block__title_vip-terminal {
-  border-radius: 0 0 0 150px;
-
-  @include for-narrow-middle {
-    border-radius: 0 0 0 80px;
-  }
-
-  @include for-mobile {
-    border-radius: 0;
-  }
-}
-
-.block__title_mastercard-fastline {
-  justify-content: left;
-}
-
-.block__container {
-  display: flex;
-  flex-direction: column;
-  height: 340px;
-  margin: 0 10px;
-  transition: 0.3s ease-in-out;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: center !important;
-
-  @include for-wide-middle {
-    height: 230px;
-  }
-
-  @include for-narrow-middle {
-    height: 230px;
-  }
-
-  @include for-mobile {
-    height: 250px;
-  }
-}
-
-.block__container_top-position {
-  justify-content: space-between;
-}
-
-.block__container_bottom-position {
-  background-color: $color-white;
-}
-
-.block__container_wide-size {
-  width: 645px;
-
-  @include for-wide-middle {
-    width: 540px;
-  }
-
-  @include for-narrow-middle {
-    width: 400px;
-  }
-
-  @include for-mobile {
-    width: calc(100vw - 20px);
-  }
-}
-
-.block__container_medium-size {
-  width: 550px;
-
-  @include for-wide-middle {
-    width: 460px;
-  }
-
-  @include for-narrow-middle {
-    width: 340px;
-  }
-
-  @include for-mobile {
-    width: calc(100vw - 20px);
-  }
-}
-
-.block__container_narrow-size {
-  width: 455px;
-
-  @include for-wide-middle {
-    width: 380px;
-  }
-
-  @include for-narrow-middle {
-    width: 280px;
-  }
-
-  @include for-mobile {
-    width: calc(100vw - 20px);
-  }
-}
-
-.block__container_how-to-get {
-  border-radius: 0 200px 0 0;
-
-  &:hover {
-    border-radius: 0 150px 0 0;
-
-    @include for-mobile {
-      border-radius: 0 70px 0 0;
-    }
-  }
-
-  &:hover .block__content_how-to-get {
-    border-radius: 0 100px 0 0;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_how-to-get {
-    background-color: $color-blue;
-    color: $color-white;
-
-    @include for-wide-middle {
-      width: 266px;
-    }
-
-    @include for-mobile {
+.block {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_right-top {
       background-color: $color-white;
-      color: $color-blue;
-    }
-  }
+      height: 118px;
+      padding-top: 22px;
+      border-radius: 150px 0 0 0;
+      transition: 0.3s ease-in-out;
 
-  @include for-narrow-middle {
-    border-radius: 0 120px 0 0;
-  }
+      @include for-wide-middle {
+        height: 128px;
+      }
 
-  @include for-mobile {
-    border-radius: 0 70px 0 0;
-    margin-bottom: 15px;
-  }
-}
-
-.block__container_buy-tickets {
-  border-radius: 200px 0 0 0;
-
-  &:hover {
-    border-radius: 150px 0 0 0;
-
-    @include for-mobile {
-      border-radius: 70px 0 0 0;
-    }
-  }
-
-  &:hover .block__content_buy-tickets {
-    border-radius: 100px 0 0 0;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_buy-tickets {
-    background-color: $color-blue;
-    color: $color-white;
-
-    @include for-wide-middle {
-      width: 378px;
+      @include for-narrow-middle {
+        border-radius: 80px 0 0 0;
+      }
     }
 
-    @include for-mobile {
+    &_buy-tickets {
+      height: 106px;
+      padding-top: 34px;
+
+      @include for-wide-middle {
+        height: 116.01px;
+      }
+
+      @include for-narrow-middle {
+        padding-top: 17px;
+        height: 98px;
+      }
+
+      @include for-mobile {
+        border-radius: 0;
+      }
+    }
+
+    &_right-bottom {
+      height: 150px;
+      align-items: end;
+
+      @include for-wide-middle {
+        padding-top: 34px;
+      }
+    }
+
+    &_express-line {
+      margin-top: 34px;
+
+      @include for-wide-middle {
+        margin-top: 0px;
+        height: 116.01px;
+      }
+    }
+
+    &_vip-terminal {
+      margin-top: 22px;
+
+      @include for-wide-middle {
+        margin-top: 0px;
+        height: 116.01px;
+      }
+
+      @include for-mobile {
+        border-radius: 0;
+      }
+    }
+
+    &_left-top {
       background-color: $color-white;
-      color: $color-blue;
+      height: 118px;
+      padding-top: 22px;
+      border-radius: 0 150px 0 0;
+      transition: 0.3s ease-in-out;
+
+      @include for-wide-middle {
+        height: 128px;
+      }
+
+      @include for-narrow-middle {
+        height: 115px;
+        border-radius: 0 80px 0 0;
+      }
+    }
+
+    &_how-to-get {
+      width: 455px;
+
+      @include for-wide-middle {
+        width: 380px;
+      }
+
+      @include for-narrow-middle {
+        padding-top: 17px;
+        height: 98px;
+        width: 280px;
+      }
+
+      @include for-mobile {
+        width: calc(100vw - 20px);
+        border-radius: 0;
+      }
+    }
+
+    &_services {
+      width: 550px;
+
+      @include for-wide-middle {
+        width: 460px;
+      }
+
+      @include for-narrow-middle {
+        padding-top: 17px;
+        height: 98px;
+        width: 340px;
+      }
+
+      @include for-mobile {
+        width: calc(100vw - 20px);
+        border-radius: 0;
+      }
+    }
+
+    &_mastercard-fastline {
+      height: 106px;
+      padding-top: 34px;
+      width: 645px;
+
+      @include for-wide-middle {
+        width: 540px;
+        height: 116.01px;
+      }
+
+      @include for-narrow-middle {
+        padding-top: 17px;
+        height: 98px;
+        width: 400px;
+      }
+
+      @include for-mobile {
+        width: calc(100vw - 20px);
+        border-radius: 0;
+      }
+    }
+
+    &_left-bottom {
+      height: 150px;
+
+      @include for-wide-middle {
+        padding-top: 34px;
+        height: 116.01px;
+      }
+    }
+
+    &_parking {
+      margin-top: 22px;
+
+      @include for-wide-middle {
+        margin-top: 0px;
+      }
+    }
+
+    &_airlines-destinations {
+      margin-top: 34px;
+
+      @include for-wide-middle {
+        margin-top: 0px;
+      }
+    }
+
+    &_covid-testing {
+      margin-top: 34px;
+
+      @include for-wide-middle {
+        margin-top: 0px;
+      }
+
+      @include for-narrow-middle {
+        margin-top: 0px;
+        padding-top: 17px;
+        height: 98px;
+      }
+
+      @include for-mobile {
+        border-radius: 0;
+      }
+    }
+
+    &_information {
+      height: 118px;
+      padding-top: 22px;
+      border-radius: 150px 0 0 0;
+
+      @include for-wide-middle {
+        height: 128px;
+      }
+
+      @include for-narrow-middle {
+        padding-top: 17px;
+        height: 98px;
+        border-radius: 80px 0 0 0;
+      }
+
+      @include for-mobile {
+        border-radius: 0;
+      }
     }
   }
 
-  @include for-narrow-middle {
-    border-radius: 120px 0 0 0;
-  }
-
-  @include for-mobile {
-    border-radius: 70px 0 0 0;
-  }
-}
-
-.block__container_parking {
-  border-radius: 0 0 200px 0;
-
-  &:hover {
-    border-radius: 0 0 150px 0;
+  &__description {
+    color: #595959;
+    font: $font-description;
 
     @include for-wide-middle {
-      overflow: hidden;
+      font-size: 18px;
     }
 
     @include for-narrow-middle {
-      overflow: hidden;
+      font-size: 18px;
     }
 
     @include for-mobile {
-      border-radius: 0 0 70px 0;
+      font-size: 16px;
+    }
+
+    &_left-position {
+      padding-left: 30px;
+      text-align: start;
+
+      @include for-wide-middle {
+        padding-left: 15px;
+      }
+
+      @include for-narrow-middle {
+        padding-left: 15px;
+      }
+
+      @include for-mobile {
+        padding-left: 15px;
+      }
+    }
+
+    &_right-position {
+      padding-right: 30px;
+      text-align: end;
+
+      @include for-wide-middle {
+        padding-right: 15px;
+      }
+
+      @include for-narrow-middle {
+        padding-right: 15px;
+      }
+
+      @include for-mobile {
+        padding-right: 15px;
+      }
     }
   }
 
-  &:hover .block__title_parking {
-    border-radius: 0 0 100px 0;
+  &__button {
+    color: $color-blue;
+    font: $font-button;
+    background-color: $color-white;
+    border: none;
+    height: 50px;
+    transition: 0.3s ease-in-out;
 
-    @include for-mobile {
-      border-radius: 0;
+    &:hover {
+      background-color: $color-blue;
+      color: $color-white;
     }
-  }
-
-  &:hover .block__button_parking {
-    background-color: $color-blue;
-    color: $color-white;
-    width: 318.5px;
 
     @include for-wide-middle {
-      width: 266px;
+      font-size: 12px;
     }
 
     @include for-narrow-middle {
-      width: 196px;
+      font-size: 12px;
     }
 
     @include for-mobile {
-      background-color: $color-white;
-      color: $color-blue;
+      font-size: 12px;
+    }
+
+    &_left-position {
+      padding-left: 30px;
+      text-align: start;
+
+      @include for-wide-middle {
+        padding-left: 15px;
+      }
+
+      @include for-narrow-middle {
+        padding-left: 15px;
+      }
+
+      @include for-mobile {
+        padding-left: 15px;
+      }
+    }
+
+    &_right-position {
+      padding-right: 30px;
+      text-align: end;
+
+      @include for-wide-middle {
+        padding-right: 15px;
+      }
+
+      @include for-narrow-middle {
+        padding-right: 15px;
+      }
+
+      @include for-mobile {
+        padding-right: 15px;
+      }
+    }
+
+    &_how-to-get {
+      border-radius: 0 150px 0 0;
+      width: 318.5px;
+
+      @include for-narrow-middle {
+        width: 196px;
+      }
+    }
+
+    &_buy-tickets {
+      border-radius: 150px 0 0 0;
+      width: 451.5px;
+      align-self: flex-end;
+
+      @include for-narrow-middle {
+        width: 280px;
+      }
+    }
+
+    &_parking {
+      width: 250px;
+      border-radius: 0 150px 0 0;
+
+      @include for-wide-middle {
+        width: 170px;
+      }
+
+      @include for-narrow-middle {
+        width: 170px;
+      }
+    }
+
+    &_express-line {
+      width: 451.5px;
+      border-radius: 150px 0 0 0;
+
+      @include for-wide-middle {
+        width: 350px;
+      }
+
+      @include for-narrow-middle {
+        width: 280px;
+      }
+    }
+
+    &_services {
+      border-radius: 0 150px 0 0;
+      width: 385px;
+
+      @include for-narrow-middle {
+        width: 238px;
+      }
+    }
+
+    &_covid-testing {
+      border-radius: 150px 0 0 0;
+      width: 385px;
+      align-self: flex-end;
+
+      @include for-narrow-middle {
+        width: 238px;
+      }
+    }
+
+    &_airlines-destinations {
+      width: 350px;
+      border-radius: 0 150px 0 0;
+
+      @include for-wide-middle {
+        width: 250px;
+      }
+
+      @include for-narrow-middle {
+        width: 200px;
+      }
+    }
+
+    &_vip-terminal {
+      width: 350px;
+      border-radius: 150px 0 0 0;
+
+      @include for-wide-middle {
+        width: 250px;
+      }
+
+      @include for-narrow-middle {
+        width: 200px;
+      }
+    }
+
+    &_mastercard-fastline {
+      border-radius: 0 150px 0 0;
+      width: 451.5px;
+
+      @include for-narrow-middle {
+        width: 280px;
+      }
+    }
+
+    &_information {
+      border-radius: 150px 0 0 0;
+      width: 318.5px;
+      align-self: flex-end;
+
+      @include for-narrow-middle {
+        width: 196px;
+      }
     }
   }
 
-  @include for-narrow-middle {
-    border-radius: 0 0 120px 0;
-  }
-
-  @include for-mobile {
-    border-radius: 0 0 70px 0;
-    margin-bottom: 15px;
-  }
-}
-
-.block__container_express-line {
-  border-radius: 0 0 0 200px;
-
-  &:hover {
-    border-radius: 0 0 0 150px;
-
-    @include for-narrow-middle {
-      overflow: hidden;
-    }
-
-    @include for-mobile {
-      border-radius: 0 0 0 70px;
-    }
-  }
-
-  &:hover .block__title_express-line {
-    border-radius: 0 0 0 100px;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_express-line {
-    background-color: $color-blue;
-    color: $color-white;
+  &__title {
+    display: flex;
+    height: 190px;
+    align-items: center;
+    transition: 0.3s ease-in-out;
 
     @include for-wide-middle {
-      width: 378px;
-    }
-
-    @include for-mobile {
-      background-color: $color-white;
-      color: $color-blue;
-    }
-  }
-
-  @include for-narrow-middle {
-    border-radius: 0 0 0 120px;
-  }
-
-  @include for-mobile {
-    border-radius: 0 0 0 70px;
-  }
-}
-
-.block__container_services {
-  border-radius: 0 200px 0 0;
-
-  &:hover {
-    border-radius: 0 150px 0 0;
-
-    @include for-mobile {
-      border-radius: 0 70px 0 0;
-    }
-  }
-
-  &:hover .block__content_services {
-    border-radius: 0 100px 0 0;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_services {
-    background-color: $color-blue;
-    color: $color-white;
-
-    @include for-wide-middle {
-      width: 322px;
-    }
-
-    @include for-mobile {
-      background-color: $color-white;
-      color: $color-blue;
-    }
-  }
-
-  @include for-narrow-middle {
-    border-radius: 0 120px 0 0;
-  }
-
-  @include for-mobile {
-    border-radius: 0 70px 0 0;
-    margin-bottom: 15px;
-  }
-}
-
-.block__container_covid-testing {
-  border-radius: 200px 0 0 0;
-
-  &:hover {
-    border-radius: 150px 0 0 0;
-
-    @include for-mobile {
-      border-radius: 70px 0 0 0;
-    }
-  }
-
-  &:hover .block__content_covid-testing {
-    border-radius: 100px 0 0 0;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_covid-testing {
-    background-color: $color-blue;
-    color: $color-white;
-
-    @include for-wide-middle {
-      width: 322px;
-    }
-
-    @include for-mobile {
-      background-color: $color-white;
-      color: $color-blue;
-    }
-  }
-
-  @include for-narrow-middle {
-    border-radius: 120px 0 0 0;
-  }
-
-  @include for-mobile {
-    border-radius: 70px 0 0 0;
-  }
-}
-
-.block__container_airlines-destinations {
-  border-radius: 0 0 200px 0;
-
-  &:hover {
-    border-radius: 0 0 150px 0;
-
-    @include for-narrow-middle {
-      overflow: hidden;
-    }
-
-    @include for-mobile {
-      border-radius: 0 0 70px 0;
-    }
-  }
-
-  &:hover .block__title_airlines-destinations {
-    border-radius: 0 0 100px 0;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_airlines-destinations {
-    background-color: $color-blue;
-    color: $color-white;
-    width: 395px;
-
-    @include for-wide-middle {
-      width: 322px;
+      height: 80px;
     }
 
     @include for-narrow-middle {
-      width: 238px;
+      height: 115px;
     }
 
-    @include for-mobile {
-      background-color: $color-white;
-      color: $color-blue;
+    &_left-position {
+      padding-left: 30px;
+
+      @include for-wide-middle {
+        padding-left: 15px;
+      }
+
+      @include for-narrow-middle {
+        padding-left: 15px;
+      }
+
+      @include for-mobile {
+        padding-left: 15px;
+      }
+    }
+
+    &_right-position {
+      padding-right: 30px;
+      justify-content: end;
+
+      @include for-wide-middle {
+        padding-right: 15px;
+      }
+
+      @include for-narrow-middle {
+        padding-right: 15px;
+      }
+
+      @include for-mobile {
+        padding-right: 15px;
+      }
+    }
+
+    &_parking {
+      border-radius: 0 0 150px 0;
+
+      @include for-narrow-middle {
+        border-radius: 0 0 80px 0;
+      }
+
+      @include for-mobile {
+        border-radius: 0;
+      }
+    }
+
+    &_express-line {
+      border-radius: 0 0 0 150px;
+
+      @include for-narrow-middle {
+        border-radius: 0 0 0 80px;
+      }
+
+      @include for-mobile {
+        border-radius: 0;
+      }
+    }
+
+    &_airlines-destinations {
+      border-radius: 0 0 150px 0;
+
+      @include for-narrow-middle {
+        border-radius: 0 0 80px 0;
+      }
+
+      @include for-mobile {
+        border-radius: 0;
+      }
+    }
+
+    &_vip-terminal {
+      border-radius: 0 0 0 150px;
+
+      @include for-narrow-middle {
+        border-radius: 0 0 0 80px;
+      }
+
+      @include for-mobile {
+        border-radius: 0;
+      }
+    }
+
+    &_mastercard-fastline {
+      justify-content: left;
     }
   }
 
-  @include for-narrow-middle {
-    border-radius: 0 0 120px 0;
-  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
 
-  @include for-mobile {
-    border-radius: 0 0 70px 0;
-    margin-bottom: 15px;
-  }
-}
-
-.block__container_vip-terminal {
-  border-radius: 0 0 0 200px;
-
-  &:hover {
-    border-radius: 0 0 0 150px;
+    @include for-wide-middle {
+      height: 230px;
+    }
 
     @include for-narrow-middle {
-      overflow: hidden;
+      height: 230px;
     }
 
     @include for-mobile {
-      border-radius: 0 0 0 70px;
-    }
-  }
-
-  &:hover .block__title_vip-terminal {
-    border-radius: 0 0 0 100px;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_vip-terminal {
-    background-color: $color-blue;
-    color: $color-white;
-    width: 385px;
-
-    @include for-wide-middle {
-      width: 322px;
+      height: 250px;
     }
 
-    @include for-narrow-middle {
-      width: 238px;
+    &_top-position {
+      justify-content: space-between;
     }
 
-    @include for-mobile {
+    &_bottom-position {
       background-color: $color-white;
-      color: $color-blue;
-    }
-  }
-
-  @include for-narrow-middle {
-    border-radius: 0 0 0 120px;
-  }
-
-  @include for-mobile {
-    border-radius: 0 0 0 70px;
-  }
-}
-
-.block__container_mastercard-fastline {
-  border-radius: 0 200px 0 0;
-
-  &:hover {
-    border-radius: 0 150px 0 0;
-
-    @include for-mobile {
-      border-radius: 0 70px 0 0;
-    }
-  }
-
-  &:hover .block__content_mastercard-fastline {
-    border-radius: 0 100px 0 0;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_mastercard-fastline {
-    background-color: $color-blue;
-    color: $color-white;
-
-    @include for-wide-middle {
-      width: 378px;
     }
 
-    @include for-mobile {
-      background-color: $color-white;
-      color: $color-blue;
-    }
-  }
+    &_wide-size {
+      width: 645px;
 
-  @include for-narrow-middle {
-    border-radius: 0 120px 0 0;
-  }
+      @include for-wide-middle {
+        width: 540px;
+      }
 
-  @include for-mobile {
-    border-radius: 0 70px 0 0;
-    margin-bottom: 15px;
-  }
-}
+      @include for-narrow-middle {
+        width: 400px;
+      }
 
-.block__container_information {
-  border-radius: 200px 0 0 0;
-
-  &:hover {
-    border-radius: 150px 0 0 0;
-
-    @include for-mobile {
-      border-radius: 70px 0 0 0;
-    }
-  }
-
-  &:hover .block__content_information {
-    border-radius: 100px 0 0 0;
-
-    @include for-mobile {
-      border-radius: 0;
-    }
-  }
-
-  &:hover .block__button_information {
-    background-color: $color-blue;
-    color: $color-white;
-
-    @include for-wide-middle {
-      width: 266px;
+      @include for-mobile {
+        width: calc(100vw - 20px);
+      }
     }
 
-    @include for-mobile {
-      background-color: $color-white;
-      color: $color-blue;
+    &_medium-size {
+      width: 550px;
+
+      @include for-wide-middle {
+        width: 460px;
+      }
+
+      @include for-narrow-middle {
+        width: 340px;
+      }
+
+      @include for-mobile {
+        width: calc(100vw - 20px);
+      }
     }
-  }
 
-  @include for-narrow-middle {
-    border-radius: 120px 0 0 0;
-  }
+    &_narrow-size {
+      width: 455px;
 
-  @include for-mobile {
-    border-radius: 70px 0 0 0;
+      @include for-wide-middle {
+        width: 380px;
+      }
+
+      @include for-narrow-middle {
+        width: 280px;
+      }
+
+      @include for-mobile {
+        width: calc(100vw - 20px);
+      }
+    }
+
+    &_how-to-get {
+      border-radius: 0 200px 0 0;
+
+      &:hover {
+        border-radius: 0 150px 0 0;
+
+        @include for-mobile {
+          border-radius: 0 70px 0 0;
+        }
+      }
+
+      &:hover .block__content_how-to-get {
+        border-radius: 0 100px 0 0;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_how-to-get {
+        background-color: $color-blue;
+        color: $color-white;
+
+        @include for-wide-middle {
+          width: 266px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 0 120px 0 0;
+      }
+
+      @include for-mobile {
+        border-radius: 0 70px 0 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    &_buy-tickets {
+      border-radius: 200px 0 0 0;
+
+      &:hover {
+        border-radius: 150px 0 0 0;
+
+        @include for-mobile {
+          border-radius: 70px 0 0 0;
+        }
+      }
+
+      &:hover .block__content_buy-tickets {
+        border-radius: 100px 0 0 0;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_buy-tickets {
+        background-color: $color-blue;
+        color: $color-white;
+
+        @include for-wide-middle {
+          width: 378px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 120px 0 0 0;
+      }
+
+      @include for-mobile {
+        border-radius: 70px 0 0 0;
+      }
+    }
+
+    &_parking {
+      border-radius: 0 0 200px 0;
+
+      &:hover {
+        border-radius: 0 0 150px 0;
+
+        @include for-wide-middle {
+          overflow: hidden;
+        }
+
+        @include for-narrow-middle {
+          overflow: hidden;
+        }
+
+        @include for-mobile {
+          border-radius: 0 0 70px 0;
+        }
+      }
+
+      &:hover .block__title_parking {
+        border-radius: 0 0 100px 0;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_parking {
+        background-color: $color-blue;
+        color: $color-white;
+        width: 318.5px;
+
+        @include for-wide-middle {
+          width: 266px;
+        }
+
+        @include for-narrow-middle {
+          width: 196px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 0 0 120px 0;
+      }
+
+      @include for-mobile {
+        border-radius: 0 0 70px 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    &_express-line {
+      border-radius: 0 0 0 200px;
+
+      &:hover {
+        border-radius: 0 0 0 150px;
+
+        @include for-narrow-middle {
+          overflow: hidden;
+        }
+
+        @include for-mobile {
+          border-radius: 0 0 0 70px;
+        }
+      }
+
+      &:hover .block__title_express-line {
+        border-radius: 0 0 0 100px;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_express-line {
+        background-color: $color-blue;
+        color: $color-white;
+
+        @include for-wide-middle {
+          width: 378px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 0 0 0 120px;
+      }
+
+      @include for-mobile {
+        border-radius: 0 0 0 70px;
+      }
+    }
+
+    &_services {
+      border-radius: 0 200px 0 0;
+
+      &:hover {
+        border-radius: 0 150px 0 0;
+
+        @include for-mobile {
+          border-radius: 0 70px 0 0;
+        }
+      }
+
+      &:hover .block__content_services {
+        border-radius: 0 100px 0 0;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_services {
+        background-color: $color-blue;
+        color: $color-white;
+
+        @include for-wide-middle {
+          width: 322px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 0 120px 0 0;
+      }
+
+      @include for-mobile {
+        border-radius: 0 70px 0 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    &_covid-testing {
+      border-radius: 200px 0 0 0;
+
+      &:hover {
+        border-radius: 150px 0 0 0;
+
+        @include for-mobile {
+          border-radius: 70px 0 0 0;
+        }
+      }
+
+      &:hover .block__content_covid-testing {
+        border-radius: 100px 0 0 0;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_covid-testing {
+        background-color: $color-blue;
+        color: $color-white;
+
+        @include for-wide-middle {
+          width: 322px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 120px 0 0 0;
+      }
+
+      @include for-mobile {
+        border-radius: 70px 0 0 0;
+      }
+    }
+
+    &_airlines-destinations {
+      border-radius: 0 0 200px 0;
+
+      &:hover {
+        border-radius: 0 0 150px 0;
+
+        @include for-narrow-middle {
+          overflow: hidden;
+        }
+
+        @include for-mobile {
+          border-radius: 0 0 70px 0;
+        }
+      }
+
+      &:hover .block__title_airlines-destinations {
+        border-radius: 0 0 100px 0;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_airlines-destinations {
+        background-color: $color-blue;
+        color: $color-white;
+        width: 395px;
+
+        @include for-wide-middle {
+          width: 322px;
+        }
+
+        @include for-narrow-middle {
+          width: 238px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 0 0 120px 0;
+      }
+
+      @include for-mobile {
+        border-radius: 0 0 70px 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    &_vip-terminal {
+      border-radius: 0 0 0 200px;
+
+      &:hover {
+        border-radius: 0 0 0 150px;
+
+        @include for-narrow-middle {
+          overflow: hidden;
+        }
+
+        @include for-mobile {
+          border-radius: 0 0 0 70px;
+        }
+      }
+
+      &:hover .block__title_vip-terminal {
+        border-radius: 0 0 0 100px;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_vip-terminal {
+        background-color: $color-blue;
+        color: $color-white;
+        width: 385px;
+
+        @include for-wide-middle {
+          width: 322px;
+        }
+
+        @include for-narrow-middle {
+          width: 238px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 0 0 0 120px;
+      }
+
+      @include for-mobile {
+        border-radius: 0 0 0 70px;
+      }
+    }
+
+    &_mastercard-fastline {
+      border-radius: 0 200px 0 0;
+
+      &:hover {
+        border-radius: 0 150px 0 0;
+
+        @include for-mobile {
+          border-radius: 0 70px 0 0;
+        }
+      }
+
+      &:hover .block__content_mastercard-fastline {
+        border-radius: 0 100px 0 0;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_mastercard-fastline {
+        background-color: $color-blue;
+        color: $color-white;
+
+        @include for-wide-middle {
+          width: 378px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 0 120px 0 0;
+      }
+
+      @include for-mobile {
+        border-radius: 0 70px 0 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    &_information {
+      border-radius: 200px 0 0 0;
+
+      &:hover {
+        border-radius: 150px 0 0 0;
+
+        @include for-mobile {
+          border-radius: 70px 0 0 0;
+        }
+      }
+
+      &:hover .block__content_information {
+        border-radius: 100px 0 0 0;
+
+        @include for-mobile {
+          border-radius: 0;
+        }
+      }
+
+      &:hover .block__button_information {
+        background-color: $color-blue;
+        color: $color-white;
+
+        @include for-wide-middle {
+          width: 266px;
+        }
+
+        @include for-mobile {
+          background-color: $color-white;
+          color: $color-blue;
+        }
+      }
+
+      @include for-narrow-middle {
+        border-radius: 120px 0 0 0;
+      }
+
+      @include for-mobile {
+        border-radius: 70px 0 0 0;
+      }
+    }
   }
 }

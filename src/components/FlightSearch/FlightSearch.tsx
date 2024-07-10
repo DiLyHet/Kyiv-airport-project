@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Image from '../../../assets/images/main.jpg';
-
-interface AirportData {
-  codeShare: string;
-  departureCity: string;
-  arrivalCity: string;
-}
+import Image from "../../images/main.jpg";
 
 interface FlightSearchProps {
   type: string;
@@ -21,7 +15,6 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
   setType,
   data,
   setInputSearchArray,
-  inputSearchArray,
 }) => {
   const [inputValue, setInputValue] = useState<string>("");
 
@@ -53,7 +46,10 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
   };
 
   return (
-    <section className="flight-search" style={{ backgroundImage: `url(${Image})` }}>
+    <section
+      className="flight-search"
+      style={{ backgroundImage: `url(${Image})` }}
+    >
       <h2 className="flight-search__title">ПОШУК РЕЙСУ</h2>
       <form className="flight-search__form">
         <div className="flight-search__form_icon-holder">
@@ -86,8 +82,9 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
       </form>
       <div className="flight-search__buttons">
         <Link
-          className={`flight-search__btn flight-search__btn_all-departures ${type === "DEPARTURE" ? "flight-search__btn_current" : ""
-            }`}
+          className={`flight-search__btn flight-search__btn_all-departures ${
+            type === "DEPARTURE" ? "flight-search__btn_current" : ""
+          }`}
           to={"/flight_search"}
           onClick={() => setType("DEPARTURE")}
         >
@@ -108,8 +105,9 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
           <span className="flight-search__btn_text">ВИЛІТ УСІ РЕЙСИ</span>
         </Link>
         <Link
-          className={`flight-search__btn flight-search__btn_all-arrivals ${type === "ARRIVAL" ? "flight-search__btn_current" : ""
-            }`}
+          className={`flight-search__btn flight-search__btn_all-arrivals ${
+            type === "ARRIVAL" ? "flight-search__btn_current" : ""
+          }`}
           to={"/flight_search"}
           onClick={() => setType("ARRIVAL")}
         >

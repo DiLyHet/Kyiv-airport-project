@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-      "target": "ES6",
-      "module": "commonjs",
-      "jsx": "react",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "outDir": "./dist",
-      "sourceMap": true
+    "target": "ES6",
+    "module": "commonjs",
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "typeRoots": ["./node_modules/@types", "./"],
+    "sourceMap": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "components.d.ts", "images.d.ts", "styles.d.ts"],
   "exclude": ["node_modules"]
 }

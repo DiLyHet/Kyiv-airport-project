@@ -14,11 +14,9 @@
   @include for-wide-middle {
     width: 960px;
   }
-
   @include for-narrow-middle {
     width: 720px;
   }
-
   @include for-mobile {
     width: 100vw;
     padding: 0;
@@ -40,11 +38,9 @@
       @include for-wide-middle {
         font-size: 36px;
       }
-
       @include for-narrow-middle {
         font-size: 36px;
       }
-
       @include for-mobile {
         font-size: 36px;
         margin-left: 15px;
@@ -96,11 +92,9 @@
       @include for-wide-middle {
         width: 460px;
       }
-
       @include for-narrow-middle {
         width: 340px;
       }
-
       @include for-mobile {
         width: calc(100vw - 20px);
         margin-top: 30px;
@@ -130,11 +124,9 @@
       @include for-wide-middle {
         width: 460px;
       }
-
       @include for-narrow-middle {
         width: 340px;
       }
-
       @include for-mobile {
         width: calc(100vw - 20px);
         margin-bottom: 60px;
@@ -148,11 +140,9 @@
       @include for-wide-middle {
         width: 380px;
       }
-
       @include for-narrow-middle {
         width: 280px;
       }
-
       @include for-mobile {
         width: calc(100vw - 20px);
       }
@@ -171,11 +161,9 @@
       @include for-wide-middle {
         width: 380px;
       }
-
       @include for-narrow-middle {
         width: 280px;
       }
-
       @include for-mobile {
         width: calc(100vw - 20px);
       }

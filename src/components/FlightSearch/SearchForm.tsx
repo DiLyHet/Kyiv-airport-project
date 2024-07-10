@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getAirportData } from "../../api";
-import Image from '../../../assets/images/calendar-icon.svg';
+import Image from "../../images/calendar-icon.svg";
 
 interface Airport {
   id: number;
@@ -52,13 +52,12 @@ const SearchForm: React.FC<SearchFormProps> = ({
         const airportData = await getAirportData();
         setData(airportData);
       } catch (error) {
-        console.error('Failed to receive data from server');
+        console.error("Failed to receive data from server");
       }
     };
 
     fetchData();
   }, []);
-
 
   useEffect(() => {
     let availableDate = false;
@@ -66,8 +65,10 @@ const SearchForm: React.FC<SearchFormProps> = ({
       data.forEach((airport) => {
         const formattedDate =
           type === "DEPARTURE"
-            ? formatDate(airport.departureDateExpected) ?? formatDate(airport.departureDate)
-            : formatDate(airport.arrivalDateExpected) ?? formatDate(airport.arrivalDate);
+            ? formatDate(airport.departureDateExpected) ??
+              formatDate(airport.departureDate)
+            : formatDate(airport.arrivalDateExpected) ??
+              formatDate(airport.arrivalDate);
 
         if (formattedDate === date && airport.type === type) {
           availableDate = true;
@@ -139,7 +140,10 @@ const SearchForm: React.FC<SearchFormProps> = ({
     <div className="board__content">
       <div className="filter">
         <div className="filter__date-wrapper">
-          <label htmlFor="filter-date-input" className="filter__date-input-label">
+          <label
+            htmlFor="filter-date-input"
+            className="filter__date-input-label"
+          >
             <p>{date}</p>
             <input
               type="date"
@@ -178,33 +182,51 @@ const SearchForm: React.FC<SearchFormProps> = ({
       </div>
       <div className="table">
         <ul className="airport-list">
-          {(inputSearchArray.length > 0 ? inputSearchArray : data).map((airport) => {
-            const formattedDate =
-              type === "DEPARTURE"
-                ? formatDate(airport.departureDateExpected) ?? formatDate(airport.departureDate)
-                : formatDate(airport.arrivalDateExpected) ?? formatDate(airport.arrivalDate);
+          {(inputSearchArray.length > 0 ? inputSearchArray : data).map(
+            (airport) => {
+              const formattedDate =
+                type === "DEPARTURE"
+                  ? formatDate(airport.departureDateExpected) ??
+                    formatDate(airport.departureDate)
+                  : formatDate(airport.arrivalDateExpected) ??
+                    formatDate(airport.arrivalDate);
 
-            if (formattedDate === date && airport.type === type) {
-              return (
-                <li key={airport.id} className="airport-item">
-                  <img src={airport.airlineLogo} alt="logo" className="airport-item__logo" />
-                  <p className="airport-item__name">{airport.airlineName}</p>
-                  <p className="airport-item__city">Виліт з аеропорту {airport.departureCity}</p>
-                  <p className="airport-item__date">{formattedDate}</p>
-                  <p className="airport-item__city">Приліт у аеропорт {airport.arrivalCity}</p>
-                  <p className="airport-item__date">{formattedDate}</p>
-                  <p className="airport-item__code">{airport.codeShare}</p>
-                  <p className="airport-item__terminal">Термінал {airport.terminal}</p>
-                  <p className="airport-item__status">Статус {airport.status}</p>
-                  <p className="airport-item__type">{airport.type}</p>
-                </li>
-              );
-            } else {
-              return null;
-            }
-          })}
+              if (formattedDate === date && airport.type === type) {
+                return (
+                  <li key={airport.id} className="airport-item">
+                    <img
+                      src={airport.airlineLogo}
+                      alt="logo"
+                      className="airport-item__logo"
+                    />
+                    <p className="airport-item__name">{airport.airlineName}</p>
+                    <p className="airport-item__city">
+                      Виліт з аеропорту {airport.departureCity}
+                    </p>
+                    <p className="airport-item__date">{formattedDate}</p>
+                    <p className="airport-item__city">
+                      Приліт у аеропорт {airport.arrivalCity}
+                    </p>
+                    <p className="airport-item__date">{formattedDate}</p>
+                    <p className="airport-item__code">{airport.codeShare}</p>
+                    <p className="airport-item__terminal">
+                      Термінал {airport.terminal}
+                    </p>
+                    <p className="airport-item__status">
+                      Статус {airport.status}
+                    </p>
+                    <p className="airport-item__type">{airport.type}</p>
+                  </li>
+                );
+              } else {
+                return null;
+              }
+            },
+          )}
         </ul>
-        {!currentDateIsAvailable && <h1 className="no-flights">НЕМАЄ РЕЙСІВ</h1>}
+        {!currentDateIsAvailable && (
+          <h1 className="no-flights">НЕМАЄ РЕЙСІВ</h1>
+        )}
       </div>
     </div>
   );

@@ -1,5 +1,3 @@
-
-
 .announcement {
   background-color: #ffffff;
   width: 100vw;
@@ -53,30 +51,42 @@
 }
 
 .announcement__message {
-  font: normal 700 26px "Open Sans condenced", sans-serif;
+  font:
+    normal 700 26px "Open Sans condenced",
+    sans-serif;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
   .announcement__message {
-    font: normal 700 22px "Open Sans condenced", sans-serif;
+    font:
+      normal 700 22px "Open Sans condenced",
+      sans-serif;
   }
 }
 @media screen and (max-width: 767.9px) {
   .announcement__message {
-    font: normal 700 22px "Open Sans condenced", sans-serif;
+    font:
+      normal 700 22px "Open Sans condenced",
+      sans-serif;
   }
 }
 
 .announcement__link {
-  font: normal 700 30px "Open Sans condenced", sans-serif;
+  font:
+    normal 700 30px "Open Sans condenced",
+    sans-serif;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
   .announcement__link {
-    font: normal 700 22px "Open Sans condenced", sans-serif;
+    font:
+      normal 700 22px "Open Sans condenced",
+      sans-serif;
   }
 }
 @media screen and (max-width: 767.9px) {
   .announcement__link {
-    font: normal 700 22px "Open Sans condenced", sans-serif;
+    font:
+      normal 700 22px "Open Sans condenced",
+      sans-serif;
   }
 }
 
@@ -149,7 +159,9 @@
 }
 
 .info-block__description_title {
-  font: normal 700 120px "Open Sans", sans-serif;
+  font:
+    normal 700 120px "Open Sans",
+    sans-serif;
   background: linear-gradient(-180deg, #8dc23a 0%, #587e1d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -170,7 +182,9 @@
 }
 
 .info-block__description_subtitle {
-  font: normal 400 24px "Open Sans", sans-serif;
+  font:
+    normal 400 24px "Open Sans",
+    sans-serif;
   color: #2f2f2f;
   margin-top: 15px;
   line-height: 1;
@@ -239,13 +253,17 @@
 }
 
 .icon__text {
-  font: normal 700 14px "Open Sans", sans-serif;
+  font:
+    normal 700 14px "Open Sans",
+    sans-serif;
   color: #5a5e60;
 }
 
 .quantity-selector__counter_number {
   color: #2f2f2f;
-  font: normal 700 40px "Open Sans", sans-serif;
+  font:
+    normal 700 40px "Open Sans",
+    sans-serif;
   line-height: 1;
   margin-bottom: 15px;
   margin-left: 5px;
@@ -618,7 +636,9 @@
 
 .block__description {
   color: #595959;
-  font: normal 600 24px "Open Sans", sans-serif;
+  font:
+    normal 600 24px "Open Sans",
+    sans-serif;
 }
 @media screen and (min-width: 992px) and (max-width: 1199.9px) {
   .block__description {
@@ -678,7 +698,9 @@
 
 .block__button {
   color: #1eb7ee;
-  font: normal 700 20px "Open Sans", sans-serif;
+  font:
+    normal 700 20px "Open Sans",
+    sans-serif;
   background-color: #ffffff;
   border: none;
   height: 50px;
@@ -924,7 +946,6 @@
 }
 
 .block__title_parking {
-  background: url('../assets/images/2.jpg');
   border-radius: 0 0 150px 0;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
@@ -939,7 +960,6 @@
 }
 
 .block__title_express-line {
-  background: url("/assets/images/49.jpg");
   border-radius: 0 0 0 150px;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
@@ -954,7 +974,6 @@
 }
 
 .block__title_airlines-destinations {
-  background: url("/assets/images/4.jpg");
   border-radius: 0 0 150px 0;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
@@ -969,7 +988,6 @@
 }
 
 .block__title_vip-terminal {
-  background: url("/assets/images/27.jpg");
   border-radius: 0 0 0 150px;
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
@@ -1081,7 +1099,6 @@
 
 .block__container_how-to-get {
   border-radius: 0 200px 0 0;
-  background: url("/assets/images/1.jpg");
 }
 .block__container_how-to-get:hover {
   border-radius: 0 150px 0 0;
@@ -1128,7 +1145,6 @@
 
 .block__container_buy-tickets {
   border-radius: 200px 0 0 0;
-  background: url("/assets/images/32.jpg");
 }
 .block__container_buy-tickets:hover {
   border-radius: 150px 0 0 0;
@@ -1286,7 +1302,6 @@
 
 .block__container_services {
   border-radius: 0 200px 0 0;
-  background: url("/assets/images/24.jpg");
 }
 .block__container_services:hover {
   border-radius: 0 150px 0 0;
@@ -1333,7 +1348,6 @@
 
 .block__container_covid-testing {
   border-radius: 200px 0 0 0;
-  background: url("/assets/images/covid-3.jpeg");
 }
 .block__container_covid-testing:hover {
   border-radius: 150px 0 0 0;
@@ -1393,31 +1407,37 @@
     border-radius: 0 0 70px 0;
   }
 }
-.block__container_airlines-destinations:hover .block__title_airlines-destinations {
+.block__container_airlines-destinations:hover
+  .block__title_airlines-destinations {
   border-radius: 0 0 100px 0;
 }
 @media screen and (max-width: 767.9px) {
-  .block__container_airlines-destinations:hover .block__title_airlines-destinations {
+  .block__container_airlines-destinations:hover
+    .block__title_airlines-destinations {
     border-radius: 0;
   }
 }
-.block__container_airlines-destinations:hover .block__button_airlines-destinations {
+.block__container_airlines-destinations:hover
+  .block__button_airlines-destinations {
   background-color: #1eb7ee;
   color: #ffffff;
   width: 395px;
 }
 @media screen and (min-width: 992px) and (max-width: 1199.9px) {
-  .block__container_airlines-destinations:hover .block__button_airlines-destinations {
+  .block__container_airlines-destinations:hover
+    .block__button_airlines-destinations {
     width: 322px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
-  .block__container_airlines-destinations:hover .block__button_airlines-destinations {
+  .block__container_airlines-destinations:hover
+    .block__button_airlines-destinations {
     width: 238px;
   }
 }
 @media screen and (max-width: 767.9px) {
-  .block__container_airlines-destinations:hover .block__button_airlines-destinations {
+  .block__container_airlines-destinations:hover
+    .block__button_airlines-destinations {
     background-color: #ffffff;
     color: #1eb7ee;
   }
@@ -1492,7 +1512,6 @@
 
 .block__container_mastercard-fastline {
   border-radius: 0 200px 0 0;
-  background: url("/assets/images/47.jpg");
 }
 .block__container_mastercard-fastline:hover {
   border-radius: 0 150px 0 0;
@@ -1502,11 +1521,13 @@
     border-radius: 0 70px 0 0;
   }
 }
-.block__container_mastercard-fastline:hover .block__content_mastercard-fastline {
+.block__container_mastercard-fastline:hover
+  .block__content_mastercard-fastline {
   border-radius: 0 100px 0 0;
 }
 @media screen and (max-width: 767.9px) {
-  .block__container_mastercard-fastline:hover .block__content_mastercard-fastline {
+  .block__container_mastercard-fastline:hover
+    .block__content_mastercard-fastline {
     border-radius: 0;
   }
 }
@@ -1515,12 +1536,14 @@
   color: #ffffff;
 }
 @media screen and (min-width: 992px) and (max-width: 1199.9px) {
-  .block__container_mastercard-fastline:hover .block__button_mastercard-fastline {
+  .block__container_mastercard-fastline:hover
+    .block__button_mastercard-fastline {
     width: 378px;
   }
 }
 @media screen and (max-width: 767.9px) {
-  .block__container_mastercard-fastline:hover .block__button_mastercard-fastline {
+  .block__container_mastercard-fastline:hover
+    .block__button_mastercard-fastline {
     background-color: #ffffff;
     color: #1eb7ee;
   }
@@ -1539,7 +1562,6 @@
 
 .block__container_information {
   border-radius: 200px 0 0 0;
-  background: url("/assets/images/12.jpg");
 }
 .block__container_information:hover {
   border-radius: 150px 0 0 0;
@@ -1584,7 +1606,6 @@
 }
 
 .flight-search {
-  background-image: url("/assets/images/main.jpg");
   height: 392px;
   margin: 0px;
   display: flex;
@@ -1596,14 +1617,12 @@
 }
 @media screen and (min-width: 992px) and (max-width: 1199.9px) {
   .flight-search {
-    background: url("/assets/images/main.jpg") no-repeat center bottom;
     background-size: cover;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
   .flight-search {
     height: 372px;
-    background: url("/assets/images/main.jpg") no-repeat center bottom;
   }
 }
 @media screen and (max-width: 767.9px) {
@@ -1615,7 +1634,9 @@
 }
 .flight-search__title {
   margin: 0px;
-  font: 70px "open sans", sans-serif;
+  font:
+    70px "open sans",
+    sans-serif;
   color: #ffffff;
   line-height: 80px;
   padding-top: 60px;
@@ -1625,12 +1646,16 @@
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
   .flight-search__title {
-    font: 60px "open sans", sans-serif;
+    font:
+      60px "open sans",
+      sans-serif;
   }
 }
 @media screen and (max-width: 767.9px) {
   .flight-search__title {
-    font: 35px "open sans", sans-serif;
+    font:
+      35px "open sans",
+      sans-serif;
     padding-top: 20px;
     line-height: 40px;
   }
@@ -1699,7 +1724,9 @@
   height: 80px;
   background-color: #1eb7ee;
   color: #ffffff;
-  font: 26px "open sans", sans-serif;
+  font:
+    26px "open sans",
+    sans-serif;
   border: none;
   margin: 0px;
   padding: 0 20px;
@@ -1850,19 +1877,25 @@
   filter: grayscale(100%) invert(100%) brightness(1000%) contrast(100%);
 }
 .flight-search__btn_text {
-  font: 20px "open sans", sans-serif;
+  font:
+    20px "open sans",
+    sans-serif;
   color: #1eb7ee;
   font-weight: 500;
   text-decoration: none;
 }
 @media screen and (min-width: 992px) and (max-width: 1199.9px) {
   .flight-search__btn_text {
-    font: 16px "open sans", sans-serif;
+    font:
+      16px "open sans",
+      sans-serif;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991.9px) {
   .flight-search__btn_text {
-    font: 16px "open sans", sans-serif;
+    font:
+      16px "open sans",
+      sans-serif;
   }
 }
 .flight-search__btn_icon {
@@ -1873,7 +1906,9 @@
 
 .submit-btn__text {
   color: #ffffff;
-  font: 26px "open sans", sans-serif;
+  font:
+    26px "open sans",
+    sans-serif;
   font-weight: 700;
   text-align: left;
   text-decoration: none;
@@ -1921,7 +1956,7 @@
   display: block;
   width: 30px;
   height: 30px;
-  background: url("https://www.pngkey.com/png/full/138-1382606_icon-airplane-icon-blue-png.png") no-repeat center;
+  background: no-repeat center;
   background-size: contain;
   filter: brightness(500%);
 }
@@ -1972,7 +2007,6 @@
   border-radius: 5px;
   outline: none;
   background-color: #1eb7ee;
-  background-image: url("/assets/images/calendar-icon.svg");
   background-repeat: no-repeat;
   background-position: 44% 47%;
   background-size: 120px 120px;
@@ -2406,7 +2440,9 @@
   background-color: #1eb7ee;
   border: none;
   color: #ffffff;
-  font: 20px "open sans", sans-serif;
+  font:
+    20px "open sans",
+    sans-serif;
   cursor: pointer;
   font-weight: 600;
 }
