@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getAirportData } from "../../api";
 import Image from "../../images/calendar-icon.svg";
-
+import { useNavigate } from "react-router-dom";
 interface Airport {
   id: number;
   airlineName: string;
@@ -32,18 +32,14 @@ const SearchForm: React.FC<SearchFormProps> = ({
   data,
   setData,
   inputSearchArray,
+  date,
+  setDate,
+  getCurrentFormattedDate,
+  updateSearchQuery
 }) => {
-  const getCurrentFormattedDate = () => {
-    const today = new Date();
-    const formatNumber = (num: number) => (num < 10 ? `0${num}` : num);
-    const day = formatNumber(today.getDate());
-    const month = formatNumber(today.getMonth() + 1);
-    const year = today.getFullYear();
-    return `${year}-${month}-${day}`;
-  };
-
+  
+const navigate = useNavigate();
   const [activeButton, setActiveButton] = useState("current");
-  const [date, setDate] = useState<string>(getCurrentFormattedDate());
   const [currentDateIsAvailable, setCurrentDateIsAvailable] = useState(false);
 
   useEffect(() => {
@@ -82,6 +78,8 @@ const SearchForm: React.FC<SearchFormProps> = ({
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDate(e.target.value);
+    console.log(date);
+    updateSearchQuery(navigate);
   };
 
   const handlePreviousDate = () => {

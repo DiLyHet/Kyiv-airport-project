@@ -10,7 +10,7 @@ interface HomePageProps {
   setType: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ type, setType }) => {
+const HomePage: React.FC<HomePageProps> = ({ type, setType, updateSearchQuery, date, setDate, inputValue, setInputValue }) => {
   const [inputSearchArray, setInputSearchArray] = useState<any[]>([]);
   const [data, setData] = useState<any[]>([]);
 
@@ -23,6 +23,11 @@ const HomePage: React.FC<HomePageProps> = ({ type, setType }) => {
         data={data}
         setInputSearchArray={setInputSearchArray}
         inputSearchArray={inputSearchArray}
+        updateSearchQuery={updateSearchQuery}
+        date={date}
+        setDate={setDate}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
       />
       <Announcement />
       <News />

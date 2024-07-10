@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Image from "../../images/main.jpg";
+import { useNavigate } from "react-router-dom";
+
 
 interface FlightSearchProps {
   type: string;
@@ -15,11 +17,22 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
   setType,
   data,
   setInputSearchArray,
+  date,
+  setDate,
+  inputValue,
+  setInputValue,
+  updateSearchQuery
 }) => {
-  const [inputValue, setInputValue] = useState<string>("");
+
+const navigate = useNavigate();
+
+
+
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
+    updateSearchQuery(navigate);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
@@ -81,12 +94,13 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
         </Link>
       </form>
       <div className="flight-search__buttons">
-        <Link
-          className={`flight-search__btn flight-search__btn_all-departures ${
-            type === "DEPARTURE" ? "flight-search__btn_current" : ""
-          }`}
-          to={"/flight_search"}
-          onClick={() => setType("DEPARTURE")}
+        <button
+          className={`flight-search__btn flight-search__btn_all-departures ${type === "DEPARTURE" ? "flight-search__btn_current" : ""
+            }`}
+          onClick={() => {
+            setType("DEPARTURE");
+            updateSearchQuery(navigate);
+          }}
         >
           <div className="flight-search__btn_icon">
             <svg
@@ -103,13 +117,14 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
             </svg>
           </div>
           <span className="flight-search__btn_text">ВИЛІТ УСІ РЕЙСИ</span>
-        </Link>
-        <Link
-          className={`flight-search__btn flight-search__btn_all-arrivals ${
-            type === "ARRIVAL" ? "flight-search__btn_current" : ""
-          }`}
-          to={"/flight_search"}
-          onClick={() => setType("ARRIVAL")}
+        </button>
+        <button
+          className={`flight-search__btn flight-search__btn_all-arrivals ${type === "ARRIVAL" ? "flight-search__btn_current" : ""
+            }`}
+          onClick={() => {
+            setType("ARRIVAL");
+            updateSearchQuery(navigate);
+          }}
         >
           <span className="flight-search__btn_text">ПРИЛІТ УСІ РЕЙСИ</span>
           <div className="flight-search__btn_icon">
@@ -126,7 +141,7 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
               />
             </svg>
           </div>
-        </Link>
+        </button>
       </div>
     </section>
   );
