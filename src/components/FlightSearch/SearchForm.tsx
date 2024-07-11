@@ -79,7 +79,7 @@ const navigate = useNavigate();
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDate(e.target.value);
     console.log(date);
-    updateSearchQuery(navigate);
+    //updateSearchQuery(navigate);
   };
 
   const handlePreviousDate = () => {

@@ -32,7 +32,7 @@ const navigate = useNavigate();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
-    updateSearchQuery(navigate);
+   // updateSearchQuery(navigate);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
@@ -99,7 +99,7 @@ const navigate = useNavigate();
             }`}
           onClick={() => {
             setType("DEPARTURE");
-            updateSearchQuery(navigate);
+           // updateSearchQuery(navigate);
           }}
         >
           <div className="flight-search__btn_icon">
@@ -123,7 +123,7 @@ const navigate = useNavigate();
             }`}
           onClick={() => {
             setType("ARRIVAL");
-            updateSearchQuery(navigate);
+            //updateSearchQuery(navigate);
           }}
         >
           <span className="flight-search__btn_text">ПРИЛІТ УСІ РЕЙСИ</span>

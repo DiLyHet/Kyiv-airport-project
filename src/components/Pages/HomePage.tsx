@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import FlightSearch from "../FlightSearch/FlightSearch";
 import Announcement from "../Announcement/Announcement";
 import News from "../News/News";
 import Footer from "../Footer/Footer";
-
+import { useNavigate } from "react-router-dom";
 interface HomePageProps {
   type: string;
   setType: React.Dispatch<React.SetStateAction<string>>;
@@ -13,7 +13,11 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = ({ type, setType, updateSearchQuery, date, setDate, inputValue, setInputValue }) => {
   const [inputSearchArray, setInputSearchArray] = useState<any[]>([]);
   const [data, setData] = useState<any[]>([]);
-
+  const navigate = useNavigate();
+  useEffect(()=>{
+    if(type == "") return;
+    updateSearchQuery(navigate);
+    },[date,type,inputValue]);
   return (
     <>
       <Header />

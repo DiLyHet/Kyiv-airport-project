@@ -55,7 +55,16 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.24.0",
+    "redux": "^5.0.1",
     "ts-loader": "^9.5.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiLyHet/Kyiv-airport-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DiLyHet/Kyiv-airport-project/issues"
+  },
+  "homepage": "https://github.com/DiLyHet/Kyiv-airport-project#readme",
   "description": ""
 }

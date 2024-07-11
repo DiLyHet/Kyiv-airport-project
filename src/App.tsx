@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, NavigateFunction, Route, Routes } from "react-router-dom";
 import HomePage from "./components/Pages/HomePage";
 import FlightSearchPage from "./components/Pages/FlightSearchPage";
@@ -18,20 +18,20 @@ const App: React.FC<AppProps> = () => {
   const [type, setType] = useState<string>("");
   const [date, setDate] = useState<string>(getCurrentFormattedDate());
   const [inputValue, setInputValue] = useState<string>("");
-  
-  const updateSearchQuery = (navigation: NavigateFunction) => {
-    const searchParams = new URLSearchParams();
-    if (type) {
-      searchParams.set('type', type);
+
+    const updateSearchQuery = (navigation: NavigateFunction) => {
+      const searchParams = new URLSearchParams();
+      if (type) {
+        searchParams.set('type', type);
+      }
+      if (date) {
+        searchParams.set('date', date);
+      }
+      if (inputValue) {
+        searchParams.set('inputValue', inputValue);
+      }
+      navigation(`/flight_search?${searchParams.toString()}`);
     }
-    if (date) {
-      searchParams.set('date', date);
-    }
-    if (inputValue) {
-      searchParams.set('inputValue', inputValue);
-    }
-    navigation(`/flight_search?${searchParams.toString()}`);
-  }
 
   return (
     <BrowserRouter>

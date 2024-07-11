@@ -36,7 +36,10 @@ const FlightSearchPage: React.FC<FlightSearchPageProps> = ({
     setInputValue(initialInputValue);
   }, []);
 
-
+useEffect(()=>{
+  if(type == "") return;
+updateSearchQuery(navigate);
+},[type,date,inputValue]);
 
   return (
     <>
