@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getAirportData } from "../../api";
 import Image from "../../images/calendar-icon.svg";
-import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { setDataAction, setDateAction } from "../../redux/slices/rootSlice";
 interface Airport {
