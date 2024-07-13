@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { getAirportData } from "../../api";
 import Image from "../../images/calendar-icon.svg";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { setDataAction, setDateAction } from "../../redux/slices/rootSlice";
 interface Airport {
   id: number;
   airlineName: string;
@@ -27,18 +29,15 @@ interface SearchFormProps {
 }
 
 const SearchForm: React.FC<SearchFormProps> = ({
-  type,
-  setType,
-  data,
-  setData,
   inputSearchArray,
-  date,
-  setDate,
   getCurrentFormattedDate,
-  updateSearchQuery
 }) => {
   
-const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const data = useAppSelector((state) => state.data);
+  const type = useAppSelector((state) => state.type);
+  const date = useAppSelector((state) => state.date);
+
   const [activeButton, setActiveButton] = useState("current");
   const [currentDateIsAvailable, setCurrentDateIsAvailable] = useState(false);
 
@@ -46,7 +45,7 @@ const navigate = useNavigate();
     const fetchData = async () => {
       try {
         const airportData = await getAirportData();
-        setData(airportData);
+        dispatch(setDataAction(airportData));
       } catch (error) {
         console.error("Failed to receive data from server");
       }
@@ -74,27 +73,26 @@ const navigate = useNavigate();
     setCurrentDateIsAvailable(availableDate);
   }, [data, type, date]);
 
-  let currentDate = getCurrentFormattedDate();
+  const currentDate = getCurrentFormattedDate();
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDate(e.target.value);
+    dispatch(setDateAction(e.target.value));
     console.log(date);
-    //updateSearchQuery(navigate);
   };
 
   const handlePreviousDate = () => {
     setActiveButton("previous");
-    setDate(getPreviousDate(currentDate));
+    dispatch(setDateAction(getPreviousDate(currentDate)));
   };
 
   const handleCurrentDate = () => {
     setActiveButton("current");
-    setDate(currentDate);
+    dispatch(setDateAction(currentDate));
   };
 
   const handleNextDate = () => {
     setActiveButton("next");
-    setDate(getNextDate(currentDate));
+    dispatch(setDateAction(getNextDate(currentDate)));
   };
 
   const formatNumber = (num: number): string => {

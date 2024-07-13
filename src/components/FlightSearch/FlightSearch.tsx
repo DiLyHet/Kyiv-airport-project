@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Image from "../../images/main.jpg";
-import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { setTypeAction } from "../../redux/slices/rootSlice";
 
 
 interface FlightSearchProps {
@@ -13,22 +14,15 @@ interface FlightSearchProps {
 }
 
 const FlightSearch: React.FC<FlightSearchProps> = ({
-  type,
-  setType,
-  data,
   setInputSearchArray,
-  date,
-  setDate,
   inputValue,
   setInputValue,
   updateSearchQuery
 }) => {
 
-const navigate = useNavigate();
-
-
-
-
+  const dispatch = useAppDispatch();
+  const type = useAppSelector((state) => state.type);
+  const data = useAppSelector((state) => state.data);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
@@ -39,7 +33,7 @@ const navigate = useNavigate();
     e.preventDefault();
 
     if (type !== "ARRIVAL") {
-      setType("DEPARTURE");
+      dispatch(setTypeAction("DEPARTURE"));
     }
 
     const matchingAirports = data.filter((airport) => {
@@ -98,8 +92,7 @@ const navigate = useNavigate();
           className={`flight-search__btn flight-search__btn_all-departures ${type === "DEPARTURE" ? "flight-search__btn_current" : ""
             }`}
           onClick={() => {
-            setType("DEPARTURE");
-           // updateSearchQuery(navigate);
+            dispatch(setTypeAction("DEPARTURE"))
           }}
         >
           <div className="flight-search__btn_icon">
@@ -122,8 +115,7 @@ const navigate = useNavigate();
           className={`flight-search__btn flight-search__btn_all-arrivals ${type === "ARRIVAL" ? "flight-search__btn_current" : ""
             }`}
           onClick={() => {
-            setType("ARRIVAL");
-            //updateSearchQuery(navigate);
+            dispatch(setTypeAction("ARRIVAL"));
           }}
         >
           <span className="flight-search__btn_text">ПРИЛІТ УСІ РЕЙСИ</span>

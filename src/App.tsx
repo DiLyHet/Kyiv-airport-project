@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { BrowserRouter, NavigateFunction, Route, Routes } from "react-router-dom";
 import HomePage from "./components/Pages/HomePage";
 import FlightSearchPage from "./components/Pages/FlightSearchPage";
+import { useSelector } from "react-redux";
+import { useAppSelector } from "./redux/store";
 
 interface AppProps {
 }
@@ -15,11 +17,15 @@ const App: React.FC<AppProps> = () => {
     const year = today.getFullYear();
     return `${year}-${month}-${day}`;
   };
-  const [type, setType] = useState<string>("");
-  const [date, setDate] = useState<string>(getCurrentFormattedDate());
+  // const [type, setType] = useState<string>("");
+  // const [date, setDate] = useState<string>(getCurrentFormattedDate());
+
+  const type = useAppSelector((state) => state.type);
+  const date = useAppSelector((state) => state.date);
+
   const [inputValue, setInputValue] = useState<string>("");
 
-    const updateSearchQuery = (navigation: NavigateFunction) => {
+    const updateSearchQuery = useCallback((navigation: NavigateFunction) => {
       const searchParams = new URLSearchParams();
       if (type) {
         searchParams.set('type', type);
@@ -31,15 +37,15 @@ const App: React.FC<AppProps> = () => {
         searchParams.set('inputValue', inputValue);
       }
       navigation(`/flight_search?${searchParams.toString()}`);
-    }
+    }, [type, date, inputValue])
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage type={type} setType={setType} updateSearchQuery={updateSearchQuery} date={date} setDate={setDate} inputValue={inputValue} setInputValue={setInputValue} />} />
+        <Route path="/" element={<HomePage updateSearchQuery={updateSearchQuery} inputValue={inputValue} setInputValue={setInputValue} />} />
         <Route
           path="/flight_search"
-          element={<FlightSearchPage type={type} setType={setType} updateSearchQuery={updateSearchQuery} date={date} setDate={setDate} inputValue={inputValue} setInputValue={setInputValue} getCurrentFormattedDate={getCurrentFormattedDate} />}
+          element={<FlightSearchPage updateSearchQuery={updateSearchQuery} inputValue={inputValue} setInputValue={setInputValue} getCurrentFormattedDate={getCurrentFormattedDate} />}
         />
       </Routes>
     </BrowserRouter>
