@@ -1,29 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "../Header/Header";
 import FlightSearch from "../FlightSearch/FlightSearch";
 import SearchForm from "../FlightSearch/SearchForm";
 import Footer from "../Footer/Footer";
-import { useNavigate } from "react-router-dom";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
-import { Type, setDateAction, setTypeAction } from "../../redux/slices/rootSlice";
+import { Type, setDateAction, setTypeAction, setInputValueAction } from "../../redux/slices/rootSlice";
+
+
+interface UpdateSearchQuery {
+  (navigation: NavigateFunction): void;
+}
 
 interface FlightSearchPageProps {
-  type: string;
-  setType: React.Dispatch<React.SetStateAction<string>>;
+  updateSearchQuery: UpdateSearchQuery;
 }
 
 const FlightSearchPage: React.FC<FlightSearchPageProps> = ({
-  updateSearchQuery, 
-  inputValue, 
-  setInputValue,
-  getCurrentFormattedDate
+  updateSearchQuery,
 }) => {
- 
+
   const dispatch = useAppDispatch();
   const type = useAppSelector((state) => state.type);
   const date = useAppSelector((state) => state.date);
+  const inputValue = useAppSelector((state) => state.inputValue);
 
-  const [inputSearchArray, setInputSearchArray] = useState<any[]>([]);
   const navigate = useNavigate();
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -33,29 +34,19 @@ const FlightSearchPage: React.FC<FlightSearchPageProps> = ({
 
     dispatch(setTypeAction(initialType));
     dispatch(setDateAction(initialDate));
-    setInputValue(initialInputValue);
+    dispatch(setInputValueAction(initialInputValue));
   }, []);
 
-useEffect(()=>{
-  if(type == "") return;
-updateSearchQuery(navigate);
-},[type,date,inputValue]);
+  useEffect(() => {
+    if (type == "") return;
+    updateSearchQuery(navigate);
+  }, [type, date, inputValue]);
 
   return (
     <>
       <Header />
-      <FlightSearch
-        setInputSearchArray={setInputSearchArray}
-        inputSearchArray={inputSearchArray}
-        inputValue={inputValue}
-        setInputValue={setInputValue}
-        updateSearchQuery={() => updateSearchQuery(navigate)}
-      />
-      <SearchForm
-        inputSearchArray={inputSearchArray}
-        getCurrentFormattedDate={getCurrentFormattedDate}
-        updateSearchQuery={updateSearchQuery}
-      />
+      <FlightSearch />
+      <SearchForm />
       <Footer />
     </>
   );

@@ -3,39 +3,17 @@ import { getAirportData } from "../../api";
 import Image from "../../images/calendar-icon.svg";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { setDataAction, setDateAction } from "../../redux/slices/rootSlice";
-interface Airport {
-  id: number;
-  airlineName: string;
-  airlineLogo: string;
-  departureCity: string;
-  departureDate: number;
-  departureDateExpected: number | null;
-  arrivalCity: string;
-  arrivalDate: number;
-  arrivalDateExpected: number | null;
-  codeShare: string;
-  terminal: string;
-  status: string;
-  type: string;
-}
+import { getCurrentFormattedDate } from "../../functions";
 
-interface SearchFormProps {
-  type: string;
-  setType: (type: string) => void;
-  data: Airport[];
-  setData: (data: Airport[]) => void;
-  inputSearchArray: Airport[];
-}
+interface SearchFormProps { }
 
-const SearchForm: React.FC<SearchFormProps> = ({
-  inputSearchArray,
-  getCurrentFormattedDate,
-}) => {
-  
+const SearchForm: React.FC<SearchFormProps> = () => {
+
   const dispatch = useAppDispatch();
   const data = useAppSelector((state) => state.data);
   const type = useAppSelector((state) => state.type);
   const date = useAppSelector((state) => state.date);
+  const inputSearchArray = useAppSelector((state) => state.inputSearchArray);
 
   const [activeButton, setActiveButton] = useState("current");
   const [currentDateIsAvailable, setCurrentDateIsAvailable] = useState(false);
@@ -60,9 +38,9 @@ const SearchForm: React.FC<SearchFormProps> = ({
         const formattedDate =
           type === "DEPARTURE"
             ? formatDate(airport.departureDateExpected) ??
-              formatDate(airport.departureDate)
+            formatDate(airport.departureDate)
             : formatDate(airport.arrivalDateExpected) ??
-              formatDate(airport.arrivalDate);
+            formatDate(airport.arrivalDate);
 
         if (formattedDate === date && airport.type === type) {
           availableDate = true;
@@ -182,9 +160,9 @@ const SearchForm: React.FC<SearchFormProps> = ({
               const formattedDate =
                 type === "DEPARTURE"
                   ? formatDate(airport.departureDateExpected) ??
-                    formatDate(airport.departureDate)
+                  formatDate(airport.departureDate)
                   : formatDate(airport.arrivalDateExpected) ??
-                    formatDate(airport.arrivalDate);
+                  formatDate(airport.arrivalDate);
 
               if (formattedDate === date && airport.type === type) {
                 return (

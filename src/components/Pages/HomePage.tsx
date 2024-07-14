@@ -1,35 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "../Header/Header";
 import FlightSearch from "../FlightSearch/FlightSearch";
 import Announcement from "../Announcement/Announcement";
 import News from "../News/News";
 import Footer from "../Footer/Footer";
-import { useNavigate } from "react-router-dom";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../redux/store";
 
-interface HomePageProps {
-  type: string;
-  setType: React.Dispatch<React.SetStateAction<string>>;
+interface UpdateSearchQuery {
+  (navigation: NavigateFunction): void;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ updateSearchQuery, inputValue, setInputValue }) => {
-  const [inputSearchArray, setInputSearchArray] = useState<any[]>([]);
+interface HomePageProps {
+  updateSearchQuery: UpdateSearchQuery;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ updateSearchQuery }) => {
   const navigate = useNavigate();
   const type = useAppSelector((state) => state.type);
-  useEffect(()=>{
-    if(type == "") return;
+  useEffect(() => {
+    if (type == "") return;
     updateSearchQuery(navigate);
-    },[type, updateSearchQuery]);
+  }, [type, updateSearchQuery]);
+
   return (
     <>
       <Header />
-      <FlightSearch
-        setInputSearchArray={setInputSearchArray}
-        inputSearchArray={inputSearchArray}
-        updateSearchQuery={updateSearchQuery}
-        inputValue={inputValue}
-        setInputValue={setInputValue}
-      />
+      <FlightSearch />
       <Announcement />
       <News />
       <Footer />

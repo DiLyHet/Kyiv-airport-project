@@ -1,32 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Image from "../../images/main.jpg";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
-import { setTypeAction } from "../../redux/slices/rootSlice";
+import { setInputSearchArrayAction, setInputValueAction, setTypeAction } from "../../redux/slices/rootSlice";
 
 
-interface FlightSearchProps {
-  type: string;
-  setType: React.Dispatch<React.SetStateAction<string>>;
-  data: any[];
-  setInputSearchArray: React.Dispatch<React.SetStateAction<any[]>>;
-  inputSearchArray: any[];
-}
+interface FlightSearchProps { }
 
-const FlightSearch: React.FC<FlightSearchProps> = ({
-  setInputSearchArray,
-  inputValue,
-  setInputValue,
-  updateSearchQuery
-}) => {
+const FlightSearch: React.FC<FlightSearchProps> = () => {
 
   const dispatch = useAppDispatch();
   const type = useAppSelector((state) => state.type);
   const data = useAppSelector((state) => state.data);
+  const inputValue = useAppSelector((state) => state.inputValue);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-   // updateSearchQuery(navigate);
+    dispatch(setInputValueAction(e.target.value));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
@@ -49,7 +38,7 @@ const FlightSearch: React.FC<FlightSearchProps> = ({
       );
     });
 
-    setInputSearchArray(matchingAirports);
+    dispatch(setInputSearchArrayAction(matchingAirports));
   };
 
   return (
