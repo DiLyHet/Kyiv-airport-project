@@ -16,15 +16,11 @@ This project is a web application built with React and TypeScript, leveraging mo
    ```bash
    git clone https://github.com/DiLyHet/Kyiv-airport-project.git
    ```
-2. Change branch:
-   ```bash
-   git checkout type-script
-   ```
-3. Navigate to the project directory:
+2. Navigate to the project directory:
    ```bash
    cd Kyiv-airport-project
    ```
-4. Install the dependencies:
+3. Install the dependencies:
    ```bash
    npm install
    ```
