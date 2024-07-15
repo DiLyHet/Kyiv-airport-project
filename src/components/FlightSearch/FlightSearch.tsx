@@ -88,7 +88,7 @@ const FlightSearch: React.FC<FlightSearchProps> = () => {
             <svg
               width="40px"
               height="28px"
-              viewBox="0 0 40 28"
+              viewBox="0 0 48 33.6"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -112,7 +112,7 @@ const FlightSearch: React.FC<FlightSearchProps> = () => {
             <svg
               width="40px"
               height="28px"
-              viewBox="0 0 40 28"
+              viewBox="0 0 48 33.6"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
