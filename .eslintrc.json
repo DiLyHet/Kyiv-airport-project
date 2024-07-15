@@ -1,0 +1,41 @@
+{
+    "plugins": ["prettier"],
+    "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+    "parser": "@typescript-eslint/parser",
+    "ignorePatterns": [
+      "dist/",
+      "node_modules/",
+      "webpack.config.js",
+      "styles.d.ts",
+      "images.d.ts",
+      "components.d.ts",
+      "tsconfig.json",
+      "d.ts",
+      "api.tsx",
+      "babel.config.js",
+      "assets.d.ts"
+    ],
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": ["./tsconfig.json"]
+    },
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
+  
