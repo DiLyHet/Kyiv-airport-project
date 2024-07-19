@@ -1,1 +1,7 @@
 node_modules
+dist
+assets.d.ts
+components.d.ts
+d.ts
+images.d.ts
+styles.d.ts
