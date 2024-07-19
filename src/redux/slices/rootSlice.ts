@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { getCurrentFormattedDate } from '../../functions';
+import { getCurrentFormattedDate } from '../../utils';
 import { Airport } from "../../types/airports";
 
 export type Type = {

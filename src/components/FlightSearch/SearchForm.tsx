@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { getAirportData } from "../../api";
+import { getAirportData } from "../../gateways";
 import Image from "../../images/calendar-icon.svg";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { setDataAction, setDateAction } from "../../redux/slices/rootSlice";
-import { getCurrentFormattedDate } from "../../functions";
+import { getCurrentFormattedDate } from "../../utils";
 
 interface SearchFormProps { }
 
