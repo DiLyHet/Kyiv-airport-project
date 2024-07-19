@@ -13,6 +13,7 @@ This project is a web application built with React and TypeScript, leveraging mo
 - [Dependencies](#dependencies)
 - [Development](#development)
 - [Contributing](#contributing)
+- [Author](#author)
 
 ## Installation
 1. Clone the repository:
@@ -90,5 +91,8 @@ npm run prettier
 4. Commit your changes (`git commit -am 'Add new feature'`).
 5. Push to the branch (`git push origin feature-branch`).
 6. Open a Pull Request.
+
+## Author
+This project was created by Lydia Hetmanova.
 
 ```
