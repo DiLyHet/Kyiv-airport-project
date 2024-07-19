@@ -94,5 +94,3 @@ npm run prettier
 
 ## Author
 This project was created by Lydia Hetmanova.
-
-```
