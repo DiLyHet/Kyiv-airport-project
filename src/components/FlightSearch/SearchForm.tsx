@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getAirportData } from "../../gateways";
-import Image from "../../images/calendar-icon.svg";
+import Image from "../../images/CalendarIcon.svg";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { setDataAction, setDateAction } from "../../redux/slices/rootSlice";
 import { getCurrentFormattedDate } from "../../utils";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Image from "../../images/main.jpg";
+import Image from "../../images/Main.jpg";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { setInputSearchArrayAction, setInputValueAction, setTypeAction } from "../../redux/slices/rootSlice";
 
