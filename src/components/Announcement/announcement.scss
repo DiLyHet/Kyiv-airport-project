@@ -26,6 +26,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
     justify-content: space-between;
     transition: border-radius 0.2s ease-out;
+    cursor: pointer;
 
     &:hover {
       border-radius: 20px 125px 20px 20px;
