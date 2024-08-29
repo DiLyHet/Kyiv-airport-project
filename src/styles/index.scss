@@ -1,8 +1,8 @@
-@import "announcement.scss";
-@import "flight-search.scss";
-@import "footer.scss";
-@import "header.scss";
-@import "news.scss";
+@import "../components/Announcement/announcement.scss";
+@import "../components/Announcement/flight-search.scss";
+@import "../components/Announcement/footer.scss";
+@import "../components/Announcement/header.scss";
+@import "../components/Announcement/news.scss";
 
 .page {
   margin: 0;
