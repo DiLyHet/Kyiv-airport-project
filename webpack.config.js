@@ -39,7 +39,7 @@ module.exports = (_, argv) => {
               options: {
                 name: "[name].[hash].[ext]",
                 outputPath: "images/",
-                publicPath: "images/", // This should match the outputPath
+                publicPath: "images/",
               },
             },
           ],
@@ -47,7 +47,7 @@ module.exports = (_, argv) => {
       ],
     },
     resolve: {
-      extensions: [".js", ".jsx", ".ts", ".tsx", ".scss"],
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.jpg', '.jpeg', '.png', '.svg'],
     },
     plugins: [
       new webpack.ProgressPlugin(),
