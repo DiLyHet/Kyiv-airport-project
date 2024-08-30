@@ -1,17 +1,17 @@
 import React from "react";
-import AdultImg from "../../images/AdultImg.svg";
-import ChildImg from "../../images/ChildImg.svg";
-import PriorityLineImg from "../../images/PriorityLineImg.svg";
-import HowToGet from "../../images/HowToGet.jpg";
-import BuyTickets from "../../images/BuyTickets.jpg";
-import Parking from "../../images/Parking.jpg";
-import ExpressLine from "../../images/ExpressLine.jpg";
-import Services from "../../images/Services.jpg";
-import CovidTesting from "../../images/CovidTesting.jpeg";
-import AirlinesDestinations from "../../images/AirlinesDestinations.jpg";
-import VipTerminal from "../../images/VipTerminal.jpg";
-import MastercardFastline from "../../images/MastercardFastline.jpg";
-import Information from "../../images/Information.jpg";
+import AdultImg from "../../../public/images/AdultImg.svg";
+import ChildImg from "../../../public/images/ChildImg.svg";
+import PriorityLineImg from "../../../public/images/PriorityLineImg.svg";
+import HowToGet from "../../../public/images/HowToGet.jpg";
+import BuyTickets from "../../../public/images/BuyTickets.jpg";
+import Parking from "../../../public/images/Parking.jpg";
+import ExpressLine from "../../../public/images/ExpressLine.jpg";
+import Services from "../../../public/images/Services.jpg";
+import CovidTesting from "../../../public/images/CovidTesting.jpeg";
+import AirlinesDestinations from "../../../public/images/AirlinesDestinations.jpg";
+import VipTerminal from "../../../public/images/VipTerminal.jpg";
+import MastercardFastline from "../../../public/images/MastercardFastline.jpg";
+import Information from "../../../public/images/Information.jpg";
 
 const Announcement: React.FC = () => {
   return (
