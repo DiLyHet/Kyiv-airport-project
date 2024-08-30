@@ -67,7 +67,7 @@ module.exports = (_, argv) => {
   if (isProduction) {
     config.plugins.push(
       new MiniCssExtractPlugin({
-        filename: "[name].[contenthash].css",
+        filename: "[name].css",
       }),
     );
   }
