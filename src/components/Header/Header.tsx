@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <button className="header__logo">
-        <img className="header__logo_img" src='/images/Logo.png' alt="Logo" />
+        <img className="header__logo_img" src='./images/Logo.png' alt="Logo" />
       </button>
       <nav className="header__navigation">
         <button className="header__navigation_item">Пасажирам</button>
