@@ -43,6 +43,7 @@ const FlightSearch: React.FC<FlightSearchProps> = () => {
   return (
     <section
       className="flight-search"
+      style={{ backgroundImage: `url(/images/Main.jpg)` }}
     >
       <h2 className="flight-search__title">ПОШУК РЕЙСУ</h2>
       <form className="flight-search__form">
