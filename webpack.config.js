@@ -37,7 +37,7 @@ module.exports = (_, argv) => {
             {
               loader: "file-loader",
               options: {
-                name: "[name].[hash].[ext]",
+                name: "[name].[ext]",
                 outputPath: "images/",
                 publicPath: "images/",
               },
