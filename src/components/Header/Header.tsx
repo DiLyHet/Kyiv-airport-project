@@ -1,12 +1,12 @@
 import React from "react";
 import "./header.scss";
-import Logo from "../../images/Logo.png";
+import WhiteLogo from "../../images/Logo.png";
 
 const Header: React.FC = () => {
   return (
     <header className="header">
       <button className="header__logo">
-        <img className="header__logo_img" src={Logo} alt="Logo" />
+        <img className="header__logo_img" src={WhiteLogo} alt="Logo" />
       </button>
       <nav className="header__navigation">
         <button className="header__navigation_item">Пасажирам</button>

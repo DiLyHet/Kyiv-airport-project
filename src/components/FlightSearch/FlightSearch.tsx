@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Image from "../../images/Main.jpg";
+import MainImage from "../../images/Main.jpg";
 import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { setInputSearchArrayAction, setInputValueAction, setTypeAction } from "../../redux/slices/rootSlice";
 
@@ -44,7 +44,7 @@ const FlightSearch: React.FC<FlightSearchProps> = () => {
   return (
     <section
       className="flight-search"
-      style={{ backgroundImage: `url(${Image})` }}
+      style={{ backgroundImage: `url(${MainImage})` }}
     >
       <h2 className="flight-search__title">ПОШУК РЕЙСУ</h2>
       <form className="flight-search__form">
